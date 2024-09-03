@@ -1,0 +1,97 @@
+.typography {
+    &-display {
+        &-96 {
+            font-size: $fontSize-display-96;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        &-76 {
+            font-size: $fontSize-display-76;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        &-64 {
+            font-size: $fontSize-display-64;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        &-48 {
+            font-size: $fontSize-display-48;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+    }
+
+    &-heading {
+        &-40 {
+            font-size: $fontSize-heading-40;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        &-32 {
+            font-size: $fontSize-heading-32;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        &-24 {
+            font-size: $fontSize-heading-24;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        &-20 {
+            font-size: $fontSize-heading-20;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        &-16 {
+            font-size: $fontSize-heading-16;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+    }
+
+    &-subheading {
+        &-24 {
+            font-size: $fontSize-subheading-24;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+    }
+
+    &-body {
+        &-20 {
+            font-size: $fontSize-body-20;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+
+        &-16 {
+            font-size: $fontSize-body-16;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+    }
+
+    &-footnote {
+        &-14 {
+            font-size: $fontSize-footnote-14;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+    }
+
+    &-caption {
+        &-12 {
+            font-size: $fontSize-caption-12;
+            font-weight: 400;
+            line-height: 1.3;
+        }
+    }
+}

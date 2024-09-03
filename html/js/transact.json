@@ -1,0 +1,70 @@
+{
+    "productos" : [
+        {
+            "id" : "P001",
+            "nombre" : "Pensiones Obligatorias",
+            "servicios" : [
+                {
+                    "id" : "S001",
+                    "nombre" : "Actualización Historia Laboral"
+                },
+                {   
+                    "id" : "S002",
+                    "nombre" : "Agendamiento"
+                },
+                {
+                    "id" : "S003",
+                    "nombre" : "Consulta de saldo"
+                },
+                {
+                    "id" : "S004",
+                    "nombre" : "Descarga Historia Laboral"
+                },
+                {
+                    "id" : "S005",
+                    "nombre" : "Doble Asesoría"
+                },
+                {
+                    "id" : "S006",
+                    "nombre" : "Simulador pensional"
+                }
+            ]
+        },
+        {
+            "id" : "P002",
+            "nombre" : "Cesantías",
+            "servicios" : [
+                {
+                    "id" : "S001",
+                    "nombre" : "Agendamiento de cita"
+                },
+                {
+                    "id" : "S002",
+                    "nombre" : "Consulta de saldos"
+                }
+            ]
+        },
+        {
+            "id" : "P003",
+            "nombre" : "Pensiones Voluntarias",
+            "servicios" : [
+                {
+                    "id" : "S001",
+                    "nombre" : "Agendamiento de cita"
+                },
+                {
+                    "id" : "S002",
+                    "nombre" : "Consulta de saldos"
+                },
+                {
+                    "id" : "S003",
+                    "nombre" : "Transparencia de portafolio"
+                },
+                {
+                    "id" : "S004",
+                    "nombre" : "Retiro de cesantías en línea"
+                }
+            ]
+        }
+    ]
+}

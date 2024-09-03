@@ -1,0 +1,24 @@
+// Project dependencies
+@import "project-dependencies/fonts";
+@import "project-dependencies/variables";
+
+// Components
+@import "components/accordion";
+@import "components/bar";
+@import "components/typography";
+@import "components/text";
+@import "components/text-color";
+@import "components/breadcrumb";
+@import "components/button";
+@import "components/select";
+@import "components/tabs";
+@import "components/tooltip";
+@import "components/table";
+
+// Patterns
+@import "patterns/general";
+
+// Structure
+@import "structure/header";
+@import "structure/breadcrumb";
+@import "structure/footer";

@@ -1,0 +1,128 @@
+.navigation-tabs {
+    .tab-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 0;
+        margin-bottom: 1.5rem;
+        list-style: none;
+
+        .navigation-link {
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1;
+            padding: 0.75rem 1rem;
+            border-radius: 0;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: $color-gray-70;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+
+            &:focus-visible {
+                outline: 0;
+                border-color: $color-white;
+                box-shadow: 0px 0px 0px 2px $color-blue-50;
+            }
+        }
+    }
+
+    &-pills {
+        .navigation-tab-item {
+            &:first-child {
+                .navigation-link {
+                    border-top-left-radius: 0.125rem;
+                    border-bottom-left-radius: 0.125rem;
+                    border-right: 2px solid transparent;
+                }
+            }
+
+            &:last-child {
+                .navigation-link {
+                    border-top-right-radius: 0.125rem;
+                    border-bottom-right-radius: 0.125rem;
+                    border-left: 2px solid transparent;
+                }
+            }
+        }
+
+        .tab-buttons {
+            .navigation-link {
+                font-size: 0.875rem;
+                padding: 0.438rem 0.75rem;
+                background-color: $color-gray-20;
+                border: 2px solid rgba(38, 40, 45, 0.15);
+
+                &:active {
+                    background-color: $color-gray-40;
+                    border-color: rgba(38, 40, 45, 0.15);
+                    color: $color-blue-60;
+                }
+
+                &:hover {
+                    background-color: $color-gray-30;
+                    border-color: rgba(38, 40, 45, 0.15);
+                }
+
+                &:disabled {
+                    background-color: $color-blue-20;
+                    border-color: $color-blue-20;
+                    color: $color-gray-50;
+                }
+
+                &:focus-visible {
+                    outline: 0;
+                    border-color: $color-white;
+                    box-shadow: 0px 0px 0px 2px $color-blue-50;
+                }
+
+                &.active {
+                    color: $color-blue-60;
+                    border-color: $color-blue-50 !important;
+                }
+            }
+        }
+    }
+
+    &-underline {
+        .tab-buttons {
+            border-bottom: 1px solid $color-gray-40;
+
+            .navigation-link {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -1px;
+                    height: 0px;
+                    background-color: $color-blue-50;
+                    border-radius: 10px;
+                    left: 0;
+                    right: 0;
+                    transition: height .3s;
+                }
+
+                &.active {
+                    &::after {
+                        height: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+
+    .tab-content {
+        .tab-pane {
+            display: none;
+            padding: 0px;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+}
