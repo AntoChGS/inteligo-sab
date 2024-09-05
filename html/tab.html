@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Web Design</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow">
+        <meta name="description" content="{page-description}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--link(rel='apple-touch-icon' sizes="180x180" href='images/favicon/apple-touch-icon.png')-->
+        <!--link(rel='icon' type='image/png' sizes="32x32" href='images/favicon/favicon-32x32.png')-->
+        <!--link(rel='icon' type='image/png' sizes="16x16" href='images/favicon/favicon-16x16.png')-->
+        <!--link(rel='manifest' href='images/favicon/manifest.json')-->
+        <!--link(rel='mask-icon' href='images/favicon/safari-pinned-tab.svg' color='#4eb500')-->
+        <!--link(rel='shortcut icon' href='images/favicon/favicon.ico')-->
+        <!--meta(name='msapplication-TileColor' content='#4eb500')-->
+        <!--meta(name='msapplication-config' content='images/favicon/browserconfig.xml')-->
+        <!--meta(name='theme-color' content='#0044bd')-->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="body">
+        <h1 class="visually--hidden">Porvenir Colombia</h1>
+        <header class="header"> 
+            <div class="header__top">
+                <div class="button button-secondary button-xs" id="toggle-btn"><span class="icon svg--inline-icon">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+<rect width="16" height="16" fill="white" fill-opacity="0.01" style="mix-blend-mode:multiply"/>
+<path d="M14 3H2V4H14V3Z" />
+<path d="M14 12H2V13H14V12Z" />
+<path d="M14 6H2V7H14V6Z" />
+<path d="M14 9H2V10H14V9Z" />
+</svg>
+</span>
+                </div>
+                <div class="brand"> <a class="brand__link" href="/"> 
+                        <picture> 
+                            <source media="(min-width: 992px)" srcset="images/logo/logo-inteligo-sab.png"><img class="image" src="images/logo/logo-inteligo-sab.png" alt="Logo Inteligo SAB" srcset="images/logo/logo-inteligo-sab.png">
+                        </picture></a></div>
+                <ul class="top__nav"> 
+                    <li class="nav__item"> <a class="nav__link" href="#"> <span class="icon svg--inline-icon">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-help"></use>
+                                </svg></span>Preguntas frecuentes</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="#"> <span class="icon svg--inline-icon">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-customer-service"></use>
+                                </svg></span>Contacto</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="#"> <span class="user-profile">EQ<span class="user-profile__badge"></span></span>Perfil<span class="icon svg--inline-icon">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                </svg></span></a></li>
+                </ul>
+            </div>
+            <nav class="nav__menu"> 
+                <ul class="navbar__nav"> 
+                    <li class="nav__item"> <a class="nav__link active" href="#">Inicio</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="#">Operar en Bolsa</a></li>
+                    <!--li.nav__item a.nav__link(href="#") Reportes de Mercado
+                    -->
+                    <li class="nav__item"> <a class="nav__link" href="#">Movimientos de Efectivo<span class="icon svg--inline-icon">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                </svg></span></a></li>
+                    <!--li.nav__item a.nav__link(href="#") Fondos Mutuos
+                    -->
+                    <li class="nav__item"> <a class="nav__link" href="#">Otras Consultas<span class="icon svg--inline-icon">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                </svg></span></a></li>
+                </ul>
+                <ul class="navbar__nav-right">
+                    <li class="nav__item"> <span class="nav__text">Cambio USD: <b class="text-color-blue-60">3.728</b></span></li>
+                    <li class="nav__item"> <span class="nav__text">Última actualización: <b>10:20:42 am</b></span></li>
+                </ul>
+            </nav>
+        </header>
+        <main role="main"><table>
+<thead>
+<tr>
+<th>Enlaces</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#" class="navbar-tab-link" data-tab="tab1">Enlace 1</a></td>
+<td>Descripción del Enlace 1</td>
+</tr>
+<tr>
+<td><a href="#" class="navbar-tab-link" data-tab="tab2">Enlace 2</a></td>
+<td>Descripción del Enlace 2</td>
+</tr>
+<tr>
+<td><a href="#" class="navbar-tab-link" data-tab="tab3">Enlace 3</a></td>
+<td>Descripción del Enlace 3</td>
+</tr>
+</tbody>
+</table>
+<!-- Paneles de contenido -->
+<div id="tab1" class="tab-content">
+<h2>Contenido del Tab 1</h2>
+<p>Este es el contenido para el primer panel.</p>
+</div>
+<div id="tab2" class="tab-content">
+<h2>Contenido del Tab 2</h2>
+<p>Este es el contenido para el segundo panel.</p>
+</div>
+<div id="tab3" class="tab-content">
+<h2>Contenido del Tab 3</h2>
+<p>Este es el contenido para el tercer panel.</p>
+</div>
+        </main>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

@@ -126,3 +126,13 @@
         }
     }
 }
+
+.external-tab-button {
+    color: $color-gray-70;
+    text-decoration: none;
+
+    &.active {
+        color: $color-blue-60;
+        text-decoration: underline;
+    }
+}

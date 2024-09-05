@@ -222,12 +222,10 @@ legend {
 
 .svg--inline-icon {
     display: inline-block;
-    font-size: inherit;
     width: 1em;
     height: 1em;
     overflow: visible;
-    //vertical-align: -0.125em;
-    vertical-align: 0.1em;
+    vertical-align: -.125em;
 }
 
 .svg--inline {
@@ -255,6 +253,7 @@ legend {
 .patrimony__main1 {
     padding: 1.5rem 2rem;
     background-color: #F9FAFC;
+    border-bottom: 1px solid $color-gray-40;
 
     .main1__row {
         display: flex;
@@ -271,6 +270,7 @@ legend {
 
     .main1__buttons {
         text-align: right;
+
         .button {
             margin: 0 4px;
         }
@@ -279,10 +279,6 @@ legend {
 
 .patrimony__main2 {
     padding: 1.5rem 1.5rem;
-    
-    .typography-heading-20 {
-        margin-bottom: 0;
-    }
 
     .main2__row {
         display: flex;
@@ -303,14 +299,57 @@ legend {
     }
 }
 
-.full-overflow-1 {
-    max-height: calc(100vh);
-    overflow-y: auto;
+.layout-sidebar {
+    .patrimony {
+        &__total-portfolio-box {
+            .box__info {
+                display: flex;
+                align-items: center;
+
+                .info__button-renew {
+                    margin-left: 4px;
+
+                    .button {
+                        padding: 0.25rem;
+                    }
+                }
+            }
+        }
+
+        &__heading-title-box {
+            display: block;
+
+            .box__info {
+                display: flex;
+                align-items: center;
+
+                .info__heading {
+                    flex: 1;
+
+                    .heading__title {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    .heading__icon {
+                        margin-right: 8px;
+                    }
+                }
+
+                .info__information {
+                    font-size: 16px;
+                    line-height: 1;
+
+                    .icon {
+                        color: $color-gray-60;
+                    }
+                }
+            }
+        }
+    }
 }
 
-.patrimony-right {
-    flex: 1;
-
+.layout-content {
     .patrimony {
         &__total-portfolio-box {
             margin-bottom: 0;
@@ -331,78 +370,9 @@ legend {
     }
 }
 
-.patrimony-portlet {
-    position: sticky;
-    height: calc(100vh);
-    z-index: 1000;
-    width: 356px;
-    background-color: $color-white;
-    border-right: 1px solid $color-gray-30;
-    padding: 1.5rem 1.5rem;
-
-    .typography-heading-20 {
-        margin-bottom: 16px;
-    }
-
-    .patrimony {
-        &__total-portfolio-box {
-            margin-bottom: 1.5rem;
-
-            .typography-caption-12 {
-                margin-bottom: 2px;
-            }
-
-            .box__info {
-                display: flex;
-                align-items: center;
-
-                .info__subheading {
-                    margin-bottom: 0;
-                }
-
-                .info__button-renew {
-                    margin-left: 4px;
-
-                    .button {
-                        padding: 0.25rem;
-                    }
-                }
-            }
-        }
-
-        &__heading-title-box {
-            display: block;
-            margin-bottom: 0.75rem;
-
-            .box__info {
-                display: flex;
-                align-items: center;
-
-                .info__heading {
-                    flex: 1;
-                    margin-bottom: 0;
-
-                    .heading__icon {
-                        margin-right: 8px;
-                    }
-                }
-
-                .info__information {
-                    font-size: 16px;
-                    line-height: 1;
-
-                    .icon {
-                        color: $color-gray-60;
-                    }
-                }
-            }
-        }
-    }
-}
-
 .button-plus {
     .button {
-        padding: 0;
+        padding: 0 .125rem;
         font-size: 16px;
     }
 }
@@ -443,5 +413,18 @@ legend {
 
     .amount__text {
         font-size: 1rem;
+    }
+}
+
+.box11 {
+    display: flex;
+    align-items: flex-end;
+}
+
+#toggle-btn {
+    display: none;
+    @media (max-width: 1056px) {
+        display: inline-flex;
+        margin-right: 16px;
     }
 }

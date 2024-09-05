@@ -47,6 +47,11 @@
                                 td.text-align-right 5,673.00
                                 td.text-align-right 0.00
                             tr 
+                                td.text-ws-nowrap 
+                                    a.external-tab-button(href="#", data-target="tab3", data-tabs-id="tabs2") Fondos Mutuos
+                                td.text-align-right 10,500.54
+                                td.text-align-right 0.00
+                            tr 
                                 td.text-ws-nowrap Efectivo
                                 td.text-align-right 10,950.00
                                 td.text-align-right 0.00
@@ -81,13 +86,6 @@
                                     .fill
                             td 
                                 span.percentage#percentage2 0%
-                        tr
-                            td.text-ws-nowrap Op. de Reporte
-                            td 
-                                .bar#bar3
-                                    .fill
-                            td 
-                                span.percentage#percentage3 0%
                         tr
                             td.text-ws-nowrap Fondos Mutuos
                             td 
@@ -193,6 +191,8 @@
                         button.tab-button.navigation-link.active(data-tab="tab1") Renta Variable
                     li.navigation-tab-item
                         button.tab-button.navigation-link(data-tab="tab2") Renta Fija
+                    li.navigation-tab-item
+                        button.tab-button.navigation-link(data-tab="tab3") Fondos Mutuos
                 .tab-content
                     .tab-pane.active#tab1
                         .accordion
@@ -454,6 +454,27 @@
                                                     span.text-color-blue-60 29,973.90
                                                 td.text-align-right.button-plus 
                                                     button.button.button-invisible +
+                    
+                    .tab-pane#tab3
+                        .accordion
+                            .accordion-item
+                                h3.accordion-header 
+                                    button.accordion-toggle(data-toggle="collapse" data-target="#collapse2One") Interfondos
+                                p.valued-amount Monto valorizado dólares americanos #[span.text-color-blue-60 USD #[span.amount__text 3,963.01]]
+                                .accordion-body.collapse.show#collapse2One
+                                    table.table.table-border-round 
+                                        thead
+                                            tr 
+                                                th Descripción
+                                                th Moneda
+                                                th.text-align-right Monto
+                                                th.text-align-right Monto Valorizado USD
+                                        tbody
+                                            tr 
+                                                td IF MIXTO BALANCEADO FMV
+                                                td USD
+                                                td.text-align-right 10,500.54
+                                                td.text-align-right 10,500.54
 
 
 .modal#modal1

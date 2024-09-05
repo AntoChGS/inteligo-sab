@@ -2,6 +2,15 @@
 //=require jquery/dist/jquery.min.js
 
 document.addEventListener('DOMContentLoaded', function () {
+    // TOGGLE SIDEBAR
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('toggle-btn');
+
+    toggleBtn.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+    });
+    
+    // ACCORDION
     const buttons = document.querySelectorAll('.accordion-toggle');
 
     buttons.forEach(button => {
@@ -53,27 +62,57 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // TABS
-    const tabContainers = document.querySelectorAll('.navigation-tabs');
-
-    tabContainers.forEach(container => {
+    // Función para activar una pestaña y sincronizar botones externos
+    function activateTab(container, button) {
         const tabButtons = container.querySelectorAll('.tab-button');
         const tabPanes = container.querySelectorAll('.tab-pane');
+        const targetTabId = button.getAttribute('data-tab');
+        const targetPane = container.querySelector(`#${targetTabId}`);
+
+        // Elimina la clase activa de todos los botones y panes
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabPanes.forEach(pane => pane.classList.remove('active'));
+
+        // Añade la clase activa al botón y al pane correspondiente
+        button.classList.add('active');
+        if (targetPane) {
+            targetPane.classList.add('active');
+        }
+
+        // Actualiza la clase activa en los botones externos relacionados
+        const containerId = container.getAttribute('id');
+        document.querySelectorAll(`.external-tab-button[data-tabs-id="${containerId}"]`).forEach(externalButton => {
+            externalButton.classList.remove('active');
+            if (externalButton.getAttribute('data-target') === targetTabId) {
+                externalButton.classList.add('active');
+            }
+        });
+    }
+
+    // Manejo de clics en botones de tabs internos
+    document.querySelectorAll('.navigation-tabs').forEach(container => {
+        const tabButtons = container.querySelectorAll('.tab-button');
 
         tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const targetTabId = button.getAttribute('data-tab');
-
-                // Elimina la clase activa de todos los botones y panes
-                tabButtons.forEach(btn => btn.classList.remove('active'));
-                tabPanes.forEach(pane => pane.classList.remove('active'));
-
-                // Añade la clase activa al botón y al pane correspondiente
-                button.classList.add('active');
-                const targetPane = container.querySelector(`#${targetTabId}`);
-                if (targetPane) {
-                    targetPane.classList.add('active');
-                }
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); // Evita el comportamiento predeterminado
+                activateTab(container, button);
             });
+        });
+    });
+
+    // Manejo de clics en botones externos
+    document.querySelectorAll('.external-tab-button').forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // Evita el comportamiento predeterminado
+            const targetTabId = button.getAttribute('data-target');
+            const tabsId = button.getAttribute('data-tabs-id');
+            const container = document.getElementById(tabsId);
+            const targetTabButton = container ? container.querySelector(`[data-tab="${targetTabId}"]`) : null;
+
+            if (targetTabButton) {
+                activateTab(container, targetTabButton);
+            }
         });
     });
 
@@ -114,6 +153,56 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         document.addEventListener('click', closeTooltip);
+    });
+
+    // MODAL
+    // Function to open the modal
+    function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+            // Temporarily set display to block to ensure the modal is rendered
+            modal.style.display = "block";
+            // Ensure a new frame is rendered before adding the transition class
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10); // Brief delay to trigger transition
+
+            document.body.classList.add('modal-open');
+        }
+    }
+
+    // Function to close the modal
+    function closeModal(modal) {
+        modal.classList.remove('show');
+        document.body.classList.remove('modal-open');
+        // Delay hiding the modal to allow the transition to complete
+        setTimeout(() => {
+            modal.style.display = "none";
+        }, 300); // Match the transition duration in CSS
+    }
+
+    // Event listener for open modal buttons and links
+    document.querySelectorAll('.open-modal-btn').forEach(element => {
+        element.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent default action for links
+            const modalId = this.getAttribute('data-modal');
+            openModal(modalId);
+        });
+    });
+
+    // Event listener for close buttons
+    document.querySelectorAll('.close, .close-modal-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            const modal = this.closest('.modal');
+            closeModal(modal);
+        });
+    });
+
+    // Close modal when clicking outside of the modal content
+    window.addEventListener('click', function (event) {
+        if (event.target.classList.contains('modal')) {
+            closeModal(event.target);
+        }
     });
 });
 

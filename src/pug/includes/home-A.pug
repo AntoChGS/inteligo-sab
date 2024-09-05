@@ -82,20 +82,6 @@
                             td 
                                 span.percentage#percentage2 0%
                         tr
-                            td.text-ws-nowrap Op. de Reporte
-                            td 
-                                .bar#bar3
-                                    .fill
-                            td 
-                                span.percentage#percentage3 0%
-                        tr
-                            td.text-ws-nowrap Fondos Mutuos
-                            td 
-                                .bar#bar4
-                                    .fill
-                            td 
-                                span.percentage#percentage4 0%
-                        tr
                             td.text-ws-nowrap Efectivo
                             td 
                                 .bar#bar5
@@ -335,86 +321,11 @@
                                     button.accordion-toggle(data-toggle="collapse" data-target="#collapseTwo") Acciones y ETFs en la Bolsa de Lima
                                 p.valued-amount Monto valorizado dólares americanos #[span.text-color-blue-60 USD #[span.amount__text 3,963.01]]
                                 .accordion-body.collapse.show#collapseTwo
-                                    table.table.table-border-round 
-                                        thead
-                                            tr 
-                                                th Símbolo
-                                                th Descripción
-                                                th Mercado
-                                                th Moneda
-                                                th.text-align-right Cantidad #[br] Disponible
-                                                th.text-align-right Precio de #[br] Mercado
-                                                th.text-align-right Monto #[br] Invertido
-                                                th.text-align-right Ganancia/ #[br] Pérdida
-                                                th.text-align-right Valor de #[br] Mercado
-                                                th.text-align-right V. de Mercado #[br] (USD)
-                                                th.text-align-right Comprar/ #[br] Vender
-                                                th.text-align-right Más
-                                        tbody
-                                            tr 
-                                                td 
-                                                    a.text-link(href="#") ALICORC1
-                                                td 
-                                                    span.text-ellipsis ALICORP S.A.A
-                                                td BVL
-                                                td PEN
-                                                td.text-align-right 30
-                                                td.text-align-right 177.925
-                                                td.text-align-right 5,337.75
-                                                td.text-align-right
-                                                    span.text-color-green-70 13,310
-                                                td.text-align-right 3,310.23
-                                                td.text-align-right 
-                                                    span.text-color-blue-60 887.94
-                                                td.text-align-right 
-                                                    span.compra-green C
-                                                    |  
-                                                    span.venta-red V
-                                                td.text-align-right.button-plus 
-                                                    button.button.button-invisible +
-
-                                            tr 
-                                                td 
-                                                    a.text-link(href="#") ABX
-                                                td 
-                                                    span.text-ellipsis BARRICK GOLD CORPORATION
-                                                td BVL
-                                                td PEN
-                                                td.text-align-right 1,000
-                                                td.text-align-right 202.490
-                                                td.text-align-right 2,024.90
-                                                td.text-align-right
-                                                    span.text-color-red-70 -527.55
-                                                td.text-align-right 5,620.00
-                                                td.text-align-right 
-                                                    span.text-color-blue-60 1,507.51
-                                                td.text-align-right 
-                                                    span.compra-green C
-                                                    |  
-                                                    span.venta-red V
-                                                td.text-align-right.button-plus 
-                                                    button.button.button-invisible +
-                                            tr 
-                                                td
-                                                    a.text-link(href="#") ALT
-                                                td 
-                                                    span.text-ellipsis ALTURAS MINERAS CORP.
-                                                td BVL
-                                                td USD
-                                                td.text-align-right 65
-                                                td.text-align-right 33.551
-                                                td.text-align-right 2,181.08
-                                                td.text-align-right 
-                                                    span.text-color-green-70 68.60
-                                                td.text-align-right 1,567.56
-                                                td.text-align-right 
-                                                    span.text-color-blue-60 1,567.56
-                                                td.text-align-right 
-                                                    span.compra-green C
-                                                    |  
-                                                    span.venta-red V
-                                                td.text-align-right.button-plus 
-                                                    button.button.button-invisible +
+                                    .alert.alert-light.alert-icon-center 
+                                        span.icon.svg--inline-icon.mrg-e-1: svg: use(xlink:href=iconPath+'information-filled')
+                                        div Recuerda que también puedes invertir en la Bolsa de Lima.
+                                            | 
+                                            a.button.button-invisible.button-xs(href="#") Operar en bolsa 
                     .tab-pane#tab2
                         .accordion
                             .accordion-item
@@ -453,7 +364,11 @@
                                                 td.text-align-right 
                                                     span.text-color-blue-60 29,973.90
                                                 td.text-align-right.button-plus 
-                                                    button.button.button-invisible +
+                                                    button.button.button-invisible
+                                                        span.icon.svg--inline-icon
+                                                            <svg>
+                                                                <use xlink:href="#icon-add"></use>
+                                                            </svg>
 
 
 .modal#modal1

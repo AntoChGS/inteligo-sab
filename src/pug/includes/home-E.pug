@@ -36,14 +36,20 @@
                             tr 
                                 td.text-ws-nowrap 
                                     a.external-tab-button.active(href="#", data-target="tab1", data-tabs-id="tabs2") Renta Variable
-                                    .info__information.tooltip-container.tooltip-bottom-left
-                                        span.tooltip-trigger.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'information-filled')
-                                        .tooltip-content Totaliza el monto invertido como Reportante.
                                 td.text-align-right 14,320.67
                                 td.text-align-right 8,930.23
                             tr 
                                 td.text-ws-nowrap 
                                     a.external-tab-button(href="#", data-target="tab2", data-tabs-id="tabs2") Renta Fija
+                                td.text-align-right 5,673.00
+                                td.text-align-right 0.00
+                            tr 
+                                td.text-ws-nowrap 
+                                    a.external-tab-button(href="#", data-target="tab3", data-tabs-id="tabs2") Op. de Reporte
+                                    | 
+                                    .info__information.tooltip-container.tooltip-bottom-left
+                                        span.tooltip-trigger.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'information-filled')
+                                        .tooltip-content Totaliza el monto invertido como Reportante.
                                 td.text-align-right 5,673.00
                                 td.text-align-right 0.00
                             tr 
@@ -88,13 +94,6 @@
                                     .fill
                             td 
                                 span.percentage#percentage3 0%
-                        tr
-                            td.text-ws-nowrap Fondos Mutuos
-                            td 
-                                .bar#bar4
-                                    .fill
-                            td 
-                                span.percentage#percentage4 0%
                         tr
                             td.text-ws-nowrap Efectivo
                             td 
@@ -193,6 +192,8 @@
                         button.tab-button.navigation-link.active(data-tab="tab1") Renta Variable
                     li.navigation-tab-item
                         button.tab-button.navigation-link(data-tab="tab2") Renta Fija
+                    li.navigation-tab-item
+                        button.tab-button.navigation-link(data-tab="tab3") Operaciones de Reporte
                 .tab-content
                     .tab-pane.active#tab1
                         .accordion
@@ -454,6 +455,64 @@
                                                     span.text-color-blue-60 29,973.90
                                                 td.text-align-right.button-plus 
                                                     button.button.button-invisible +
+                    
+                    .tab-pane.active#tab3
+                        .accordion
+                            .accordion-item
+                                h3.accordion-header 
+                                    button.accordion-toggle(data-toggle="collapse" data-target="#collapse3One") Reportante
+                                p.valued-amount Monto valorizado dólares americanos #[span.text-color-blue-60 USD #[span.amount__text 12,753.11]]
+                                .accordion-body.collapse.show#collapse3One
+                                    table.table.table-border-round 
+                                        thead
+                                            tr 
+                                                th Símbolo
+                                                th Mercado
+                                                th.text-align-right Cantidad #[br] Disponible
+                                                th.text-align-right Fecha de #[br] Operación
+                                                th.text-align-right N° de Póliza
+                                                th.text-align-right Fecha de #[br] Liquidación 1
+                                                th.text-align-right Fecha de #[br] Liquidación 2
+                                                th.text-align-right Monto Póliza #[br] Contado
+                                                th.text-align-right Monto Póliza #[br] Plazo
+                                                th.text-align-right M. Valorizado #[br] USD
+                                        tbody
+                                            tr 
+                                                td VOLCAB1
+                                                td USD
+                                                td.text-align-right 85,011
+                                                td.text-align-right 05/07/2024
+                                                td.text-align-right 68391
+                                                td.text-align-right 05/10/2024
+                                                td.text-align-right 03/10/2024
+                                                td.text-align-right 16,662.16
+                                                td.text-align-right 17,073.63
+                                                td.text-align-right 
+                                                    span.text-color-blue-60 4,469.46
+                                            tr 
+                                                td ENDSPC1
+                                                td USD
+                                                td.text-align-right 85,011
+                                                td.text-align-right 05/07/2024
+                                                td.text-align-right 68391
+                                                td.text-align-right 05/10/2024
+                                                td.text-align-right 03/10/2024
+                                                td.text-align-right 16,662.16
+                                                td.text-align-right 17,073.63
+                                                td.text-align-right 
+                                                    span.text-color-blue-60 4,469.46
+                                            tr 
+                                                td CASAGRC1
+                                                td USD
+                                                td.text-align-right 85,011
+                                                td.text-align-right 05/07/2024
+                                                td.text-align-right 68391
+                                                td.text-align-right 05/10/2024
+                                                td.text-align-right 03/10/2024
+                                                td.text-align-right 16,662.16
+                                                td.text-align-right 17,073.63
+                                                td.text-align-right 
+                                                    span.text-color-blue-60 4,469.46
 
 
 .modal#modal1

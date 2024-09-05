@@ -82,20 +82,6 @@
                             td 
                                 span.percentage#percentage2 0%
                         tr
-                            td.text-ws-nowrap Op. de Reporte
-                            td 
-                                .bar#bar3
-                                    .fill
-                            td 
-                                span.percentage#percentage3 0%
-                        tr
-                            td.text-ws-nowrap Fondos Mutuos
-                            td 
-                                .bar#bar4
-                                    .fill
-                            td 
-                                span.percentage#percentage4 0%
-                        tr
                             td.text-ws-nowrap Efectivo
                             td 
                                 .bar#bar5
@@ -202,132 +188,11 @@
                                     button.accordion-toggle(data-toggle="collapse" data-target="#collapseOne") Acciones y ETFs en el mercado extranjero
                                 p.valued-amount Monto valorizado dólares americanos #[span.text-color-blue-60 USD #[span.amount__text 12,753.11]]
                                 .accordion-body.collapse.show#collapseOne
-                                    table.table.table-border-round 
-                                        thead
-                                            tr 
-                                                th Símbolo
-                                                th Descripción
-                                                th Mercado
-                                                th Moneda
-                                                th.text-align-right Cantidad #[br] Disponible
-                                                th.text-align-right Precio de #[br] Mercado
-                                                th.text-align-right Monto #[br] Invertido
-                                                th.text-align-right Ganancia/ #[br] Pérdida
-                                                th.text-align-right Valor de #[br] Mercado
-                                                th.text-align-right V. de Mercado #[br] (USD)
-                                                th.text-align-right Comprar/ #[br] Vender
-                                                th.text-align-right Más
-                                        tbody
-                                            tr 
-                                                td 
-                                                    a.text-link.open-modal-btn(href="#" data-modal="modal1") AAL
-                                                td 
-                                                    span.text-ellipsis AMERICAN AIRLINES
-                                                td NYSE
-                                                td USD
-                                                td.text-align-right 30
-                                                td.text-align-right 177.95
-                                                td.text-align-right 5,337.75
-                                                td.text-align-right
-                                                    span.text-color-green-70 13,310
-                                                td.text-align-right 4,810.20
-                                                td.text-align-right 
-                                                    span.text-color-blue-60 4,810.20
-                                                td.text-align-right 
-                                                    span.compra-green C
-                                                    |  
-                                                    span.venta-red V
-                                                td.text-align-right.button-plus 
-                                                    button.button.button-invisible.open-modal-btn(data-modal="modal1") +
-                                            tr 
-                                                td 
-                                                    a.text-link(href="#") APPL
-                                                td 
-                                                    span.text-ellipsis APPLE INC
-                                                td NYSE
-                                                td USD
-                                                td.text-align-right 1,000
-                                                td.text-align-right 202.40
-                                                td.text-align-right 2,024.90
-                                                td.text-align-right
-                                                    span.text-color-red-70 -527.55
-                                                td.text-align-right 2,093.50
-                                                td.text-align-right 
-                                                    span.text-color-blue-60 2,093.50
-                                                td.text-align-right 
-                                                    span.compra-green C
-                                                    |  
-                                                    span.venta-red V
-                                                td.text-align-right.button-plus 
-                                                    button.button.button-invisible +
-                                            tr 
-                                                td
-                                                    a.text-link(href="#") AMZN
-                                                td 
-                                                    span.text-ellipsis AMAZON.COM
-                                                td NYSE
-                                                td USD
-                                                td.text-align-right 65
-                                                td.text-align-right 33.51
-                                                td.text-align-right 2,181.08
-                                                td.text-align-right 
-                                                    span.text-color-green-70 68.60
-                                                td.text-align-right 1,603.55
-                                                td.text-align-right 
-                                                    span.text-color-blue-60 1,603.55
-                                                td.text-align-right 
-                                                    span.compra-green C
-                                                    |  
-                                                    span.venta-red V
-                                                td.text-align-right.button-plus 
-                                                    button.button.button-invisible +
-                                            tr 
-                                                td
-                                                    a.text-link(href="#") ADBE
-                                                td 
-                                                    span.text-ellipsis ADOBE INC
-                                                td NYSE
-                                                td USD
-                                                td.text-align-right 10
-                                                td.text-align-right 213.36
-                                                td.text-align-right 4,568.56
-                                                td.text-align-right
-                                                    span.text-color-red-70 -577.53
-                                                td.text-align-right 1,213.30
-                                                td.text-align-right 
-                                                    span.text-color-blue-60 1,213.30
-                                                td.text-align-right 
-                                                    span.compra-green C
-                                                    |  
-                                                    span.venta-red V
-                                                td.text-align-right.button-plus 
-                                                    button.button.button-invisible +
-                                            tr 
-                                                td
-                                                    a.text-link(href="#") ADBE
-                                                td 
-                                                    span.text-ellipsis ADOBE INC
-                                                td NYSE
-                                                td USD
-                                                td.text-align-right 1,000
-                                                td.text-align-right 145.58
-                                                td.text-align-right 1,556.78
-                                                td.text-align-right 
-                                                    span.text-color-green-70 10,390
-                                                td.text-align-right 3,032.56
-                                                td.text-align-right 
-                                                    span.text-color-blue-60 3,032.56
-                                                td.text-align-right 
-                                                    span.compra-green C
-                                                    |  
-                                                    span.venta-red V
-                                                td.text-align-right.button-plus 
-                                                    button.button.button-invisible +
-                                        tfoot 
-                                            tr
-                                                td(colspan="8") 5 de 10 símbolos mostrados
-                                                td.text-align-right(colspan="4")
-                                                    a.button.button-invisible.button-xs(href="#") Ver todos 
+                                    .alert.alert-light.alert-icon-center 
+                                        span.icon.svg--inline-icon.mrg-e-1: svg: use(xlink:href=iconPath+'information-filled')
+                                        div Recuerda que también puedes invertir en el Mercado Extranjero.
+                                            | 
+                                            a.button.button-invisible.button-xs(href="#") Operar en bolsa 
 
                             .accordion-item
                                 h3.accordion-header 

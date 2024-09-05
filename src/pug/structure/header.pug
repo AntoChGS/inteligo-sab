@@ -1,35 +1,35 @@
 header.header 
     .header__top
+        .button.button-secondary.button-xs#toggle-btn
+            <span class="icon svg--inline-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
+                <rect width="16" height="16" fill="white" fill-opacity="0.01" style="mix-blend-mode:multiply"/>
+                <path d="M14 3H2V4H14V3Z" />
+                <path d="M14 12H2V13H14V12Z" />
+                <path d="M14 6H2V7H14V6Z" />
+                <path d="M14 9H2V10H14V9Z" />
+                </svg>
+            </span>
         .brand 
             a(href="/" class="brand__link") 
                 picture 
                     source(media="(min-width: 992px)", srcset="images/logo/logo-inteligo-sab.png")
                     img.image(src="images/logo/logo-inteligo-sab.png", alt="Logo Inteligo SAB", srcset="images/logo/logo-inteligo-sab.png")
-
         ul.top__nav 
             li.nav__item 
                 a.nav__link(href="#") 
-                    span.icon.svg--inline-icon
-                        <svg>
-                            <use xlink:href="#icon-help"></use>
-                        </svg>
+                    span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'help')
                     | Preguntas frecuentes
             li.nav__item 
                 a.nav__link(href="#") 
-                    span.icon.svg--inline-icon
-                        <svg>
-                            <use xlink:href="#icon-customer-service"></use>
-                        </svg>
+                    span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'customer-service')
                     | Contacto
             li.nav__item 
                 a.nav__link(href="#") 
                     span.user-profile EQ
                         span.user-profile__badge
                     | Perfil
-                    span.icon-chevron-down.icon.svg--inline-icon 
-                        <svg>
-                            <use xlink:href="#icon-chevron-down"></use>
-                        </svg>
+                    span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chevron-down')
     nav.nav__menu 
         ul.navbar__nav 
             li.nav__item 
@@ -40,20 +40,12 @@ header.header
                 a.nav__link(href="#") Reportes de Mercado
             li.nav__item 
                 a.nav__link(href="#") Movimientos de Efectivo
-                    | 
-                    span.icon.svg--inline-icon 
-                        <svg>
-                            <use xlink:href="#icon-chevron-down"></use>
-                        </svg>
+                    span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chevron-down')
             li.nav__item 
                 a.nav__link(href="#") Fondos Mutuos
             li.nav__item 
                 a.nav__link(href="#") Otras Consultas
-                    | 
-                    span.icon.svg--inline-icon 
-                        <svg>
-                            <use xlink:href="#icon-chevron-down"></use>
-                        </svg>
+                    span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chevron-down')
         ul.navbar__nav-right
             li.nav__item 
                 span.nav__text Cambio USD: #[b.text-color-blue-60 3.728]
