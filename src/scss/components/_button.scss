@@ -12,9 +12,11 @@
     text-decoration: none;
     transition: background-color 0.3s ease;
 
-    &:disabled {
+    &:disabled,
+    &.disabled {
         background-color: #ccc;
         cursor: not-allowed;
+        pointer-events: all !important;
         color: #fff;
     }
 
@@ -30,12 +32,17 @@
         font-size: 1rem;
     }
 
+    &-i-only {
+        font-size: 1rem;
+        padding: 0.125rem 0.125rem;
+    }
+
     &-primary {
         background-color: $color-blue-60;
         color: $color-white;
         border: 1px solid rgba(38, 40, 45, 0.30);
 
-        &:active {
+        &:active, &.show {
             color: $color-white;
             text-decoration: none;
             background-color: $color-blue-80;
@@ -49,7 +56,8 @@
             border-color: rgba(38, 40, 45, 0.15);
         }
 
-        &:disabled {
+        &:disabled,
+        &.disabled {
             background-color: $color-blue-20;
             border-color: $color-blue-20;
         }
@@ -66,7 +74,7 @@
         color: $color-gray-70;
         border: 1px solid rgba(38, 40, 45, 0.15);
 
-        &:active {
+        &:active, &.show {
             color: $color-gray-70;
             text-decoration: none;
             background-color: $color-gray-40;
@@ -80,7 +88,8 @@
             border-color: rgba(38, 40, 45, 0.15);
         }
 
-        &:disabled {
+        &:disabled,
+        &.disabled {
             background-color: $color-blue-20;
             border-color: $color-blue-20;
             color: $color-gray-50;
@@ -98,7 +107,7 @@
         color: $color-blue-60;
         border: 1px solid transparent;
 
-        &:active {
+        &:active, &.show {
             color: $color-blue-60;
             text-decoration: none;
             background-color: $color-gray-30;
@@ -112,7 +121,8 @@
             border-color: $color-gray-20;
         }
 
-        &:disabled {
+        &:disabled,
+        &.disabled {
             background-color: transparent;
             border-color: transparent;
             color: $color-gray-50;
@@ -129,8 +139,9 @@
         background-color: $color-gray-20;
         color: $color-red-60;
         border: 1px solid rgba(38, 40, 45, 0.15);
+        border-radius: 9px;
 
-        &:active {
+        &:active, &.show {
             color: $color-white;
             text-decoration: none;
             background-color: $color-red-80;
@@ -144,7 +155,8 @@
             border-color: rgba(38, 40, 45, 0.15);
         }
 
-        &:disabled {
+        &:disabled,
+        &.disabled {
             background-color: $color-gray-20;
             border-color: $color-gray-20;
             color: $color-gray-50;
@@ -153,6 +165,80 @@
         &:focus-visible {
             outline: 0;
             border-color: $color-gray-20;
+            box-shadow: 0px 0px 0px 2px $color-blue-50;
+        }
+    }
+
+    &-buy {
+        background-color: $color-blue-20;
+        color: $color-blue-50;
+        border: 1px solid $color-blue-30;
+        border-radius: 9px;
+        font-size: 0.75rem;
+        font-weight: 400;
+        padding: 0.125rem 0.45rem;
+
+        &:active, &.show {
+            color: $color-blue-50;
+            text-decoration: none;
+            background-color: $color-blue-20;
+            border-color: $color-blue-30;
+        }
+
+        &:hover {
+            color: $color-blue-50;
+            text-decoration: none;
+            background-color: $color-blue-30;
+            border-color: $color-blue-30;
+        }
+
+        &:disabled,
+        &.disabled {
+            color: $color-gray-60;
+            background-color: $color-gray-20;
+            border-color: $color-gray-40;
+        }
+
+        &:focus-visible {
+            outline: 0;
+            border-color: #fff;
+            box-shadow: 0px 0px 0px 2px $color-blue-50;
+        }
+    }
+
+    &-sell {
+        background-color: $color-red-30;
+        color: $color-red-70;
+        border: 1px solid $color-red-40;
+        border-radius: 9px;
+        font-size: 0.75rem;
+        font-weight: 400;
+        padding: 0.125rem 0.45rem;
+
+        &:active, &.show {
+            color: $color-red-70;
+            text-decoration: none;
+            background-color: $color-red-30;
+            border-color: $color-red-40;
+        }
+
+        &:hover {
+            color: $color-red-70;
+            text-decoration: none;
+            background-color: $color-red-40;
+            border-color: $color-red-40;
+        }
+
+        &:disabled,
+        &.disabled {
+            color: $color-gray-60;
+            background-color: $color-gray-20;
+            border-color: $color-gray-40;
+        }
+
+        &:focus-visible {
+            outline: 0;
+            border-color: #fff;
             box-shadow: 0px 0px 0px 2px $color-blue-50;
         }
     }
@@ -173,4 +259,34 @@
             color: darken($color-blue-60, 10%);
         }
     }
+}
+
+.compra-green {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 18px;
+    width: 24px;
+    padding: .063rem 0.125rem;
+    border-radius: 9px;
+    border: 1px solid $color-blue-30;
+    background: $color-blue-20;
+    color: $color-blue-50;
+    font-size: 0.75rem;
+    line-height: 1;
+}
+
+.venta-red {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 18px;
+    width: 24px;
+    padding: .063rem 0.125rem;
+    border-radius: 9px;
+    border: 1px solid $color-red-40;
+    background: $color-red-30;
+    color: $color-red-70;
+    font-size: 0.75rem;
+    line-height: 1;
 }

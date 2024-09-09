@@ -1,6 +1,6 @@
 header.header 
     .header__top
-        .button.button-secondary.button-xs#toggle-btn
+        .button.button-secondary.button-xs.mrg-e-4.toggle-btn
             <span class="icon svg--inline-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
                 <rect width="16" height="16" fill="white" fill-opacity="0.01" style="mix-blend-mode:multiply"/>
@@ -24,12 +24,17 @@ header.header
                 a.nav__link(href="#") 
                     span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'customer-service')
                     | Contacto
-            li.nav__item 
-                a.nav__link(href="#") 
+            li.nav__item.dropdown 
+                a.nav__link.dropdown-toggle(href="#") 
                     span.user-profile EQ
                         span.user-profile__badge
                     | Perfil
                     span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chevron-down')
+                ul.dropdown-menu.dropdown-align--end
+                    li.dropdown-item RUT 1412669
+                    li: a.dropdown-item(href="#") Actualizar registro de cliente
+                    li: a.dropdown-item(href="#") Configuración
+                    li: a.dropdown-item(href="#") Cerrar sesión
     nav.nav__menu 
         ul.navbar__nav 
             li.nav__item 
@@ -38,14 +43,23 @@ header.header
                 a.nav__link(href="#") Operar en Bolsa
             li.nav__item 
                 a.nav__link(href="#") Reportes de Mercado
-            li.nav__item 
-                a.nav__link(href="#") Movimientos de Efectivo
-                    span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chevron-down')
+            li.nav__item.dropdown 
+                a.nav__link.dropdown-toggle(href="#") Movimientos de Efectivo
+                    span.icon.svg--inline-icon.mrg-s-1: svg: use(xlink:href=iconPath+'chevron-down')
+                ul.dropdown-menu
+                    li: a.dropdown-item(href="#") Depositar
+                    li: a.dropdown-item(href="#") Retirar
+                    li: a.dropdown-item(href="#") Historial de transacciones
             li.nav__item 
                 a.nav__link(href="#") Fondos Mutuos
-            li.nav__item 
-                a.nav__link(href="#") Otras Consultas
-                    span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chevron-down')
+            li.nav__item.dropdown  
+                a.nav__link.dropdown-toggle(href="#") Otras Consultas
+                    span.icon.svg--inline-icon.mrg-s-1: svg: use(xlink:href=iconPath+'chevron-down')
+                ul.dropdown-menu
+                    li: a.dropdown-item(href="#") Custodia de valores
+                    li: a.dropdown-item(href="#") Consulta de órdenes
+                    li: a.dropdown-item(href="#") Consulta de pólizas
+                    li: a.dropdown-item(href="#") Consulta estado de cuenta
         ul.navbar__nav-right
             li.nav__item 
                 span.nav__text Cambio USD: #[b.text-color-blue-60 3.728]

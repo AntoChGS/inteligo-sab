@@ -2,14 +2,14 @@
 //=require jquery/dist/jquery.min.js
 
 document.addEventListener('DOMContentLoaded', function () {
-    // TOGGLE SIDEBAR
-    const sidebar = document.getElementById('sidebar');
-    const toggleBtn = document.getElementById('toggle-btn');
-
-    toggleBtn.addEventListener('click', () => {
-        sidebar.classList.toggle('open');
+    document.querySelectorAll('.toggle-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            // Encuentra el primer elemento con la clase 'sidebar'
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.toggle('open');
+        });
     });
-    
+
     // ACCORDION
     const buttons = document.querySelectorAll('.accordion-toggle');
 
@@ -45,19 +45,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // SELECT DROPDOWN
-    const dropdown = document.querySelector('.dropdown');
-    const button = dropdown.querySelector('.dropdown-button');
-    const content = dropdown.querySelector('.dropdown-content');
+    const dropdowns = document.querySelectorAll('.dropdown');
 
-    button.addEventListener('click', () => {
-        const isVisible = content.classList.toggle('show-content');
-        button.classList.toggle('show', isVisible);
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        const menu = dropdown.querySelector('.dropdown-menu');
+
+        toggle.addEventListener('click', function () {
+            const isOpen = menu.classList.contains('show');
+
+            // Cerrar todos los dropdowns abiertos
+            document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('show'));
+            document.querySelectorAll('.dropdown-toggle').forEach(t => t.classList.remove('show'));
+
+            if (!isOpen) {
+                menu.classList.add('show');
+                toggle.classList.add('show');
+            }
+        });
     });
 
-    document.addEventListener('click', (e) => {
-        if (!dropdown.contains(e.target)) {
-            content.classList.remove('show-content');
-            button.classList.remove('show');
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.dropdown')) {
+            document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('show'));
+            document.querySelectorAll('.dropdown-toggle').forEach(toggle => toggle.classList.remove('show'));
         }
     });
 

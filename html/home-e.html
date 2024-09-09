@@ -21,7 +21,7 @@
         <h1 class="visually--hidden">Porvenir Colombia</h1>
         <header class="header"> 
             <div class="header__top">
-                <div class="button button-secondary button-xs" id="toggle-btn"><span class="icon svg--inline-icon">
+                <div class="button button-secondary button-xs mrg-e-4 toggle-btn"><span class="icon svg--inline-icon">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
 <rect width="16" height="16" fill="white" fill-opacity="0.01" style="mix-blend-mode:multiply"/>
 <path d="M14 3H2V4H14V3Z" />
@@ -44,10 +44,17 @@
                                 <svg>
                                     <use xlink:href="images/icons/icons.svg#icon-customer-service"></use>
                                 </svg></span>Contacto</a></li>
-                    <li class="nav__item"> <a class="nav__link" href="#"> <span class="user-profile">EQ<span class="user-profile__badge"></span></span>Perfil<span class="icon svg--inline-icon">
+                    <li class="nav__item dropdown"> <a class="nav__link dropdown-toggle" href="#"> <span class="user-profile">EQ<span class="user-profile__badge"></span></span>Perfil<span class="icon svg--inline-icon">
                                 <svg>
                                     <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
-                                </svg></span></a></li>
+                                </svg></span></a>
+                        <ul class="dropdown-menu dropdown-align--end">
+                            <li class="dropdown-item">RUT 1412669</li>
+                            <li><a class="dropdown-item" href="#">Actualizar registro de cliente</a></li>
+                            <li><a class="dropdown-item" href="#">Configuración</a></li>
+                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <nav class="nav__menu"> 
@@ -55,15 +62,28 @@
                     <li class="nav__item"> <a class="nav__link active" href="#">Inicio</a></li>
                     <li class="nav__item"> <a class="nav__link" href="#">Operar en Bolsa</a></li>
                     <li class="nav__item"> <a class="nav__link" href="#">Reportes de Mercado</a></li>
-                    <li class="nav__item"> <a class="nav__link" href="#">Movimientos de Efectivo<span class="icon svg--inline-icon">
+                    <li class="nav__item dropdown"> <a class="nav__link dropdown-toggle" href="#">Movimientos de Efectivo<span class="icon svg--inline-icon mrg-s-1">
                                 <svg>
                                     <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
-                                </svg></span></a></li>
+                                </svg></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Depositar</a></li>
+                            <li><a class="dropdown-item" href="#">Retirar</a></li>
+                            <li><a class="dropdown-item" href="#">Historial de transacciones</a></li>
+                        </ul>
+                    </li>
                     <li class="nav__item"> <a class="nav__link" href="#">Fondos Mutuos</a></li>
-                    <li class="nav__item"> <a class="nav__link" href="#">Otras Consultas<span class="icon svg--inline-icon">
+                    <li class="nav__item dropdown"> <a class="nav__link dropdown-toggle" href="#">Otras Consultas<span class="icon svg--inline-icon mrg-s-1">
                                 <svg>
                                     <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
-                                </svg></span></a></li>
+                                </svg></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Custodia de valores</a></li>
+                            <li><a class="dropdown-item" href="#">Consulta de órdenes</a></li>
+                            <li><a class="dropdown-item" href="#">Consulta de pólizas</a></li>
+                            <li><a class="dropdown-item" href="#">Consulta estado de cuenta</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <ul class="navbar__nav-right">
                     <li class="nav__item"> <span class="nav__text">Cambio USD: <b class="text-color-blue-60">3.728</b></span></li>
@@ -74,227 +94,230 @@
         <main role="main">
             <div class="layout-sticky-container"> 
                 <aside class="layout-sidebar" id="sidebar">
-                    <h2 class="typography-heading-20 mrg-b-4 text-color-blue-60">Patrimonio total</h2>
-                    <div class="patrimony__total-portfolio-box mrg-b-6">
-                        <p class="typography-caption-12 mrg-b-0">Total cartera valorizada</p>
-                        <div class="box__info">
-                            <p class="info__subheading typography-subheading-24 mrg-b-0"><span class="typography-caption-12">USD</span> <span>42,562.57</span></p>
-                            <div class="info__button-renew">
-                                <button class="button button-invisible"><span class="icon svg--inline-icon">
-                                        <svg>
-                                            <use xlink:href="images/icons/icons.svg#icon-renew"></use>
-                                        </svg></span></button>
+                    <div class="scroll-bar"></div>
+                    <div class="layout-sidebar__box">
+                        <h2 class="typography-heading-20 mrg-b-4 text-color-blue-60">Patrimonio total</h2>
+                        <div class="patrimony__total-portfolio-box mrg-b-6">
+                            <p class="typography-caption-12 mrg-b-0">Total cartera valorizada</p>
+                            <div class="box__info">
+                                <p class="info__subheading typography-subheading-24 mrg-b-0"><span class="typography-caption-12">USD</span> <span>42,562.57</span></p>
+                                <div class="info__button-renew">
+                                    <button class="button button-invisible"><span class="icon svg--inline-icon">
+                                            <svg>
+                                                <use xlink:href="images/icons/icons.svg#icon-renew"></use>
+                                            </svg></span></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="navigation-tabs navigation-tabs-pills" id="tabs1">
-                        <ul class="tab-buttons">
-                            <li class="navigation-tab-item">
-                                <button class="tab-button navigation-link active" data-tab="tabType1">Por tipo de activo</button>
-                            </li>
-                            <li class="navigation-tab-item">
-                                <button class="tab-button navigation-link" data-tab="tabType2">Por moneda</button>
-                            </li>
-                        </ul>
-                        <div class="tab-content">
-                            <div class="tab-pane active" id="tabType1">
-                                <div class="patrimony__heading-title-box mrg-b-3">
-                                    <div class="box__info">
-                                        <div class="info__heading">
-                                            <h2 class="heading__title typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="heading__icon icon svg--inline-icon">
+                        <div class="navigation-tabs navigation-tabs-pills" id="tabs1">
+                            <ul class="tab-buttons">
+                                <li class="navigation-tab-item">
+                                    <button class="tab-button navigation-link active" data-tab="tabType1">Por tipo de activo</button>
+                                </li>
+                                <li class="navigation-tab-item">
+                                    <button class="tab-button navigation-link" data-tab="tabType2">Por moneda</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tabType1">
+                                    <div class="patrimony__heading-title-box mrg-b-3">
+                                        <div class="box__info">
+                                            <div class="info__heading">
+                                                <h2 class="heading__title typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="heading__icon icon svg--inline-icon">
+                                                        <svg>
+                                                            <use xlink:href="images/icons/icons.svg#icon-portfolio"></use>
+                                                        </svg></span>Por Tipo de Activo</h2>
+                                            </div>
+                                            <div class="info__information tooltip-container tooltip-bottom-right"><span class="tooltip-trigger icon svg--inline-icon">
                                                     <svg>
-                                                        <use xlink:href="images/icons/icons.svg#icon-portfolio"></use>
-                                                    </svg></span>Por Tipo de Activo</h2>
-                                        </div>
-                                        <div class="info__information tooltip-container tooltip-bottom-right"><span class="tooltip-trigger icon svg--inline-icon">
-                                                <svg>
-                                                    <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
-                                                </svg></span>
-                                            <div class="tooltip-content">Este es el texto del tooltip</div>
+                                                        <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
+                                                    </svg></span>
+                                                <div class="tooltip-content">Este es el texto del tooltip</div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <table class="table mrg-b-4">
-                                    <thead>
-                                        <tr> 
-                                            <th>Descripción</th>
-                                            <th class="text-align-right">Dólares (USD)</th>
-                                            <th class="text-align-right">Soles (PEN)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr> 
-                                            <td class="text-ws-nowrap"> <a class="external-tab-button active" href="#" data-target="tab1" data-tabs-id="tabs2">Renta Variable</a></td>
-                                            <td class="text-align-right">14,320.67</td>
-                                            <td class="text-align-right">8,930.23</td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="text-ws-nowrap"> <a class="external-tab-button" href="#" data-target="tab2" data-tabs-id="tabs2">Renta Fija</a></td>
-                                            <td class="text-align-right">5,673.00</td>
-                                            <td class="text-align-right">0.00</td>
-                                        </tr>
-                                        <tr> 
-                                            <td class="text-ws-nowrap"> <a class="external-tab-button" href="#" data-target="tab3" data-tabs-id="tabs2">Op. de Reporte</a> 
-                                                <div class="info__information tooltip-container tooltip-bottom-left"><span class="tooltip-trigger icon svg--inline-icon">
+                                    <table class="table mrg-b-4">
+                                        <thead>
+                                            <tr> 
+                                                <th>Descripción</th>
+                                                <th class="text-align-right">Dólares (USD)</th>
+                                                <th class="text-align-right">Soles (PEN)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr> 
+                                                <td class="text-ws-nowrap"> <a class="external-tab-button active" href="#" data-target="tab1" data-tabs-id="tabs2">Renta Variable</a></td>
+                                                <td class="text-align-right">14,320.67</td>
+                                                <td class="text-align-right">8,930.23</td>
+                                            </tr>
+                                            <tr> 
+                                                <td class="text-ws-nowrap"> <a class="external-tab-button" href="#" data-target="tab2" data-tabs-id="tabs2">Renta Fija</a></td>
+                                                <td class="text-align-right">5,673.00</td>
+                                                <td class="text-align-right">0.00</td>
+                                            </tr>
+                                            <tr> 
+                                                <td class="text-ws-nowrap"> <a class="external-tab-button" href="#" data-target="tab3" data-tabs-id="tabs2">Op. de Reporte</a> 
+                                                    <div class="info__information tooltip-container tooltip-bottom-left"><span class="tooltip-trigger icon svg--inline-icon">
+                                                            <svg>
+                                                                <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
+                                                            </svg></span>
+                                                        <div class="tooltip-content">Totaliza el monto invertido como Reportante.</div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-align-right">5,673.00</td>
+                                                <td class="text-align-right">0.00</td>
+                                            </tr>
+                                            <tr> 
+                                                <td class="text-ws-nowrap">Efectivo</td>
+                                                <td class="text-align-right">10,950.00</td>
+                                                <td class="text-align-right">0.00</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot> 
+                                            <tr>
+                                                <td class="text-color-blue-60">Total</td>
+                                                <td class="text-align-right text-color-blue-60">30,943.67</td>
+                                                <td class="text-align-right text-color-blue-60">8,930.23</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <div class="patrimony__heading-title-box mrg-b-3">
+                                        <div class="box__info">
+                                            <div class="info__heading">
+                                                <h2 class="heading__title typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="heading__icon icon svg--inline-icon">
                                                         <svg>
-                                                            <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
-                                                        </svg></span>
-                                                    <div class="tooltip-content">Totaliza el monto invertido como Reportante.</div>
+                                                            <use xlink:href="images/icons/icons.svg#icon-chart-bar-target"></use>
+                                                        </svg></span>Participación %</h2>
+                                            </div>
+                                            <div class="info__information tooltip-container tooltip-bottom-right"><span class="tooltip-trigger icon svg--inline-icon">
+                                                    <svg>
+                                                        <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
+                                                    </svg></span>
+                                                <div class="tooltip-content">Este es el texto del tooltip</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="table mrg-b-4">
+                                        <tr>
+                                            <td class="text-ws-nowrap">Renta Variable</td>
+                                            <td> 
+                                                <div class="bar" id="bar1">
+                                                    <div class="fill"></div>
                                                 </div>
                                             </td>
-                                            <td class="text-align-right">5,673.00</td>
-                                            <td class="text-align-right">0.00</td>
+                                            <td> <span class="percentage" id="percentage1">0%</span></td>
                                         </tr>
-                                        <tr> 
+                                        <tr>
+                                            <td class="text-ws-nowrap">Renta Fija</td>
+                                            <td> 
+                                                <div class="bar" id="bar2">
+                                                    <div class="fill"></div>
+                                                </div>
+                                            </td>
+                                            <td> <span class="percentage" id="percentage2">0%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-ws-nowrap">Op. de Reporte</td>
+                                            <td> 
+                                                <div class="bar" id="bar3">
+                                                    <div class="fill"></div>
+                                                </div>
+                                            </td>
+                                            <td> <span class="percentage" id="percentage3">0%</span></td>
+                                        </tr>
+                                        <tr>
                                             <td class="text-ws-nowrap">Efectivo</td>
-                                            <td class="text-align-right">10,950.00</td>
-                                            <td class="text-align-right">0.00</td>
+                                            <td> 
+                                                <div class="bar" id="bar5">
+                                                    <div class="fill"></div>
+                                                </div>
+                                            </td>
+                                            <td> 
+                                                <div class="percentage" id="percentage5">0%</div>
+                                            </td>
                                         </tr>
-                                    </tbody>
-                                    <tfoot> 
+                                    </table>
+                                </div>
+                                <div class="tab-pane" id="tabType2">
+                                    <div class="patrimony__heading-title-box mrg-b-3">
+                                        <div class="box__info">
+                                            <div class="info__heading">
+                                                <h2 class="heading__title typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="heading__icon icon svg--inline-icon">
+                                                        <svg>
+                                                            <use xlink:href="images/icons/icons.svg#icon-portfolio"></use>
+                                                        </svg></span>Por moneda</h2>
+                                            </div>
+                                            <div class="info__information tooltip-container tooltip-bottom-right"><span class="tooltip-trigger icon svg--inline-icon">
+                                                    <svg>
+                                                        <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
+                                                    </svg></span>
+                                                <div class="tooltip-content">Este es el texto del tooltip</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <table class="table mrg-b-4">
+                                        <thead>
+                                            <tr> 
+                                                <th>Descripción</th>
+                                                <th class="text-align-right">Dólares (USD)</th>
+                                                <th class="text-align-right">Soles (PEN)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr> 
+                                                <td class="text-ws-nowrap">Dólares USD</td>
+                                                <td class="text-align-right">14,320.67</td>
+                                                <td class="text-align-right">8,930.23</td>
+                                            </tr>
+                                            <tr> 
+                                                <td class="text-ws-nowrap">Soles PEN</td>
+                                                <td class="text-align-right">5,673.00</td>
+                                                <td class="text-align-right">0.00</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot> 
+                                            <tr>
+                                                <td class="text-color-blue-60">Total</td>
+                                                <td class="text-align-right text-color-blue-60">19,993.67</td>
+                                                <td class="text-align-right text-color-blue-60">8,930.23</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                    <div class="patrimony__heading-title-box mrg-b-3">
+                                        <div class="box__info">
+                                            <div class="info__heading">
+                                                <h2 class="heading__title typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="heading__icon icon svg--inline-icon">
+                                                        <svg>
+                                                            <use xlink:href="images/icons/icons.svg#icon-chart-bar-target"></use>
+                                                        </svg></span>Participación %</h2>
+                                            </div>
+                                            <div class="info__information"><span class="icon svg--inline-icon">
+                                                    <svg>
+                                                        <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
+                                                    </svg></span></div>
+                                        </div>
+                                    </div>
+                                    <table class="table table-mb-1rem">
                                         <tr>
-                                            <td class="text-color-blue-60">Total</td>
-                                            <td class="text-align-right text-color-blue-60">30,943.67</td>
-                                            <td class="text-align-right text-color-blue-60">8,930.23</td>
-                                        </tr>
-                                    </tfoot>
-                                </table>
-                                <div class="patrimony__heading-title-box mrg-b-3">
-                                    <div class="box__info">
-                                        <div class="info__heading">
-                                            <h2 class="heading__title typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="heading__icon icon svg--inline-icon">
-                                                    <svg>
-                                                        <use xlink:href="images/icons/icons.svg#icon-chart-bar-target"></use>
-                                                    </svg></span>Participación %</h2>
-                                        </div>
-                                        <div class="info__information tooltip-container tooltip-bottom-right"><span class="tooltip-trigger icon svg--inline-icon">
-                                                <svg>
-                                                    <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
-                                                </svg></span>
-                                            <div class="tooltip-content">Este es el texto del tooltip</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <table class="table mrg-b-4">
-                                    <tr>
-                                        <td class="text-ws-nowrap">Renta Variable</td>
-                                        <td> 
-                                            <div class="bar" id="bar1">
-                                                <div class="fill"></div>
-                                            </div>
-                                        </td>
-                                        <td> <span class="percentage" id="percentage1">0%</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-ws-nowrap">Renta Fija</td>
-                                        <td> 
-                                            <div class="bar" id="bar2">
-                                                <div class="fill"></div>
-                                            </div>
-                                        </td>
-                                        <td> <span class="percentage" id="percentage2">0%</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-ws-nowrap">Op. de Reporte</td>
-                                        <td> 
-                                            <div class="bar" id="bar3">
-                                                <div class="fill"></div>
-                                            </div>
-                                        </td>
-                                        <td> <span class="percentage" id="percentage3">0%</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-ws-nowrap">Efectivo</td>
-                                        <td> 
-                                            <div class="bar" id="bar5">
-                                                <div class="fill"></div>
-                                            </div>
-                                        </td>
-                                        <td> 
-                                            <div class="percentage" id="percentage5">0%</div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="tab-pane" id="tabType2">
-                                <div class="patrimony__heading-title-box mrg-b-3">
-                                    <div class="box__info">
-                                        <div class="info__heading">
-                                            <h2 class="heading__title typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="heading__icon icon svg--inline-icon">
-                                                    <svg>
-                                                        <use xlink:href="images/icons/icons.svg#icon-portfolio"></use>
-                                                    </svg></span>Por moneda</h2>
-                                        </div>
-                                        <div class="info__information tooltip-container tooltip-bottom-left"><span class="tooltip-trigger icon svg--inline-icon">
-                                                <svg>
-                                                    <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
-                                                </svg></span>
-                                            <div class="tooltip-content">Este es el texto del tooltip</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <table class="table mrg-b-4">
-                                    <thead>
-                                        <tr> 
-                                            <th>Descripción</th>
-                                            <th class="text-align-right">Dólares (USD)</th>
-                                            <th class="text-align-right">Soles (PEN)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr> 
                                             <td class="text-ws-nowrap">Dólares USD</td>
-                                            <td class="text-align-right">14,320.67</td>
-                                            <td class="text-align-right">8,930.23</td>
+                                            <td> 
+                                                <div class="bar" id="bar1">
+                                                    <div class="fill"></div>
+                                                </div>
+                                            </td>
+                                            <td> <span class="percentage" id="percentage1">0%</span></td>
                                         </tr>
-                                        <tr> 
-                                            <td class="text-ws-nowrap">Soles PEN</td>
-                                            <td class="text-align-right">5,673.00</td>
-                                            <td class="text-align-right">0.00</td>
-                                        </tr>
-                                    </tbody>
-                                    <tfoot> 
                                         <tr>
-                                            <td class="text-color-blue-60">Total</td>
-                                            <td class="text-align-right text-color-blue-60">19,993.67</td>
-                                            <td class="text-align-right text-color-blue-60">8,930.23</td>
+                                            <td class="text-ws-nowrap">Soles PEN</td>
+                                            <td> 
+                                                <div class="bar" id="bar2">
+                                                    <div class="fill"></div>
+                                                </div>
+                                            </td>
+                                            <td> <span class="percentage" id="percentage2">0%</span></td>
                                         </tr>
-                                    </tfoot>
-                                </table>
-                                <div class="patrimony__heading-title-box mrg-b-3">
-                                    <div class="box__info">
-                                        <div class="info__heading">
-                                            <h2 class="heading__title typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="heading__icon icon svg--inline-icon">
-                                                    <svg>
-                                                        <use xlink:href="images/icons/icons.svg#icon-chart-bar-target"></use>
-                                                    </svg></span>Participación %</h2>
-                                        </div>
-                                        <div class="info__information"><span class="icon svg--inline-icon">
-                                                <svg>
-                                                    <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
-                                                </svg></span></div>
-                                    </div>
+                                    </table>
                                 </div>
-                                <table class="table table-mb-1rem">
-                                    <tr>
-                                        <td class="text-ws-nowrap">Dólares USD</td>
-                                        <td> 
-                                            <div class="bar" id="bar1">
-                                                <div class="fill"></div>
-                                            </div>
-                                        </td>
-                                        <td> <span class="percentage" id="percentage1">0%</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-ws-nowrap">Soles PEN</td>
-                                        <td> 
-                                            <div class="bar" id="bar2">
-                                                <div class="fill"></div>
-                                            </div>
-                                        </td>
-                                        <td> <span class="percentage" id="percentage2">0%</span></td>
-                                    </tr>
-                                </table>
                             </div>
                         </div>
                     </div>

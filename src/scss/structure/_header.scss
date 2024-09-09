@@ -1,3 +1,12 @@
+#toggle-btn {
+    display: none;
+
+    @media (max-width: 1056px) {
+        display: inline-flex;
+        margin-right: 16px;
+    }
+}
+
 .header {
     position: sticky;
     top: 0;
@@ -49,6 +58,8 @@
                 }
 
                 .nav__link {
+                    display: inline-flex;
+                    align-items: center;
                     font-size: 0.75rem;
 
                     &:active {
@@ -110,40 +121,60 @@
         }
 
         .nav__link {
+            position: relative;
             display: flex;
             align-items: center;
             font-size: 16px;
+            line-height: 1.15;
             padding: 0.75rem 0.5rem;
             color: $color-gray-70;
             text-decoration: none;
             background-color: transparent;
-            border: 2px solid transparent;
+            height: 100%;
 
             &:active {
-                background-color: $color-gray-30;
-                border-color: $color-gray-30;
+                color: $color-gray-80;
             }
 
             &:hover {
-                background-color: $color-gray-20;
-                border-color: $color-gray-20;
+                color: $color-gray-80;
+
+                &::after {
+                    height: 2px;
+                    background-color: $color-gray-80;
+                }
             }
 
             &:disabled {
                 background-color: transparent;
-                border-color: transparent;
                 color: $color-gray-50;
             }
 
             &:focus-visible {
                 outline: 0;
-                border-color: transparent;
+                color: $color-gray-80;
                 box-shadow: 0px 0px 0px 2px $color-blue-50;
             }
 
-            &.active {
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -1px;
+                height: 0;
+                background-color: $color-gray-80;
+                border-radius: 0px;
+                left: 0;
+                right: 0;
+                transition: height .3s;
+            }
+
+            &.active, &.show {
                 color: $color-blue-60;
-                border-bottom-color: $color-blue-60;
+
+                &::after {
+                    height: 2px;
+                    background-color: $color-blue-60;
+                }
             }
         }
     }
