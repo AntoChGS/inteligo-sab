@@ -136,14 +136,14 @@
     }
 
     &-x {
-        margin: auto;
+        margin: auto !important;
 
         &-left {
-            margin-left: auto;
+            margin-left: auto !important;
         }
 
         &-right {
-            margin-right: auto;
+            margin-right: auto !important;
         }
     }
 }

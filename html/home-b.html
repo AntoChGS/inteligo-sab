@@ -21,38 +21,34 @@
         <h1 class="visually--hidden">Porvenir Colombia</h1>
         <header class="header"> 
             <div class="header__top">
-                <div class="button button-secondary button-xs mrg-e-4 toggle-btn"><span class="icon svg--inline-icon">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-<rect width="16" height="16" fill="white" fill-opacity="0.01" style="mix-blend-mode:multiply"/>
-<path d="M14 3H2V4H14V3Z" />
-<path d="M14 12H2V13H14V12Z" />
-<path d="M14 6H2V7H14V6Z" />
-<path d="M14 9H2V10H14V9Z" />
+                <div class="button button-secondary burger-btn mrg-e-4 toggle-btn"><svg class="icon svg--inline-icon burger-ham" viewBox="0 0 100 100" width="80">
+<path class="line top" d="m 30,33 h 40 c 0,0 8.5,-0.68551 8.5,10.375 0,8.292653 -6.122707,9.002293 -8.5,6.625 l -11.071429,-11.071429"></path>
+<path class="line middle" d="m 70,50 h -40"></path>
+<path class="line bottom" d="m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429"></path>
 </svg>
-</span>
                 </div>
                 <div class="brand"> <a class="brand__link" href="/"> 
                         <picture> 
                             <source media="(min-width: 992px)" srcset="images/logo/logo-inteligo-sab.png"><img class="image" src="images/logo/logo-inteligo-sab.png" alt="Logo Inteligo SAB" srcset="images/logo/logo-inteligo-sab.png">
                         </picture></a></div>
                 <ul class="top__nav"> 
-                    <li class="nav__item"> <a class="nav__link" href="#"> <span class="icon svg--inline-icon">
+                    <li class="nav__item"> <a class="nav__link" href="#"> <span class="link__icon icon svg--inline-icon">
                                 <svg>
                                     <use xlink:href="images/icons/icons.svg#icon-help"></use>
                                 </svg></span>Preguntas frecuentes</a></li>
-                    <li class="nav__item"> <a class="nav__link" href="#"> <span class="icon svg--inline-icon">
+                    <li class="nav__item"> <a class="nav__link" href="#"> <span class="link__icon icon svg--inline-icon">
                                 <svg>
                                     <use xlink:href="images/icons/icons.svg#icon-customer-service"></use>
                                 </svg></span>Contacto</a></li>
-                    <li class="nav__item dropdown"> <a class="nav__link dropdown-toggle" href="#"> <span class="user-profile">EQ<span class="user-profile__badge"></span></span>Perfil<span class="icon svg--inline-icon">
+                    <li class="nav__item dropdown"> <a class="nav__link dropdown-toggle" href="#"> <span class="user-profile">EQ<span class="user-profile__badge"></span></span>Perfil<span class="toggle-icon-dropdown mrg-s-1 icon svg--inline-icon">
                                 <svg>
                                     <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
                                 </svg></span></a>
                         <ul class="dropdown-menu dropdown-align--end">
                             <li class="dropdown-item">RUT 1412669</li>
-                            <li><a class="dropdown-item" href="#">Actualizar registro de cliente</a></li>
-                            <li><a class="dropdown-item" href="#">Configuración</a></li>
-                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Actualizar registro de cliente</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Configuración</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Cerrar sesión</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -62,26 +58,26 @@
                     <li class="nav__item"> <a class="nav__link active" href="#">Inicio</a></li>
                     <li class="nav__item"> <a class="nav__link" href="#">Operar en Bolsa</a></li>
                     <li class="nav__item"> <a class="nav__link" href="#">Reportes de Mercado</a></li>
-                    <li class="nav__item dropdown"> <a class="nav__link dropdown-toggle" href="#">Movimientos de Efectivo<span class="icon svg--inline-icon mrg-s-1">
+                    <li class="nav__item dropdown"> <a class="nav__link dropdown-toggle" href="#">Movimientos de Efectivo<span class="toggle-icon-dropdown icon svg--inline-icon mrg-s-1">
                                 <svg>
                                     <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
                                 </svg></span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Depositar</a></li>
-                            <li><a class="dropdown-item" href="#">Retirar</a></li>
-                            <li><a class="dropdown-item" href="#">Historial de transacciones</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Depositar</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Retirar</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Historial de transacciones</a></li>
                         </ul>
                     </li>
                     <li class="nav__item"> <a class="nav__link" href="#">Fondos Mutuos</a></li>
-                    <li class="nav__item dropdown"> <a class="nav__link dropdown-toggle" href="#">Otras Consultas<span class="icon svg--inline-icon mrg-s-1">
+                    <li class="nav__item dropdown"> <a class="nav__link dropdown-toggle" href="#">Otras Consultas<span class="toggle-icon-dropdown icon svg--inline-icon mrg-s-1">
                                 <svg>
                                     <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
                                 </svg></span></a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Custodia de valores</a></li>
-                            <li><a class="dropdown-item" href="#">Consulta de órdenes</a></li>
-                            <li><a class="dropdown-item" href="#">Consulta de pólizas</a></li>
-                            <li><a class="dropdown-item" href="#">Consulta estado de cuenta</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Custodia de valores</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Consulta de órdenes</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Consulta de pólizas</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Consulta estado de cuenta</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -93,20 +89,19 @@
         </header>
         <main role="main">
             <div class="layout-sticky-container"> 
-                <aside class="layout-sidebar" id="sidebar">
+                <aside class="layout-sidebar sidebar">
+                    <div class="button button-primary button-xs sidebar-close toggle-btn">&times;</div>
                     <div class="scroll-bar"></div>
                     <div class="layout-sidebar__box">
                         <h2 class="typography-heading-20 mrg-b-4 text-color-blue-60">Patrimonio total</h2>
                         <div class="patrimony__total-portfolio-box mrg-b-6">
-                            <p class="typography-caption-12 mrg-b-0">Total cartera valorizada</p>
-                            <div class="box__info">
-                                <p class="info__subheading typography-subheading-24 mrg-b-0"><span class="typography-caption-12">USD</span> <span>42,562.57</span></p>
-                                <div class="info__button-renew">
-                                    <button class="button button-invisible"><span class="icon svg--inline-icon">
-                                            <svg>
-                                                <use xlink:href="images/icons/icons.svg#icon-renew"></use>
-                                            </svg></span></button>
-                                </div>
+                            <p class="typography-caption-12 mrg-b-1">Total cartera valorizada</p>
+                            <div class="box-main-s-1 box-main-center">
+                                <p class="typography-subheading-24 mrg-b-0"><span class="typography-caption-12">USD</span> <span>42,562.57</span></p>
+                                <button class="button button-invisible button-i-only mrg-s-1"><span class="icon svg--inline-icon">
+                                        <svg>
+                                            <use xlink:href="images/icons/icons.svg#icon-renew"></use>
+                                        </svg></span></button>
                             </div>
                         </div>
                         <div class="navigation-tabs navigation-tabs-pills" id="tabs1">
@@ -120,15 +115,15 @@
                             </ul>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="tabType1">
-                                    <div class="patrimony__heading-title-box mrg-b-3">
-                                        <div class="box__info">
-                                            <div class="info__heading">
-                                                <h2 class="heading__title typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="heading__icon icon svg--inline-icon">
+                                    <div class="dpy-block mrg-b-3">
+                                        <div class="box-main-s-1 box-main-center">
+                                            <div class="box__info">
+                                                <h2 class="box-main-s-1 box-main-center typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="icon svg--inline-icon mrg-e-2">
                                                         <svg>
                                                             <use xlink:href="images/icons/icons.svg#icon-portfolio"></use>
                                                         </svg></span>Por Tipo de Activo</h2>
                                             </div>
-                                            <div class="info__information tooltip-container tooltip-bottom-right"><span class="tooltip-trigger icon svg--inline-icon">
+                                            <div class="tooltip-container tooltip-bottom-right"><span class="tooltip-trigger icon svg--inline-icon">
                                                     <svg>
                                                         <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
                                                     </svg></span>
@@ -176,15 +171,15 @@
                                             </tr>
                                         </tfoot>
                                     </table>
-                                    <div class="patrimony__heading-title-box mrg-b-3">
-                                        <div class="box__info">
-                                            <div class="info__heading">
-                                                <h2 class="heading__title typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="heading__icon icon svg--inline-icon">
+                                    <div class="dpy-block mrg-b-3">
+                                        <div class="box-main-s-1 box-main-center">
+                                            <div class="box__info">
+                                                <h2 class="box-main-s-1 box-main-center typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="icon svg--inline-icon mrg-e-2">
                                                         <svg>
                                                             <use xlink:href="images/icons/icons.svg#icon-chart-bar-target"></use>
                                                         </svg></span>Participación %</h2>
                                             </div>
-                                            <div class="info__information tooltip-container tooltip-bottom-right"><span class="tooltip-trigger icon svg--inline-icon">
+                                            <div class="tooltip-container tooltip-bottom-right"><span class="tooltip-trigger icon svg--inline-icon">
                                                     <svg>
                                                         <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
                                                     </svg></span>
@@ -212,6 +207,24 @@
                                             <td> <span class="percentage" id="percentage2">0%</span></td>
                                         </tr>
                                         <tr>
+                                            <td class="text-ws-nowrap">Op. de Reporte</td>
+                                            <td> 
+                                                <div class="bar" id="bar3">
+                                                    <div class="fill"></div>
+                                                </div>
+                                            </td>
+                                            <td> <span class="percentage" id="percentage3">0%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-ws-nowrap">Fondos Mutuos</td>
+                                            <td> 
+                                                <div class="bar" id="bar4">
+                                                    <div class="fill"></div>
+                                                </div>
+                                            </td>
+                                            <td> <span class="percentage" id="percentage4">0%</span></td>
+                                        </tr>
+                                        <tr>
                                             <td class="text-ws-nowrap">Efectivo</td>
                                             <td> 
                                                 <div class="bar" id="bar5">
@@ -225,15 +238,15 @@
                                     </table>
                                 </div>
                                 <div class="tab-pane" id="tabType2">
-                                    <div class="patrimony__heading-title-box mrg-b-3">
-                                        <div class="box__info">
-                                            <div class="info__heading">
-                                                <h2 class="heading__title typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="heading__icon icon svg--inline-icon">
+                                    <div class="dpy-block mrg-b-3">
+                                        <div class="box-main-s-1 box-main-center">
+                                            <div class="box__info">
+                                                <h2 class="box-main-s-1 box-main-center typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="icon svg--inline-icon mrg-e-2">
                                                         <svg>
                                                             <use xlink:href="images/icons/icons.svg#icon-portfolio"></use>
                                                         </svg></span>Por moneda</h2>
                                             </div>
-                                            <div class="info__information tooltip-container tooltip-bottom-right"><span class="tooltip-trigger icon svg--inline-icon">
+                                            <div class="tooltip-container tooltip-bottom-right"><span class="tooltip-trigger icon svg--inline-icon">
                                                     <svg>
                                                         <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
                                                     </svg></span>
@@ -269,18 +282,20 @@
                                             </tr>
                                         </tfoot>
                                     </table>
-                                    <div class="patrimony__heading-title-box mrg-b-3">
-                                        <div class="box__info">
-                                            <div class="info__heading">
-                                                <h2 class="heading__title typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="heading__icon icon svg--inline-icon">
+                                    <div class="dpy-block mrg-b-3">
+                                        <div class="box-main-s-1 box-main-center">
+                                            <div class="box__info">
+                                                <h2 class="box-main-s-1 box-main-center typography-heading-16 mrg-b-0 text-color-gray-70"> <span class="icon svg--inline-icon mrg-e-2">
                                                         <svg>
                                                             <use xlink:href="images/icons/icons.svg#icon-chart-bar-target"></use>
                                                         </svg></span>Participación %</h2>
                                             </div>
-                                            <div class="info__information"><span class="icon svg--inline-icon">
+                                            <div class="tooltip-container tooltip-bottom-right"><span class="tooltip-trigger icon svg--inline-icon">
                                                     <svg>
                                                         <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
-                                                    </svg></span></div>
+                                                    </svg></span>
+                                                <div class="tooltip-content">Este es el texto del tooltip</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <table class="table table-mb-1rem">
@@ -308,193 +323,204 @@
                         </div>
                     </div>
                 </aside>
-                <div class="layout-content">
-                    <div class="patrimony__main1">
-                        <div class="main1__row">
-                            <div class="main1__col-6">
-                                <div class="patrimony__total-portfolio-box">
-                                    <p class="typography-caption-12">Efectivo disponible</p>
-                                    <div class="box__info">
+                <div class="layout-main-content">
+                    <div class="layout-content">
+                        <div class="box-main-s-2">
+                            <div class="box-main-s-1 box-main-end">
+                                <div class="box__info">
+                                    <p class="typography-caption-12 mrg-b-1">Efectivo disponible</p>
+                                    <div class="box-main-s-1 box-main-center">
                                         <p class="info__subheading typography-subheading-24 mrg-b-0"><span class="typography-caption-12">USD</span> <span>10,950.00</span> <span class="typography-caption-12">+ PEN</span> <span>0.00</span></p>
+                                        <button class="button button-invisible button-i-only mrg-s-1"><span class="icon svg--inline-icon">
+                                                <svg>
+                                                    <use xlink:href="images/icons/icons.svg#icon-renew"></use>
+                                                </svg></span></button>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="main1__col-6">
-                                <div class="main1__buttons"><a class="button button-primary button-xs" href="#">Operar en bolsa</a><a class="button button-secondary button-xs" href="#">Depositar</a></div>
+                                </div><a class="button button-primary button-xs" href="#">Operar en bolsa</a><a class="button button-secondary button-xs mrg-s-2" href="#">Depositar</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="patrimony__main2">
-                        <div class="main2__row">
-                            <div class="main2__col-6">
-                                <h2 class="typography-heading-20 mrg-b-0 text-color-blue-60">Posición desagregada</h2>
-                            </div>
-                            <div class="main2__col-6">
-                                <div class="main2__buttons">
-                                    <div class="dropdown">
-                                        <button class="dropdown-button">
-                                            Estado de cuenta  <span class="icon svg--inline-icon">
-                                                <svg>
-                                                    <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
-                                                </svg></span></button>
-                                        <div class="dropdown-content dropdown-content-right"><a href="#">Julio 2024</a><a href="#">Junio 2024</a><a href="#">Mayo 2024</a><a class="link-view-all" href="#">Ver todos tus EECC<span class="icon svg--inline-icon">
+                        <div class="box-main-s-3">
+                            <div class="box-main-s-1 box-main-center mrg-b-2">
+                                <div class="box__info">
+                                    <h2 class="typography-heading-20 mrg-b-0 text-color-blue-60">Posición desagregada</h2>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="button button-secondary button-xs dropdown-toggle">
+                                        Estado de cuenta <span class="toggle-icon-dropdown icon svg--inline-icon mrg-s-1">
+                                            <svg>
+                                                <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                            </svg></span></button>
+                                    <ul class="dropdown-menu dropdown-align--end">
+                                        <li><a class="dropdown-item" href="#">Julio 2024</a></li>
+                                        <li><a class="dropdown-item" href="#">Junio 2024</a></li>
+                                        <li><a class="dropdown-item" href="#">Mayo 2024</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item dropdown-item--icon text-color-blue-60" href="#">Ver todos tus EECC<span class="icon svg--inline-icon mrg-s-1">
                                                     <svg>
                                                         <use xlink:href="images/icons/icons.svg#icon-arrow-up-right"></use>
-                                                    </svg></span></a></div>
-                                    </div>
+                                                    </svg></span></a></li>
+                                    </ul>
                                 </div>
                             </div>
-                        </div>
-                        <div class="navigation-tabs navigation-tabs-underline" id="tabs2">
-                            <ul class="tab-buttons">
-                                <li class="navigation-tab-item">
-                                    <button class="tab-button navigation-link active" data-tab="tab1">Renta Variable</button>
-                                </li>
-                                <li class="navigation-tab-item">
-                                    <button class="tab-button navigation-link" data-tab="tab2">Renta Fija</button>
-                                </li>
-                            </ul>
-                            <div class="tab-content">
-                                <div class="tab-pane active" id="tab1">
-                                    <div class="accordion">
-                                        <div class="accordion-item">
-                                            <h3 class="accordion-header"> 
-                                                <!--button.accordion-toggle.collapsed(data-toggle="collapse" data-target="#collapseOne") Acciones y ETFs en el mercado extranjero-->
-                                                <button class="accordion-toggle" data-toggle="collapse" data-target="#collapseOne">Acciones y ETFs en el mercado extranjero</button>
-                                            </h3>
-                                            <p class="valued-amount">Monto valorizado dólares americanos <span class="text-color-blue-60">USD <span class="amount__text">12,753.11</span></span></p>
-                                            <div class="accordion-body collapse show" id="collapseOne">
-                                                <div class="alert alert-light alert-icon-center"> <span class="icon svg--inline-icon mrg-e-1">
-                                                        <svg>
-                                                            <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
-                                                        </svg></span>
-                                                    <div>
-                                                        Recuerda que también puedes invertir en el Mercado Extranjero. <a class="button button-invisible button-xs" href="#">Operar en bolsa </a></div>
+                            <div class="navigation-tabs navigation-tabs-underline" id="tabs2">
+                                <ul class="tab-buttons">
+                                    <li class="navigation-tab-item">
+                                        <button class="tab-button navigation-link active" data-tab="tab1">Renta Variable</button>
+                                    </li>
+                                    <li class="navigation-tab-item">
+                                        <button class="tab-button navigation-link" data-tab="tab2">Renta Fija</button>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab1">
+                                        <div class="accordion">
+                                            <div class="accordion-item">
+                                                <div class="box-main-s-1 box-main-center">
+                                                    <h3 class="box__info accordion-header"> 
+                                                        <!--button.accordion-toggle.collapsed(data-toggle="collapse" data-target="#collapseOne") Acciones y ETFs en el mercado extranjero-->
+                                                        <button class="accordion-toggle" data-toggle="collapse" data-target="#collapseOne">Acciones y ETFs en el mercado extranjero</button>
+                                                    </h3>
+                                                    <p class="typography-label-12 mrg-b-0">Monto valorizado USD <span class="typography-label-16 text-color-blue-60">12,753.11</span></p>
+                                                </div>
+                                                <div class="accordion-body collapse show" id="collapseOne">
+                                                    <div class="alert alert-light alert-icon-center"> <span class="icon svg--inline-icon mrg-e-1">
+                                                            <svg>
+                                                                <use xlink:href="images/icons/icons.svg#icon-information-filled"></use>
+                                                            </svg></span>
+                                                        <div>
+                                                            Recuerda que también puedes invertir en el Mercado Extranjero. <a class="button button-invisible button-xs" href="#">Operar en bolsa </a></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <div class="box-main-s-1 box-main-center">
+                                                    <h3 class="box__info accordion-header"> 
+                                                        <!--button.accordion-toggle.collapsed(data-toggle="collapse" data-target="#collapseTwo") Acciones y ETFs en la Bolsa de Lima -->
+                                                        <button class="accordion-toggle" data-toggle="collapse" data-target="#collapseTwo">Acciones y ETFs en la Bolsa de Lima</button>
+                                                    </h3>
+                                                    <p class="typography-label-12 mrg-b-0">Monto valorizado USD <span class="typography-label-16 text-color-blue-60">3,963.01</span></p>
+                                                </div>
+                                                <div class="accordion-body collapse show" id="collapseTwo">
+                                                    <table class="table table-border-round"> 
+                                                        <thead>
+                                                            <tr> 
+                                                                <th>Símbolo</th>
+                                                                <th>Descripción</th>
+                                                                <th>Mercado</th>
+                                                                <th>Moneda</th>
+                                                                <th class="text-align-right">Cantidad <br> Disponible</th>
+                                                                <th class="text-align-right">Precio de <br> Mercado</th>
+                                                                <th class="text-align-right">Monto <br> Invertido</th>
+                                                                <th class="text-align-right">Ganancia/ <br> Pérdida</th>
+                                                                <th class="text-align-right">Valor de <br> Mercado</th>
+                                                                <th class="text-align-right">V. de Mercado <br> (USD)</th>
+                                                                <th class="text-align-right">Comprar/ <br> Vender</th>
+                                                                <th class="text-align-right">Más</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr> 
+                                                                <td> <a class="text-link open-modal-btn" href="#" data-modal="modal1">ALICORC1</a></td>
+                                                                <td> <span class="text-col-ellipsis">ALICORP S.A.A</span></td>
+                                                                <td>BVL</td>
+                                                                <td>PEN</td>
+                                                                <td class="text-align-right">30</td>
+                                                                <td class="text-align-right">177.925</td>
+                                                                <td class="text-align-right">5,337.75</td>
+                                                                <td class="text-align-right"><span class="text-color-green-70">13,310</span></td>
+                                                                <td class="text-align-right">3,310.23</td>
+                                                                <td class="text-align-right"> <span class="text-color-blue-60">887.94</span></td>
+                                                                <td class="text-align-right"> <a class="button button-buy" href="#">C</a> <a class="button button-sell" href="#">V</a></td>
+                                                                <td class="text-align-right"> 
+                                                                    <button class="button button-invisible button-i-only open-modal-btn" data-modal="modal1">+</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr> 
+                                                                <td> <a class="text-link open-modal-btn" href="#" data-modal="modal1">ABX</a></td>
+                                                                <td> <span class="text-col-ellipsis">BARRICK GOLD CORPORATION</span></td>
+                                                                <td>BVL</td>
+                                                                <td>PEN</td>
+                                                                <td class="text-align-right">1,000</td>
+                                                                <td class="text-align-right">202.490</td>
+                                                                <td class="text-align-right">2,024.90</td>
+                                                                <td class="text-align-right"><span class="text-color-red-70">-527.55</span></td>
+                                                                <td class="text-align-right">5,620.00</td>
+                                                                <td class="text-align-right"> <span class="text-color-blue-60">1,507.51</span></td>
+                                                                <td class="text-align-right"> <a class="button button-buy" href="#">C</a> <a class="button button-sell" href="#">V</a></td>
+                                                                <td class="text-align-right"> 
+                                                                    <button class="button button-invisible button-i-only open-modal-btn" data-modal="modal1">+</button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr> 
+                                                                <td> <a class="text-link open-modal-btn" href="#" data-modal="modal1">ALT</a></td>
+                                                                <td> <span class="text-col-ellipsis">ALTURAS MINERAS CORP.</span></td>
+                                                                <td>BVL</td>
+                                                                <td>USD</td>
+                                                                <td class="text-align-right">65</td>
+                                                                <td class="text-align-right">33.551</td>
+                                                                <td class="text-align-right">2,181.08</td>
+                                                                <td class="text-align-right"> <span class="text-color-green-70">68.60</span></td>
+                                                                <td class="text-align-right">1,567.56</td>
+                                                                <td class="text-align-right"> <span class="text-color-blue-60">1,567.56</span></td>
+                                                                <td class="text-align-right"> <a class="button button-buy" href="#">C</a> <a class="button button-sell" href="#">V</a></td>
+                                                                <td class="text-align-right"> 
+                                                                    <button class="button button-invisible button-i-only open-modal-btn" data-modal="modal1">+</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="accordion-item">
-                                            <h3 class="accordion-header"> 
-                                                <!--button.accordion-toggle.collapsed(data-toggle="collapse" data-target="#collapseTwo") Acciones y ETFs en la Bolsa de Lima -->
-                                                <button class="accordion-toggle" data-toggle="collapse" data-target="#collapseTwo">Acciones y ETFs en la Bolsa de Lima</button>
-                                            </h3>
-                                            <p class="valued-amount">Monto valorizado dólares americanos <span class="text-color-blue-60">USD <span class="amount__text">3,963.01</span></span></p>
-                                            <div class="accordion-body collapse show" id="collapseTwo">
-                                                <table class="table table-border-round"> 
-                                                    <thead>
-                                                        <tr> 
-                                                            <th>Símbolo</th>
-                                                            <th>Descripción</th>
-                                                            <th>Mercado</th>
-                                                            <th>Moneda</th>
-                                                            <th class="text-align-right">Cantidad <br> Disponible</th>
-                                                            <th class="text-align-right">Precio de <br> Mercado</th>
-                                                            <th class="text-align-right">Monto <br> Invertido</th>
-                                                            <th class="text-align-right">Ganancia/ <br> Pérdida</th>
-                                                            <th class="text-align-right">Valor de <br> Mercado</th>
-                                                            <th class="text-align-right">V. de Mercado <br> (USD)</th>
-                                                            <th class="text-align-right">Comprar/ <br> Vender</th>
-                                                            <th class="text-align-right">Más</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr> 
-                                                            <td> <a class="text-link" href="#">ALICORC1</a></td>
-                                                            <td> <span class="text-ellipsis">ALICORP S.A.A</span></td>
-                                                            <td>BVL</td>
-                                                            <td>PEN</td>
-                                                            <td class="text-align-right">30</td>
-                                                            <td class="text-align-right">177.925</td>
-                                                            <td class="text-align-right">5,337.75</td>
-                                                            <td class="text-align-right"><span class="text-color-green-70">13,310</span></td>
-                                                            <td class="text-align-right">3,310.23</td>
-                                                            <td class="text-align-right"> <span class="text-color-blue-60">887.94</span></td>
-                                                            <td class="text-align-right"> <span class="compra-green">C</span> <span class="venta-red">V</span></td>
-                                                            <td class="text-align-right button-plus"> 
-                                                                <button class="button button-invisible">+</button>
-                                                            </td>
-                                                        </tr>
-                                                        <tr> 
-                                                            <td> <a class="text-link" href="#">ABX</a></td>
-                                                            <td> <span class="text-ellipsis">BARRICK GOLD CORPORATION</span></td>
-                                                            <td>BVL</td>
-                                                            <td>PEN</td>
-                                                            <td class="text-align-right">1,000</td>
-                                                            <td class="text-align-right">202.490</td>
-                                                            <td class="text-align-right">2,024.90</td>
-                                                            <td class="text-align-right"><span class="text-color-red-70">-527.55</span></td>
-                                                            <td class="text-align-right">5,620.00</td>
-                                                            <td class="text-align-right"> <span class="text-color-blue-60">1,507.51</span></td>
-                                                            <td class="text-align-right"> <span class="compra-green">C</span> <span class="venta-red">V</span></td>
-                                                            <td class="text-align-right button-plus"> 
-                                                                <button class="button button-invisible">+</button>
-                                                            </td>
-                                                        </tr>
-                                                        <tr> 
-                                                            <td><a class="text-link" href="#">ALT</a></td>
-                                                            <td> <span class="text-ellipsis">ALTURAS MINERAS CORP.</span></td>
-                                                            <td>BVL</td>
-                                                            <td>USD</td>
-                                                            <td class="text-align-right">65</td>
-                                                            <td class="text-align-right">33.551</td>
-                                                            <td class="text-align-right">2,181.08</td>
-                                                            <td class="text-align-right"> <span class="text-color-green-70">68.60</span></td>
-                                                            <td class="text-align-right">1,567.56</td>
-                                                            <td class="text-align-right"> <span class="text-color-blue-60">1,567.56</span></td>
-                                                            <td class="text-align-right"> <span class="compra-green">C</span> <span class="venta-red">V</span></td>
-                                                            <td class="text-align-right button-plus"> 
-                                                                <button class="button button-invisible">+</button>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                                        </div>
                                     </div>
-                                </div>
-                                <div class="tab-pane" id="tab2">
-                                    <div class="accordion">
-                                        <div class="accordion-item">
-                                            <h3 class="accordion-header"> 
-                                                <!--button.accordion-toggle.collapsed(data-toggle="collapse" data-target="#collapseTwo") Acciones y ETFs en la Bolsa de Lima -->
-                                                <button class="accordion-toggle" data-toggle="collapse" data-target="#collapse2One">Bonos</button>
-                                            </h3>
-                                            <p class="valued-amount">Monto valorizado dólares americanos <span class="text-color-blue-60">USD <span class="amount__text">3,963.01</span></span></p>
-                                            <div class="accordion-body collapse show" id="collapse2One">
-                                                <table class="table table-border-round"> 
-                                                    <thead>
-                                                        <tr> 
-                                                            <th>Símbolo</th>
-                                                            <th>Mercado</th>
-                                                            <th>Moneda</th>
-                                                            <th class="text-align-right">Cantidad <br> Disponible</th>
-                                                            <th class="text-align-right">Valor <br> Nominal</th>
-                                                            <th class="text-align-right">Monto <br> Invertido</th>
-                                                            <th class="text-align-right">Precio de <br> Mercado</th>
-                                                            <th class="text-align-right">Ganancia/ <br> Perdida</th>
-                                                            <th class="text-align-right">Valor de <br> Mercado</th>
-                                                            <th class="text-align-right">V. de Mercado <br> (USD)</th>
-                                                            <th class="text-align-right">Más</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr> 
-                                                            <td> <a class="text-link" href="#">BANBOOG 6 1/4</a></td>
-                                                            <td>NYSE</td>
-                                                            <td>USD</td>
-                                                            <td class="text-align-right">30</td>
-                                                            <td class="text-align-right">1,000.00</td>
-                                                            <td class="text-align-right">29,970.00</td>
-                                                            <td class="text-align-right">99.91</td>
-                                                            <td class="text-align-right"><span class="text-color-green-70">3.90</span></td>
-                                                            <td class="text-align-right">29,973.90</td>
-                                                            <td class="text-align-right"> <span class="text-color-blue-60">29,973.90</span></td>
-                                                            <td class="text-align-right button-plus"> 
-                                                                <button class="button button-invisible">+</button>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                    <div class="tab-pane" id="tab2">
+                                        <div class="accordion">
+                                            <div class="accordion-item">
+                                                <div class="box-main-s-1 box-main-center">
+                                                    <h3 class="box__info accordion-header"> 
+                                                        <!--button.accordion-toggle.collapsed(data-toggle="collapse" data-target="#collapseTwo") Acciones y ETFs en la Bolsa de Lima -->
+                                                        <button class="accordion-toggle" data-toggle="collapse" data-target="#collapse2One">Bonos</button>
+                                                    </h3>
+                                                    <p class="typography-label-12 mrg-b-0">Monto valorizado USD <span class="typography-label-16 text-color-blue-60">3,963.01</span></p>
+                                                </div>
+                                                <div class="accordion-body collapse show" id="collapse2One">
+                                                    <table class="table table-border-round"> 
+                                                        <thead>
+                                                            <tr> 
+                                                                <th>Símbolo</th>
+                                                                <th>Mercado</th>
+                                                                <th>Moneda</th>
+                                                                <th class="text-align-right">Cantidad <br> Disponible</th>
+                                                                <th class="text-align-right">Valor <br> Nominal</th>
+                                                                <th class="text-align-right">Monto <br> Invertido</th>
+                                                                <th class="text-align-right">Precio de <br> Mercado</th>
+                                                                <th class="text-align-right">Ganancia/ <br> Perdida</th>
+                                                                <th class="text-align-right">Valor de <br> Mercado</th>
+                                                                <th class="text-align-right">V. de Mercado <br> (USD)</th>
+                                                                <th class="text-align-right">Más</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr> 
+                                                                <td> <a class="text-link open-modal-btn" href="#" data-modal="modal1">BANBOOG 6 1/4</a></td>
+                                                                <td>NYSE</td>
+                                                                <td>USD</td>
+                                                                <td class="text-align-right">30</td>
+                                                                <td class="text-align-right">1,000.00</td>
+                                                                <td class="text-align-right">29,970.00</td>
+                                                                <td class="text-align-right">99.91</td>
+                                                                <td class="text-align-right"><span class="text-color-green-70">3.90</span></td>
+                                                                <td class="text-align-right">29,973.90</td>
+                                                                <td class="text-align-right"> <span class="text-color-blue-60">29,973.90</span></td>
+                                                                <td class="text-align-right"> 
+                                                                    <button class="button button-invisible button-i-only open-modal-btn" data-modal="modal1">+</button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -513,13 +539,15 @@
                         </div>
                         <div class="modal-body">
                             <p class="typography-heading-18 mrg-b-2 text-color-blue-60">American Airlines Group</p>
-                            <div class="box11 mrg-b-4">
-                                <ul class="list-group list-group-horizontal typography-caption-12">
-                                    <li class="list-group-item">NYSE</li>
-                                    <li class="list-group-item">Dólares Americanos USD</li>
-                                    <li class="list-group-item">Última transac. 12/05/2026</li>
-                                </ul>
-                                <p class="typography-caption-12 mrg-x-left mrg-b-0">Monto valorizado USD <span class="typography-heading-16 text-color-blue-60">29,973.00</span></p>
+                            <div class="box-main-s-1 box-main-end mrg-b-4">
+                                <div class="box__info">
+                                    <ul class="list-group list-group-horizontal typography-caption-12">
+                                        <li class="list-group-item">NYSE</li>
+                                        <li class="list-group-item">Dólares Americanos USD</li>
+                                        <li class="list-group-item">Última transac. 12/05/2026</li>
+                                    </ul>
+                                </div>
+                                <p class="typography-caption-12 mrg-x-left mrg-b-0">Monto valorizado USD <span class="typography-label-16 text-color-blue-60">29,973.00</span></p>
                             </div>
                             <table class="table table-border-round"> 
                                 <thead>

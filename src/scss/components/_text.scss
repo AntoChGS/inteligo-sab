@@ -13,12 +13,16 @@
         }
     }
 
-    &-ellipsis {
+    &-col-ellipsis {
         display: block;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 72px;
+
+        @media (min-width: 1584px) {
+            max-width: 100%;
+        }
     }
 
     &-link {

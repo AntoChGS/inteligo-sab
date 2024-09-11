@@ -1,13 +1,17 @@
 .accordion {
     .accordion-item {
         position: relative;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
 
         .accordion-header {
             background-color: $color-white;
             margin: 0;
             padding: 0;
             border: none;
+
+            &.close {
+                border-bottom: 1px solid $color-gray-40;
+            }
 
             .accordion-toggle {
                 position: relative;

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Web Design</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="noindex,nofollow">
+        <meta name="description" content="{page-description}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--link(rel='apple-touch-icon' sizes="180x180" href='images/favicon/apple-touch-icon.png')-->
+        <!--link(rel='icon' type='image/png' sizes="32x32" href='images/favicon/favicon-32x32.png')-->
+        <!--link(rel='icon' type='image/png' sizes="16x16" href='images/favicon/favicon-16x16.png')-->
+        <!--link(rel='manifest' href='images/favicon/manifest.json')-->
+        <!--link(rel='mask-icon' href='images/favicon/safari-pinned-tab.svg' color='#4eb500')-->
+        <!--link(rel='shortcut icon' href='images/favicon/favicon.ico')-->
+        <!--meta(name='msapplication-TileColor' content='#4eb500')-->
+        <!--meta(name='msapplication-config' content='images/favicon/browserconfig.xml')-->
+        <!--meta(name='theme-color' content='#0044bd')-->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="body">
+        <h1 class="visually--hidden">Porvenir Colombia</h1>
+        <header class="header"> 
+            <div class="header__top">
+                <div class="button button-secondary burger-btn mrg-e-4 toggle-btn"><svg class="icon svg--inline-icon burger-ham" viewBox="0 0 100 100" width="80">
+<path class="line top" d="m 30,33 h 40 c 0,0 8.5,-0.68551 8.5,10.375 0,8.292653 -6.122707,9.002293 -8.5,6.625 l -11.071429,-11.071429"></path>
+<path class="line middle" d="m 70,50 h -40"></path>
+<path class="line bottom" d="m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429"></path>
+</svg>
+                </div>
+                <div class="brand"> <a class="brand__link" href="/"> 
+                        <picture> 
+                            <source media="(min-width: 992px)" srcset="images/logo/logo-inteligo-sab.png"><img class="image" src="images/logo/logo-inteligo-sab.png" alt="Logo Inteligo SAB" srcset="images/logo/logo-inteligo-sab.png">
+                        </picture></a></div>
+                <ul class="top__nav"> 
+                    <li class="nav__item"> <a class="nav__link" href="#"> <span class="link__icon icon svg--inline-icon">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-help"></use>
+                                </svg></span>Preguntas frecuentes</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="#"> <span class="link__icon icon svg--inline-icon">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-customer-service"></use>
+                                </svg></span>Contacto</a></li>
+                    <li class="nav__item dropdown"> <a class="nav__link dropdown-toggle" href="#"> <span class="user-profile">EQ<span class="user-profile__badge"></span></span>Perfil<span class="toggle-icon-dropdown mrg-s-1 icon svg--inline-icon">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                </svg></span></a>
+                        <ul class="dropdown-menu dropdown-align--end">
+                            <li class="dropdown-item">RUT 1412669</li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Actualizar registro de cliente</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Configuración</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <nav class="nav__menu"> 
+                <ul class="navbar__nav"> 
+                    <li class="nav__item"> <a class="nav__link active" href="#">Inicio</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="#">Operar en Bolsa</a></li>
+                    <li class="nav__item"> <a class="nav__link" href="#">Reportes de Mercado</a></li>
+                    <li class="nav__item dropdown"> <a class="nav__link dropdown-toggle" href="#">Movimientos de Efectivo<span class="toggle-icon-dropdown icon svg--inline-icon mrg-s-1">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                </svg></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Depositar</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Retirar</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Historial de transacciones</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item"> <a class="nav__link" href="#">Fondos Mutuos</a></li>
+                    <li class="nav__item dropdown"> <a class="nav__link dropdown-toggle" href="#">Otras Consultas<span class="toggle-icon-dropdown icon svg--inline-icon mrg-s-1">
+                                <svg>
+                                    <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
+                                </svg></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Custodia de valores</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Consulta de órdenes</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Consulta de pólizas</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#">Consulta estado de cuenta</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar__nav-right">
+                    <li class="nav__item"> <span class="nav__text">Cambio USD: <b class="text-color-blue-60">3.728</b></span></li>
+                    <li class="nav__item"> <span class="nav__text">Última actualización: <b>10:20:42 am</b></span></li>
+                </ul>
+            </nav>
+        </header>
+        <main role="main">
+            <div class="container">
+                <div class="display-flex">
+                    <div class="flex-1">
+                        <div class="table-responsive">
+                            <table class="table"> 
+                                <thead>
+                                    <tr> 
+                                        <th>Símbolo</th>
+                                        <th>Mercado</th>
+                                        <th>Moneda</th>
+                                        <th>Símbolo</th>
+                                        <th>Mercado</th>
+                                        <th>Moneda</th>
+                                        <th>Símbolo</th>
+                                        <th>Mercado</th>
+                                        <th>Moneda</th>
+                                        <th>Símbolo</th>
+                                        <th>Mercado</th>
+                                        <th>Moneda</th>
+                                        <th>Símbolo</th>
+                                        <th>Mercado</th>
+                                        <th>Moneda</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr> 
+                                        <td>BANBOOG 6 1/4</td>
+                                        <td>NYSE</td>
+                                        <td>USD</td>
+                                        <td>BANBOOG 6 1/4</td>
+                                        <td>NYSE</td>
+                                        <td>USD</td>
+                                        <td>BANBOOG 6 1/4</td>
+                                        <td>NYSE</td>
+                                        <td>USD</td>
+                                        <td>BANBOOG 6 1/4</td>
+                                        <td>NYSE</td>
+                                        <td>USD</td>
+                                        <td>BANBOOG 6 1/4</td>
+                                        <td>NYSE</td>
+                                        <td>USD</td>
+                                        <td>BANBOOG 6 1/4</td>
+                                        <td>NYSE</td>
+                                        <td>USD</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>

@@ -1,15 +1,11 @@
 header.header 
     .header__top
-        .button.button-secondary.button-xs.mrg-e-4.toggle-btn
-            <span class="icon svg--inline-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none">
-                <rect width="16" height="16" fill="white" fill-opacity="0.01" style="mix-blend-mode:multiply"/>
-                <path d="M14 3H2V4H14V3Z" />
-                <path d="M14 12H2V13H14V12Z" />
-                <path d="M14 6H2V7H14V6Z" />
-                <path d="M14 9H2V10H14V9Z" />
-                </svg>
-            </span>
+        .button.button-secondary.burger-btn.mrg-e-4.toggle-btn
+            <svg class="icon svg--inline-icon burger-ham" viewBox="0 0 100 100" width="80">
+                <path class="line top" d="m 30,33 h 40 c 0,0 8.5,-0.68551 8.5,10.375 0,8.292653 -6.122707,9.002293 -8.5,6.625 l -11.071429,-11.071429"></path>
+                <path class="line middle" d="m 70,50 h -40"></path>
+                <path class="line bottom" d="m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429"></path>
+            </svg>
         .brand 
             a(href="/" class="brand__link") 
                 picture 
@@ -18,23 +14,23 @@ header.header
         ul.top__nav 
             li.nav__item 
                 a.nav__link(href="#") 
-                    span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'help')
+                    span.link__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'help')
                     | Preguntas frecuentes
             li.nav__item 
                 a.nav__link(href="#") 
-                    span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'customer-service')
+                    span.link__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'customer-service')
                     | Contacto
             li.nav__item.dropdown 
                 a.nav__link.dropdown-toggle(href="#") 
                     span.user-profile EQ
                         span.user-profile__badge
                     | Perfil
-                    span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chevron-down')
+                    span.toggle-icon-dropdown.mrg-s-1.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chevron-down')
                 ul.dropdown-menu.dropdown-align--end
                     li.dropdown-item RUT 1412669
-                    li: a.dropdown-item(href="#") Actualizar registro de cliente
-                    li: a.dropdown-item(href="#") Configuración
-                    li: a.dropdown-item(href="#") Cerrar sesión
+                    li.dropdown-item: a.dropdown-link(href="#") Actualizar registro de cliente
+                    li.dropdown-item: a.dropdown-link(href="#") Configuración
+                    li.dropdown-item: a.dropdown-link(href="#") Cerrar sesión
     nav.nav__menu 
         ul.navbar__nav 
             li.nav__item 
@@ -45,21 +41,21 @@ header.header
                 a.nav__link(href="#") Reportes de Mercado
             li.nav__item.dropdown 
                 a.nav__link.dropdown-toggle(href="#") Movimientos de Efectivo
-                    span.icon.svg--inline-icon.mrg-s-1: svg: use(xlink:href=iconPath+'chevron-down')
+                    span.toggle-icon-dropdown.icon.svg--inline-icon.mrg-s-1: svg: use(xlink:href=iconPath+'chevron-down')
                 ul.dropdown-menu
-                    li: a.dropdown-item(href="#") Depositar
-                    li: a.dropdown-item(href="#") Retirar
-                    li: a.dropdown-item(href="#") Historial de transacciones
+                    li.dropdown-item: a.dropdown-link(href="#") Depositar
+                    li.dropdown-item: a.dropdown-link(href="#") Retirar
+                    li.dropdown-item: a.dropdown-link(href="#") Historial de transacciones
             li.nav__item 
                 a.nav__link(href="#") Fondos Mutuos
             li.nav__item.dropdown  
                 a.nav__link.dropdown-toggle(href="#") Otras Consultas
-                    span.icon.svg--inline-icon.mrg-s-1: svg: use(xlink:href=iconPath+'chevron-down')
+                    span.toggle-icon-dropdown.icon.svg--inline-icon.mrg-s-1: svg: use(xlink:href=iconPath+'chevron-down')
                 ul.dropdown-menu
-                    li: a.dropdown-item(href="#") Custodia de valores
-                    li: a.dropdown-item(href="#") Consulta de órdenes
-                    li: a.dropdown-item(href="#") Consulta de pólizas
-                    li: a.dropdown-item(href="#") Consulta estado de cuenta
+                    li.dropdown-item: a.dropdown-link(href="#") Custodia de valores
+                    li.dropdown-item: a.dropdown-link(href="#") Consulta de órdenes
+                    li.dropdown-item: a.dropdown-link(href="#") Consulta de pólizas
+                    li.dropdown-item: a.dropdown-link(href="#") Consulta estado de cuenta
         ul.navbar__nav-right
             li.nav__item 
                 span.nav__text Cambio USD: #[b.text-color-blue-60 3.728]

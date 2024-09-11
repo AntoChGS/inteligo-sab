@@ -42,7 +42,8 @@
         color: $color-white;
         border: 1px solid rgba(38, 40, 45, 0.30);
 
-        &:active, &.show {
+        &:active,
+        &.show {
             color: $color-white;
             text-decoration: none;
             background-color: $color-blue-80;
@@ -74,7 +75,8 @@
         color: $color-gray-70;
         border: 1px solid rgba(38, 40, 45, 0.15);
 
-        &:active, &.show {
+        &:active,
+        &.show {
             color: $color-gray-70;
             text-decoration: none;
             background-color: $color-gray-40;
@@ -107,7 +109,8 @@
         color: $color-blue-60;
         border: 1px solid transparent;
 
-        &:active, &.show {
+        &:active,
+        &.show {
             color: $color-blue-60;
             text-decoration: none;
             background-color: $color-gray-30;
@@ -139,9 +142,9 @@
         background-color: $color-gray-20;
         color: $color-red-60;
         border: 1px solid rgba(38, 40, 45, 0.15);
-        border-radius: 9px;
 
-        &:active, &.show {
+        &:active,
+        &.show {
             color: $color-white;
             text-decoration: none;
             background-color: $color-red-80;
@@ -170,6 +173,8 @@
     }
 
     &-buy {
+        width: 25px;
+        height: 18px;
         background-color: $color-blue-20;
         color: $color-blue-50;
         border: 1px solid $color-blue-30;
@@ -178,7 +183,8 @@
         font-weight: 400;
         padding: 0.125rem 0.45rem;
 
-        &:active, &.show {
+        &:active,
+        &.show {
             color: $color-blue-50;
             text-decoration: none;
             background-color: $color-blue-20;
@@ -207,6 +213,8 @@
     }
 
     &-sell {
+        width: 25px;
+        height: 18px;
         background-color: $color-red-30;
         color: $color-red-70;
         border: 1px solid $color-red-40;
@@ -215,7 +223,8 @@
         font-weight: 400;
         padding: 0.125rem 0.45rem;
 
-        &:active, &.show {
+        &:active,
+        &.show {
             color: $color-red-70;
             text-decoration: none;
             background-color: $color-red-30;
@@ -259,34 +268,4 @@
             color: darken($color-blue-60, 10%);
         }
     }
-}
-
-.compra-green {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 18px;
-    width: 24px;
-    padding: .063rem 0.125rem;
-    border-radius: 9px;
-    border: 1px solid $color-blue-30;
-    background: $color-blue-20;
-    color: $color-blue-50;
-    font-size: 0.75rem;
-    line-height: 1;
-}
-
-.venta-red {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 18px;
-    width: 24px;
-    padding: .063rem 0.125rem;
-    border-radius: 9px;
-    border: 1px solid $color-red-40;
-    background: $color-red-30;
-    color: $color-red-70;
-    font-size: 0.75rem;
-    line-height: 1;
 }

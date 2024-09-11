@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.toggle-btn').forEach(button => {
         button.addEventListener('click', () => {
             // Encuentra el primer elemento con la clase 'sidebar'
+            const burgerBtn = document.querySelector('.burger-btn');
             const sidebar = document.querySelector('.sidebar');
+            burgerBtn.classList.toggle('active');
             sidebar.classList.toggle('open');
         });
     });
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         button.addEventListener('click', function () {
             const targetId = this.getAttribute('data-target');
             const targetElement = document.querySelector(targetId);
+            const headerElement = this.closest('.accordion-header'); // Encuentra el encabezado más cercano
 
             if (targetElement.classList.contains('show')) {
                 // Close the target element
@@ -29,6 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Update button state
                 this.classList.add('collapsed');
+
+                // Add 'close' class to the accordion header
+                if (headerElement) {
+                    headerElement.classList.add('close');
+                }
             } else {
                 // Open the target element
                 targetElement.classList.add('collapse');
@@ -40,9 +48,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Update button state
                 this.classList.remove('collapsed');
+
+                // Remove 'close' class from the accordion header
+                if (headerElement) {
+                    headerElement.classList.remove('close');
+                }
             }
         });
     });
+
 
     // SELECT DROPDOWN
     const dropdowns = document.querySelectorAll('.dropdown');

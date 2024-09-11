@@ -1,9 +1,48 @@
-#toggle-btn {
+.burger-btn {
     display: none;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    font-size: 1.75rem;
 
-    @media (max-width: 1056px) {
+    @media (max-width: 1311.98px) {
         display: inline-flex;
-        margin-right: 16px;
+    }
+
+    &.active {
+        .burger-ham {
+            transform: rotate(180deg);
+
+            .top {
+                stroke-dasharray: 14 82;
+                stroke-dashoffset: -72px;
+            }
+
+            .bottom {
+                stroke-dasharray: 14 82;
+                stroke-dashoffset: -72px;
+            }
+        }
+    }
+
+    .burger-ham {
+        transition: transform 400ms;
+
+        .top {
+            stroke-dasharray: 40 82;
+        }
+
+        .bottom {
+            stroke-dasharray: 40 82;
+        }
+
+        .line {
+            fill: none;
+            transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+            stroke: $color-gray-70;
+            stroke-width: 5.5;
+            stroke-linecap: round;
+        }
     }
 }
 
@@ -28,8 +67,9 @@
             list-style: none;
             margin-left: auto !important;
 
-            @media (min-width: 992px) {
+            @media (min-width: 1056px) {
                 flex-direction: row;
+                align-items: center;
             }
 
             .nav__item {
@@ -61,35 +101,36 @@
                     display: inline-flex;
                     align-items: center;
                     font-size: 0.75rem;
+                    padding: 0.5rem 0.5rem;
+                    text-decoration: none;
+                    border-radius: 4px;
+                    background-color: transparent;
 
-                    &:active {
-                        text-decoration: underline;
-                    }
+                    &:active {}
 
                     &:hover {
-                        text-decoration: underline;
+                        background-color: $color-gray-20;
                     }
 
-                    .icon {
-                        font-size: 1rem;
+                    .link__icon {
+                        font-size: 12px;
                         margin-right: 4px;
                     }
 
-                    .icon-chevron-down {
-                        margin-left: 4px;
-                        margin-right: 0;
-                        font-size: 0.75rem;
+                    &.dropdown-toggle {
+                        padding: 0.25rem .5rem;
                     }
                 }
 
                 +.nav__item {
-                    padding-left: 1.25rem;
+                    padding-left: 0.75rem;
 
                     &::before {
                         float: left;
-                        padding-right: 1.25rem;
+                        padding-right: 0.75rem;
                         content: "|";
-                        color: #E5E9F1;
+                        color: $color-gray-30;
+                        margin-top: 4px;
                     }
                 }
             }
@@ -112,12 +153,16 @@
         list-style: none;
         margin: 0;
 
-        @media (min-width: 992px) {
+        @media (min-width: 1056px) {
             flex-direction: row;
         }
 
         .nav__item {
-            margin-right: 1rem;
+            margin-right: 0.5rem;
+
+            @media (min-width: 1312px) {
+                margin-right: 1rem;
+            }
         }
 
         .nav__link {
@@ -125,7 +170,7 @@
             display: flex;
             align-items: center;
             font-size: 16px;
-            line-height: 1.15;
+            line-height: 1.5;
             padding: 0.75rem 0.5rem;
             color: $color-gray-70;
             text-decoration: none;
@@ -168,7 +213,8 @@
                 transition: height .3s;
             }
 
-            &.active, &.show {
+            &.active,
+            &.show {
                 color: $color-blue-60;
 
                 &::after {
@@ -183,6 +229,7 @@
         display: flex;
         flex-wrap: wrap !important;
         flex-direction: row;
+        justify-content: end;
         padding-left: 0;
         margin-bottom: 0;
         list-style: none;

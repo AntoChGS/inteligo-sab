@@ -1,15 +1,15 @@
 .layout-sticky-container 
-    aside.layout-sidebar#sidebar
+    aside.layout-sidebar.sidebar
+        .button.button-primary.button-xs.sidebar-close.toggle-btn &times;
         .scroll-bar
         .layout-sidebar__box
             h2.typography-heading-20.mrg-b-4.text-color-blue-60 Patrimonio total
             .patrimony__total-portfolio-box.mrg-b-6
-                p.typography-caption-12.mrg-b-0 Total cartera valorizada
-                .box__info
-                    p.info__subheading.typography-subheading-24.mrg-b-0 #[span.typography-caption-12 USD] #[span 42,562.57]
-                    .info__button-renew
-                        button.button.button-invisible
-                            span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'renew')
+                p.typography-caption-12.mrg-b-1 Total cartera valorizada
+                .box-main-s-1.box-main-center
+                    p.typography-subheading-24.mrg-b-0 #[span.typography-caption-12 USD] #[span 42,562.57]
+                    button.button.button-invisible.button-i-only.mrg-s-1
+                        span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'renew')
             .navigation-tabs.navigation-tabs-pills#tabs1
                 ul.tab-buttons
                     li.navigation-tab-item
@@ -18,13 +18,13 @@
                         button.tab-button.navigation-link(data-tab="tabType2") Por moneda
                 .tab-content
                     .tab-pane.active#tabType1
-                        .patrimony__heading-title-box.mrg-b-3
-                            .box__info
-                                .info__heading
-                                    h2.heading__title.typography-heading-16.mrg-b-0.text-color-gray-70 
-                                        span.heading__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'portfolio')
+                        .dpy-block.mrg-b-3
+                            .box-main-s-1.box-main-center
+                                .box__info
+                                    h2.box-main-s-1.box-main-center.typography-heading-16.mrg-b-0.text-color-gray-70 
+                                        span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'portfolio')
                                         | Por Tipo de Activo
-                                .info__information.tooltip-container.tooltip-bottom-right
+                                .tooltip-container.tooltip-bottom-right
                                     span.tooltip-trigger.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'information-filled')
                                     .tooltip-content Este es el texto del tooltip
 
@@ -58,13 +58,13 @@
                                     td.text-align-right.text-color-blue-60 30,943.67
                                     td.text-align-right.text-color-blue-60 8,930.23
 
-                        .patrimony__heading-title-box.mrg-b-3
-                            .box__info
-                                .info__heading
-                                    h2.heading__title.typography-heading-16.mrg-b-0.text-color-gray-70 
-                                        span.heading__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chart-bar-target')
+                        .dpy-block.mrg-b-3
+                            .box-main-s-1.box-main-center
+                                .box__info
+                                    h2.box-main-s-1.box-main-center.typography-heading-16.mrg-b-0.text-color-gray-70 
+                                        span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'chart-bar-target')
                                         | Participación %
-                                .info__information.tooltip-container.tooltip-bottom-right
+                                .tooltip-container.tooltip-bottom-right
                                     span.tooltip-trigger.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'information-filled')
                                     .tooltip-content Este es el texto del tooltip
 
@@ -84,6 +84,20 @@
                                 td 
                                     span.percentage#percentage2 0%
                             tr
+                                td.text-ws-nowrap Op. de Reporte
+                                td 
+                                    .bar#bar3
+                                        .fill
+                                td 
+                                    span.percentage#percentage3 0%
+                            tr
+                                td.text-ws-nowrap Fondos Mutuos
+                                td 
+                                    .bar#bar4
+                                        .fill
+                                td 
+                                    span.percentage#percentage4 0%
+                            tr
                                 td.text-ws-nowrap Efectivo
                                 td 
                                     .bar#bar5
@@ -91,13 +105,13 @@
                                 td 
                                     .percentage#percentage5 0%
                     .tab-pane#tabType2
-                        .patrimony__heading-title-box.mrg-b-3
-                            .box__info
-                                .info__heading
-                                    h2.heading__title.typography-heading-16.mrg-b-0.text-color-gray-70 
-                                        span.heading__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'portfolio')
+                        .dpy-block.mrg-b-3
+                            .box-main-s-1.box-main-center
+                                .box__info
+                                    h2.box-main-s-1.box-main-center.typography-heading-16.mrg-b-0.text-color-gray-70 
+                                        span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'portfolio')
                                         | Por moneda
-                                .info__information.tooltip-container.tooltip-bottom-right
+                                .tooltip-container.tooltip-bottom-right
                                     span.tooltip-trigger.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'information-filled')
                                     .tooltip-content Este es el texto del tooltip
 
@@ -122,14 +136,15 @@
                                     td.text-align-right.text-color-blue-60 19,993.67
                                     td.text-align-right.text-color-blue-60 8,930.23
 
-                        .patrimony__heading-title-box.mrg-b-3
-                            .box__info
-                                .info__heading
-                                    h2.heading__title.typography-heading-16.mrg-b-0.text-color-gray-70 
-                                        span.heading__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chart-bar-target')
+                        .dpy-block.mrg-b-3
+                            .box-main-s-1.box-main-center
+                                .box__info
+                                    h2.box-main-s-1.box-main-center.typography-heading-16.mrg-b-0.text-color-gray-70 
+                                        span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'chart-bar-target')
                                         | Participación %
-                                .info__information
-                                    span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'information-filled')
+                                .tooltip-container.tooltip-bottom-right
+                                    span.tooltip-trigger.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'information-filled')
+                                    .tooltip-content Este es el texto del tooltip
 
                         table.table.table-mb-1rem
                             tr
@@ -147,180 +162,183 @@
                                 td 
                                     span.percentage#percentage2 0%
 
-    .layout-content
-        .patrimony__main1
-            .main1__row
-                .main1__col-6
-                    .patrimony__total-portfolio-box
-                        p.typography-caption-12 Efectivo disponible
-                        .box__info
+    .layout-main-content
+        .layout-content
+            .box-main-s-2
+                .box-main-s-1.box-main-end
+                    .box__info
+                        p.typography-caption-12.mrg-b-1 Efectivo disponible
+                        .box-main-s-1.box-main-center
                             p.info__subheading.typography-subheading-24.mrg-b-0 #[span.typography-caption-12 USD] #[span 10,950.00] #[span.typography-caption-12 + PEN] #[span 0.00]
-                .main1__col-6
-                    .main1__buttons
-                        a(href="#").button.button-primary.button-xs Operar en bolsa
-                        a(href="#").button.button-secondary.button-xs Depositar
-        .patrimony__main2
-            .main2__row
-                .main2__col-6
-                    h2.typography-heading-20.mrg-b-0.text-color-blue-60 Posición desagregada
-                .main2__col-6
-                    .main2__buttons
-                        .dropdown
-                            button.dropdown-button Estado de cuenta 
-                                | 
-                                span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chevron-down')
-                            .dropdown-content.dropdown-content-right
-                                a(href="#") Julio 2024
-                                a(href="#") Junio 2024
-                                a(href="#") Mayo 2024
-                                a.link-view-all(href="#") Ver todos tus EECC
-                                    span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'arrow-up-right')
-            .navigation-tabs.navigation-tabs-underline#tabs2
-                ul.tab-buttons
-                    li.navigation-tab-item
-                        button.tab-button.navigation-link.active(data-tab="tab1") Renta Variable
-                    li.navigation-tab-item
-                        button.tab-button.navigation-link(data-tab="tab2") Renta Fija
-                .tab-content
-                    .tab-pane.active#tab1
-                        .accordion
-                            .accordion-item
-                                h3.accordion-header 
-                                    //button.accordion-toggle.collapsed(data-toggle="collapse" data-target="#collapseOne") Acciones y ETFs en el mercado extranjero
-                                    button.accordion-toggle(data-toggle="collapse" data-target="#collapseOne") Acciones y ETFs en el mercado extranjero
-                                p.valued-amount Monto valorizado dólares americanos #[span.text-color-blue-60 USD #[span.amount__text 12,753.11]]
-                                .accordion-body.collapse.show#collapseOne
-                                    .alert.alert-light.alert-icon-center 
-                                        span.icon.svg--inline-icon.mrg-e-1: svg: use(xlink:href=iconPath+'information-filled')
-                                        div Recuerda que también puedes invertir en el Mercado Extranjero.
-                                            | 
-                                            a.button.button-invisible.button-xs(href="#") Operar en bolsa 
+                            button.button.button-invisible.button-i-only.mrg-s-1
+                                span.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'renew')
+                    a(href="#").button.button-primary.button-xs Operar en bolsa
+                    a(href="#").button.button-secondary.button-xs.mrg-s-2 Depositar
+            .box-main-s-3
+                .box-main-s-1.box-main-center.mrg-b-2
+                    .box__info
+                        h2.typography-heading-20.mrg-b-0.text-color-blue-60 Posición desagregada
+                    .dropdown
+                        button.button.button-secondary.button-xs.dropdown-toggle Estado de cuenta
+                            | 
+                            span.toggle-icon-dropdown.icon.svg--inline-icon.mrg-s-1: svg: use(xlink:href=iconPath+'chevron-down')
+                        ul.dropdown-menu.dropdown-align--end
+                            li: a.dropdown-item(href="#") Julio 2024
+                            li: a.dropdown-item(href="#") Junio 2024
+                            li: a.dropdown-item(href="#") Mayo 2024
+                            li: hr.dropdown-divider
+                            li: a.dropdown-item.dropdown-item--icon.text-color-blue-60(href="#") Ver todos tus EECC
+                                span.icon.svg--inline-icon.mrg-s-1: svg: use(xlink:href=iconPath+'arrow-up-right')
+                    
+                .navigation-tabs.navigation-tabs-underline#tabs2
+                    ul.tab-buttons
+                        li.navigation-tab-item
+                            button.tab-button.navigation-link.active(data-tab="tab1") Renta Variable
+                        li.navigation-tab-item
+                            button.tab-button.navigation-link(data-tab="tab2") Renta Fija
+                    .tab-content
+                        .tab-pane.active#tab1
+                            .accordion
+                                .accordion-item
+                                    .box-main-s-1.box-main-center
+                                        h3.box__info.accordion-header 
+                                            //button.accordion-toggle.collapsed(data-toggle="collapse" data-target="#collapseOne") Acciones y ETFs en el mercado extranjero
+                                            button.accordion-toggle(data-toggle="collapse" data-target="#collapseOne") Acciones y ETFs en el mercado extranjero
+                                        p.typography-label-12.mrg-b-0 Monto valorizado USD #[span.typography-label-16.text-color-blue-60 12,753.11]
+                                    .accordion-body.collapse.show#collapseOne
+                                        .alert.alert-light.alert-icon-center 
+                                            span.icon.svg--inline-icon.mrg-e-1: svg: use(xlink:href=iconPath+'information-filled')
+                                            div Recuerda que también puedes invertir en el Mercado Extranjero.
+                                                | 
+                                                a.button.button-invisible.button-xs(href="#") Operar en bolsa 
 
-                            .accordion-item
-                                h3.accordion-header 
-                                    //button.accordion-toggle.collapsed(data-toggle="collapse" data-target="#collapseTwo") Acciones y ETFs en la Bolsa de Lima 
-                                    button.accordion-toggle(data-toggle="collapse" data-target="#collapseTwo") Acciones y ETFs en la Bolsa de Lima
-                                p.valued-amount Monto valorizado dólares americanos #[span.text-color-blue-60 USD #[span.amount__text 3,963.01]]
-                                .accordion-body.collapse.show#collapseTwo
-                                    table.table.table-border-round 
-                                        thead
-                                            tr 
-                                                th Símbolo
-                                                th Descripción
-                                                th Mercado
-                                                th Moneda
-                                                th.text-align-right Cantidad #[br] Disponible
-                                                th.text-align-right Precio de #[br] Mercado
-                                                th.text-align-right Monto #[br] Invertido
-                                                th.text-align-right Ganancia/ #[br] Pérdida
-                                                th.text-align-right Valor de #[br] Mercado
-                                                th.text-align-right V. de Mercado #[br] (USD)
-                                                th.text-align-right Comprar/ #[br] Vender
-                                                th.text-align-right Más
-                                        tbody
-                                            tr 
-                                                td 
-                                                    a.text-link(href="#") ALICORC1
-                                                td 
-                                                    span.text-ellipsis ALICORP S.A.A
-                                                td BVL
-                                                td PEN
-                                                td.text-align-right 30
-                                                td.text-align-right 177.925
-                                                td.text-align-right 5,337.75
-                                                td.text-align-right
-                                                    span.text-color-green-70 13,310
-                                                td.text-align-right 3,310.23
-                                                td.text-align-right 
-                                                    span.text-color-blue-60 887.94
-                                                td.text-align-right 
-                                                    span.compra-green C
-                                                    |  
-                                                    span.venta-red V
-                                                td.text-align-right.button-plus 
-                                                    button.button.button-invisible +
+                                .accordion-item
+                                    .box-main-s-1.box-main-center
+                                        h3.box__info.accordion-header 
+                                            //button.accordion-toggle.collapsed(data-toggle="collapse" data-target="#collapseTwo") Acciones y ETFs en la Bolsa de Lima 
+                                            button.accordion-toggle(data-toggle="collapse" data-target="#collapseTwo") Acciones y ETFs en la Bolsa de Lima
+                                        p.typography-label-12.mrg-b-0 Monto valorizado USD #[span.typography-label-16.text-color-blue-60 3,963.01]
+                                    .accordion-body.collapse.show#collapseTwo
+                                        table.table.table-border-round 
+                                            thead
+                                                tr 
+                                                    th Símbolo
+                                                    th Descripción
+                                                    th Mercado
+                                                    th Moneda
+                                                    th.text-align-right Cantidad #[br] Disponible
+                                                    th.text-align-right Precio de #[br] Mercado
+                                                    th.text-align-right Monto #[br] Invertido
+                                                    th.text-align-right Ganancia/ #[br] Pérdida
+                                                    th.text-align-right Valor de #[br] Mercado
+                                                    th.text-align-right V. de Mercado #[br] (USD)
+                                                    th.text-align-right Comprar/ #[br] Vender
+                                                    th.text-align-right Más
+                                            tbody
+                                                tr 
+                                                    td 
+                                                        a.text-link.open-modal-btn(href="#" data-modal="modal1") ALICORC1
+                                                    td 
+                                                        span.text-col-ellipsis ALICORP S.A.A
+                                                    td BVL
+                                                    td PEN
+                                                    td.text-align-right 30
+                                                    td.text-align-right 177.925
+                                                    td.text-align-right 5,337.75
+                                                    td.text-align-right
+                                                        span.text-color-green-70 13,310
+                                                    td.text-align-right 3,310.23
+                                                    td.text-align-right 
+                                                        span.text-color-blue-60 887.94
+                                                    td.text-align-right 
+                                                        a.button.button-buy(href="#") C
+                                                        |  
+                                                        a.button.button-sell(href="#") V
+                                                    td.text-align-right 
+                                                        button.button.button-invisible.button-i-only.open-modal-btn(data-modal="modal1") +
 
-                                            tr 
-                                                td 
-                                                    a.text-link(href="#") ABX
-                                                td 
-                                                    span.text-ellipsis BARRICK GOLD CORPORATION
-                                                td BVL
-                                                td PEN
-                                                td.text-align-right 1,000
-                                                td.text-align-right 202.490
-                                                td.text-align-right 2,024.90
-                                                td.text-align-right
-                                                    span.text-color-red-70 -527.55
-                                                td.text-align-right 5,620.00
-                                                td.text-align-right 
-                                                    span.text-color-blue-60 1,507.51
-                                                td.text-align-right 
-                                                    span.compra-green C
-                                                    |  
-                                                    span.venta-red V
-                                                td.text-align-right.button-plus 
-                                                    button.button.button-invisible +
-                                            tr 
-                                                td
-                                                    a.text-link(href="#") ALT
-                                                td 
-                                                    span.text-ellipsis ALTURAS MINERAS CORP.
-                                                td BVL
-                                                td USD
-                                                td.text-align-right 65
-                                                td.text-align-right 33.551
-                                                td.text-align-right 2,181.08
-                                                td.text-align-right 
-                                                    span.text-color-green-70 68.60
-                                                td.text-align-right 1,567.56
-                                                td.text-align-right 
-                                                    span.text-color-blue-60 1,567.56
-                                                td.text-align-right 
-                                                    span.compra-green C
-                                                    |  
-                                                    span.venta-red V
-                                                td.text-align-right.button-plus 
-                                                    button.button.button-invisible +
-                    .tab-pane#tab2
-                        .accordion
-                            .accordion-item
-                                h3.accordion-header 
-                                    //button.accordion-toggle.collapsed(data-toggle="collapse" data-target="#collapseTwo") Acciones y ETFs en la Bolsa de Lima 
-                                    button.accordion-toggle(data-toggle="collapse" data-target="#collapse2One") Bonos
-                                p.valued-amount Monto valorizado dólares americanos #[span.text-color-blue-60 USD #[span.amount__text 3,963.01]]
-                                .accordion-body.collapse.show#collapse2One
-                                    table.table.table-border-round 
-                                        thead
-                                            tr 
-                                                th Símbolo
-                                                th Mercado
-                                                th Moneda
-                                                th.text-align-right Cantidad #[br] Disponible
-                                                th.text-align-right Valor #[br] Nominal
-                                                th.text-align-right Monto #[br] Invertido
-                                                th.text-align-right Precio de #[br] Mercado
-                                                th.text-align-right Ganancia/ #[br] Perdida
-                                                th.text-align-right Valor de #[br] Mercado
-                                                th.text-align-right V. de Mercado #[br] (USD)
-                                                th.text-align-right Más
-                                        tbody
-                                            tr 
-                                                td 
-                                                    a.text-link(href="#") BANBOOG 6 1/4
-                                                td NYSE
-                                                td USD
-                                                td.text-align-right 30
-                                                td.text-align-right 1,000.00
-                                                td.text-align-right 29,970.00
-                                                td.text-align-right 99.91
-                                                td.text-align-right
-                                                    span.text-color-green-70 3.90
-                                                td.text-align-right 29,973.90
-                                                td.text-align-right 
-                                                    span.text-color-blue-60 29,973.90
-                                                td.text-align-right.button-plus 
-                                                    button.button.button-invisible +
+                                                tr 
+                                                    td 
+                                                        a.text-link.open-modal-btn(href="#" data-modal="modal1") ABX
+                                                    td 
+                                                        span.text-col-ellipsis BARRICK GOLD CORPORATION
+                                                    td BVL
+                                                    td PEN
+                                                    td.text-align-right 1,000
+                                                    td.text-align-right 202.490
+                                                    td.text-align-right 2,024.90
+                                                    td.text-align-right
+                                                        span.text-color-red-70 -527.55
+                                                    td.text-align-right 5,620.00
+                                                    td.text-align-right 
+                                                        span.text-color-blue-60 1,507.51
+                                                    td.text-align-right 
+                                                        a.button.button-buy(href="#") C
+                                                        |  
+                                                        a.button.button-sell(href="#") V
+                                                    td.text-align-right 
+                                                        button.button.button-invisible.button-i-only.open-modal-btn(data-modal="modal1") +
+                                                tr 
+                                                    td 
+                                                        a.text-link.open-modal-btn(href="#" data-modal="modal1") ALT
+                                                    td 
+                                                        span.text-col-ellipsis ALTURAS MINERAS CORP.
+                                                    td BVL
+                                                    td USD
+                                                    td.text-align-right 65
+                                                    td.text-align-right 33.551
+                                                    td.text-align-right 2,181.08
+                                                    td.text-align-right 
+                                                        span.text-color-green-70 68.60
+                                                    td.text-align-right 1,567.56
+                                                    td.text-align-right 
+                                                        span.text-color-blue-60 1,567.56
+                                                    td.text-align-right 
+                                                        a.button.button-buy(href="#") C
+                                                        |  
+                                                        a.button.button-sell(href="#") V
+                                                    td.text-align-right 
+                                                        button.button.button-invisible.button-i-only.open-modal-btn(data-modal="modal1") +
+                        .tab-pane#tab2
+                            .accordion
+                                .accordion-item
+                                    .box-main-s-1.box-main-center
+                                        h3.box__info.accordion-header 
+                                            //button.accordion-toggle.collapsed(data-toggle="collapse" data-target="#collapseTwo") Acciones y ETFs en la Bolsa de Lima 
+                                            button.accordion-toggle(data-toggle="collapse" data-target="#collapse2One") Bonos
+                                        p.typography-label-12.mrg-b-0 Monto valorizado USD #[span.typography-label-16.text-color-blue-60 3,963.01]
+                                    .accordion-body.collapse.show#collapse2One
+                                        table.table.table-border-round 
+                                            thead
+                                                tr 
+                                                    th Símbolo
+                                                    th Mercado
+                                                    th Moneda
+                                                    th.text-align-right Cantidad #[br] Disponible
+                                                    th.text-align-right Valor #[br] Nominal
+                                                    th.text-align-right Monto #[br] Invertido
+                                                    th.text-align-right Precio de #[br] Mercado
+                                                    th.text-align-right Ganancia/ #[br] Perdida
+                                                    th.text-align-right Valor de #[br] Mercado
+                                                    th.text-align-right V. de Mercado #[br] (USD)
+                                                    th.text-align-right Más
+                                            tbody
+                                                tr 
+                                                    td 
+                                                        a.text-link.open-modal-btn(href="#" data-modal="modal1") BANBOOG 6 1/4
+                                                    td NYSE
+                                                    td USD
+                                                    td.text-align-right 30
+                                                    td.text-align-right 1,000.00
+                                                    td.text-align-right 29,970.00
+                                                    td.text-align-right 99.91
+                                                    td.text-align-right
+                                                        span.text-color-green-70 3.90
+                                                    td.text-align-right 29,973.90
+                                                    td.text-align-right 
+                                                        span.text-color-blue-60 29,973.90
+                                                    td.text-align-right 
+                                                        button.button.button-invisible.button-i-only.open-modal-btn(data-modal="modal1") +
 
 
 .modal#modal1
@@ -331,12 +349,13 @@
                 button.modal-btn-close.button.button-invisible.close &times;
             .modal-body
                 p.typography-heading-18.mrg-b-2.text-color-blue-60 American Airlines Group
-                .box11.mrg-b-4
-                    ul.list-group.list-group-horizontal.typography-caption-12
-                        li.list-group-item NYSE
-                        li.list-group-item Dólares Americanos USD
-                        li.list-group-item Última transac. 12/05/2026
-                    p.typography-caption-12.mrg-x-left.mrg-b-0 Monto valorizado USD #[span.typography-heading-16.text-color-blue-60 29,973.00]
+                .box-main-s-1.box-main-end.mrg-b-4
+                    .box__info
+                        ul.list-group.list-group-horizontal.typography-caption-12
+                            li.list-group-item NYSE
+                            li.list-group-item Dólares Americanos USD
+                            li.list-group-item Última transac. 12/05/2026
+                    p.typography-caption-12.mrg-x-left.mrg-b-0 Monto valorizado USD #[span.typography-label-16.text-color-blue-60 29,973.00]
                 table.table.table-border-round 
                     thead
                         tr 

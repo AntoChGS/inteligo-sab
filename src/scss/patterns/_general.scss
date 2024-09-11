@@ -19,11 +19,9 @@
 }
 
 body {
-    //font-family: var(--fontNunito);
     font-family: $fontFamilySatoshi;
     font-size: 16px;
     line-height: 1.5;
-    //color: var(--color-gray-500);
     padding: 0;
     margin: 0;
     overflow-x: hidden;
@@ -126,14 +124,12 @@ p {
 
 a {
     word-wrap: break-word;
-    color: var(--color-orange-300);
-    -webkit-tap-highlight-color: var(--transparent);
+    -webkit-tap-highlight-color: transparent;
     transition: all ease 300ms;
     text-decoration: none;
 
     &:hover,
     &:active {
-        color: var(--color-orange-300);
         text-decoration: underline;
     }
 }
@@ -225,7 +221,8 @@ legend {
     width: 1em;
     height: 1em;
     overflow: visible;
-    vertical-align: -.125em;
+    //vertical-align: -.125em;
+    vertical-align: .1em;
 }
 
 .svg--inline {

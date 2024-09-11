@@ -42,15 +42,15 @@ body.modal-open {
     }
 
     &-xl {
-        @media (min-width: 1200px) {
-            max-width: 1058px;
+        @media (min-width: 1312px) {
+            max-width: 1098px;
         }
     }
 
     &-lg,
     &-xl {
-        @media (min-width: 992px) {
-            max-width: 992px;
+        @media (min-width: 1056px) {
+            max-width: 1058px;
         }
     }
 

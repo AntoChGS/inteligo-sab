@@ -1,9 +1,10 @@
 .bar {
+    display: block;
     height: 16px;
     background-color: $color-gray-30;
-    //width: 100%;
-    width: 130px;
-    border-radius: 0px;
+    width: 100%;
+    min-width: 100px;
+    border-radius: 0;
     overflow: hidden;
 }
 

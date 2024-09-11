@@ -340,11 +340,86 @@
                                             button.accordion-toggle(data-toggle="collapse" data-target="#collapseTwo") Acciones y ETFs en la Bolsa de Lima
                                         p.typography-label-12.mrg-b-0 Monto valorizado USD #[span.typography-label-16.text-color-blue-60 3,963.01]
                                     .accordion-body.collapse.show#collapseTwo
-                                        .alert.alert-light.alert-icon-center 
-                                            span.icon.svg--inline-icon.mrg-e-1: svg: use(xlink:href=iconPath+'information-filled')
-                                            div Recuerda que también puedes invertir en la Bolsa de Lima.
-                                                | 
-                                                a.button.button-invisible.button-xs(href="#") Operar en bolsa 
+                                        table.table.table-border-round 
+                                            thead
+                                                tr 
+                                                    th Símbolo
+                                                    th Descripción
+                                                    th Mercado
+                                                    th Moneda
+                                                    th.text-align-right Cantidad #[br] Disponible
+                                                    th.text-align-right Precio de #[br] Mercado
+                                                    th.text-align-right Monto #[br] Invertido
+                                                    th.text-align-right Ganancia/ #[br] Pérdida
+                                                    th.text-align-right Valor de #[br] Mercado
+                                                    th.text-align-right V. de Mercado #[br] (USD)
+                                                    th.text-align-right Comprar/ #[br] Vender
+                                                    th.text-align-right Más
+                                            tbody
+                                                tr 
+                                                    td 
+                                                        a.text-link.open-modal-btn(href="#" data-modal="modal1") ALICORC1
+                                                    td 
+                                                        span.text-col-ellipsis ALICORP S.A.A
+                                                    td BVL
+                                                    td PEN
+                                                    td.text-align-right 30
+                                                    td.text-align-right 177.925
+                                                    td.text-align-right 5,337.75
+                                                    td.text-align-right
+                                                        span.text-color-green-70 13,310
+                                                    td.text-align-right 3,310.23
+                                                    td.text-align-right 
+                                                        span.text-color-blue-60 887.94
+                                                    td.text-align-right 
+                                                        a.button.button-buy(href="#") C
+                                                        |  
+                                                        a.button.button-sell(href="#") V
+                                                    td.text-align-right 
+                                                        button.button.button-invisible.button-i-only.open-modal-btn(data-modal="modal1") +
+
+                                                tr 
+                                                    td 
+                                                        a.text-link.open-modal-btn(href="#" data-modal="modal1") ABX
+                                                    td 
+                                                        span.text-col-ellipsis BARRICK GOLD CORPORATION
+                                                    td BVL
+                                                    td PEN
+                                                    td.text-align-right 1,000
+                                                    td.text-align-right 202.490
+                                                    td.text-align-right 2,024.90
+                                                    td.text-align-right
+                                                        span.text-color-red-70 -527.55
+                                                    td.text-align-right 5,620.00
+                                                    td.text-align-right 
+                                                        span.text-color-blue-60 1,507.51
+                                                    td.text-align-right 
+                                                        a.button.button-buy(href="#") C
+                                                        |  
+                                                        a.button.button-sell(href="#") V
+                                                    td.text-align-right 
+                                                        button.button.button-invisible.button-i-only.open-modal-btn(data-modal="modal1") +
+                                                tr 
+                                                    td 
+                                                        a.text-link.open-modal-btn(href="#" data-modal="modal1") ALT
+                                                    td 
+                                                        span.text-col-ellipsis ALTURAS MINERAS CORP.
+                                                    td BVL
+                                                    td USD
+                                                    td.text-align-right 65
+                                                    td.text-align-right 33.551
+                                                    td.text-align-right 2,181.08
+                                                    td.text-align-right 
+                                                        span.text-color-green-70 68.60
+                                                    td.text-align-right 1,567.56
+                                                    td.text-align-right 
+                                                        span.text-color-blue-60 1,567.56
+                                                    td.text-align-right 
+                                                        a.button.button-buy(href="#") C
+                                                        |  
+                                                        a.button.button-sell(href="#") V
+                                                    td.text-align-right 
+                                                        button.button.button-invisible.button-i-only.open-modal-btn(data-modal="modal1") +
                         .tab-pane#tab2
                             .accordion
                                 .accordion-item
@@ -394,12 +469,13 @@
                 //h2.modal-title.typography-heading-20 What is modal?
                 button.modal-btn-close.button.button-invisible.close &times;
             .modal-body
-                p.typography-heading-18.mrg-b-2.text-color-blue-60 American Airlines Group
+                p.typography-heading-18.mrg-b-2.text-color-blue-60 BANBOG 6 1/4
                 .box-main-s-1.box-main-end.mrg-b-4
-                    ul.list-group.list-group-horizontal.typography-caption-12
-                        li.list-group-item NYSE
-                        li.list-group-item Dólares Americanos USD
-                        li.list-group-item Última transac. 12/05/2026
+                    .box__info
+                        ul.list-group.list-group-horizontal.typography-caption-12
+                            li.list-group-item NYSE
+                            li.list-group-item Dólares Americanos USD
+                            li.list-group-item Última transac. 12/05/2026
                     p.typography-caption-12.mrg-x-left.mrg-b-0 Monto valorizado USD #[span.typography-label-16.text-color-blue-60 29,973.00]
                 table.table.table-border-round 
                     thead
@@ -430,9 +506,3 @@
                             td.text-align-right 13.310
                             td.text-align-right 213.31
                             td.text-align-right 213.31
-                            
-                //p Contenido del Modal 2 aquí.
-            .modal-footer
-                //button.button.button-danger.close-modal-btn Cerrar
-                button.button.button-danger.button-md Vender
-                button.button.button-primary.button-md.mrg-s-2 Comprar

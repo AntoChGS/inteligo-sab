@@ -3,25 +3,20 @@ $fontFamilySatoshi: "Satoshi", Helvetica, Arial, sans-serif;
 $icon-size: 1.5rem;
 
 // Font Size
-$fontSize-display-96: 6rem;
-$fontSize-display-76: 4.75rem;
-$fontSize-display-64: 4rem;
-$fontSize-display-48: 3rem;
-$fontSize-heading-40: 2.25rem;
-$fontSize-heading-32: 2rem;
-$fontSize-heading-24: 1.5rem;
-$fontSize-heading-20: 1.25rem;
-$fontSize-heading-18: 1.125rem;
-$fontSize-heading-16: 1rem;
-$fontSize-subheading-24: 1.5rem;
-$fontSize-body-20: 1.25rem;
-$fontSize-body-16: 1rem;
-$fontSize-footnote-14: 0.875rem;
-$fontSize-caption-12: 0.75rem;
-$fontSize-label-16: 1rem;
-$fontSize-label-14: 0.875rem;
-$fontSize-label-12: 0.75rem;
-$fontSize-label-9: 0.563rem;
+$font-size-96: 6rem;
+$font-size-76: 4.75rem;
+$font-size-64: 4rem;
+$font-size-48: 3rem;
+$font-size-40: 2.5rem;
+$font-size-36: 2.25rem;
+$font-size-32: 2rem;
+$font-size-24: 1.5rem;
+$font-size-20: 1.25rem;
+$font-size-18: 1.125rem;
+$font-size-16: 1rem;
+$font-size-14: 0.875rem;
+$font-size-12: 0.75rem;
+$font-size-9: 0.563rem;
 
 // Color White
 $color-white: #FFFFFF;
@@ -72,3 +67,4 @@ $color-red-10: #FDF3F3;
 // Color Gray with transparency
 $color-gray-80-alpha-30: rgba(38, 40, 45, 0.3);
 $color-gray-80-alpha-15: rgba(38, 40, 45, 0.15);
+$color-text-muted: rgba(54, 58, 65, 0.70);
