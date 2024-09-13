@@ -1,7 +1,10 @@
 .accordion {
     .accordion-item {
         position: relative;
-        margin-bottom: 1.5rem;
+
+        @media (min-width: 1056px) {
+            margin-bottom: 1.5rem;
+        }
 
         .accordion-header {
             background-color: $color-white;
@@ -11,6 +14,17 @@
 
             &.close {
                 border-bottom: 1px solid $color-gray-40;
+
+                .accordion-label-right {
+                    display: block;
+                    opacity: 1;
+                }
+            }
+
+            .accordion-label-right {
+                display: none;
+                opacity: 0;
+                transition: all ease .2s;
             }
 
             .accordion-toggle {
@@ -27,6 +41,11 @@
                 color: $color-gray-70;
                 border: none;
                 transition: background-color 0.3s ease;
+
+                @media (max-width: 1055.98px) {
+                    //font-size: 1.25rem;
+                    padding: 1.5rem 1rem 1.5rem 2.25rem;
+                }
 
                 &.collapsed {
                     background-color: $color-white;
@@ -69,11 +88,22 @@
 
                     border-right: 2px solid $color-gray-70;
                     border-bottom: 2px solid $color-gray-70;
+
+                    @media (max-width: 1055.98px) {
+                        width: 8px;
+                        height: 8px;
+                        top: 20px;
+                        left: 16px;
+                    }
                 }
 
                 &:not(.collapsed)::after {
                     top: 8px;
                     transform: rotate(225deg);
+
+                    @media (max-width: 1055.98px) {
+                        top: 25px;
+                    }
                 }
             }
         }

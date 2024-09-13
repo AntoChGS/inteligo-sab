@@ -1,9 +1,9 @@
 .button {
-    padding: 0.75rem 1rem;
+    padding: 0.532rem 1rem;
     border-radius: 0.125rem;
     font-size: 0.875rem;
     font-weight: 500;
-    line-height: 1;
+    line-height: 1.5;
     cursor: pointer;
     border: none;
     display: inline-flex;
@@ -20,21 +20,31 @@
         color: #fff;
     }
 
-    &-xs {
-        padding: 0.5rem 0.75rem;
-    }
-
     &-xxs {
         padding: 0.375rem 0.625rem;
     }
 
+    &-xs {
+        padding: 0.282rem 0.75rem;
+    }
+
     &-md {
         font-size: 1rem;
+        padding: 0.688rem 1rem;
+    }
+
+    &-lg {
+        font-size: 1rem;
+        padding: 0.938rem 1rem;
     }
 
     &-i-only {
         font-size: 1rem;
         padding: 0.125rem 0.125rem;
+    }
+
+    &-full {
+        width: 100%;
     }
 
     &-primary {

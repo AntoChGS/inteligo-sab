@@ -1,11 +1,15 @@
 .bar {
     display: block;
-    height: 16px;
+    height: 24px;
     background-color: $color-gray-30;
     width: 100%;
     min-width: 100px;
     border-radius: 0;
     overflow: hidden;
+
+    @media (min-width: 1056px) {
+        height: 16px;
+    }
 }
 
 .fill {

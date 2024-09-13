@@ -26,8 +26,10 @@ body {
     margin: 0;
     overflow-x: hidden;
 
-    @media (max-width: 991px) {
+    @media (max-width: 1056px) {
         font-size: 14px;
+        background-color: $color-gray-20;
+        padding-bottom: 82px;
     }
 }
 

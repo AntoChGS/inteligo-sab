@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body class="body">
-        <h1 class="visually--hidden">Porvenir Colombia</h1>
+        <h1 class="visually--hidden">Inteligo SAB</h1>
         <header class="header"> 
             <div class="header__top">
                 <div class="button button-secondary burger-btn mrg-e-4 toggle-btn"><svg class="icon svg--inline-icon burger-ham" viewBox="0 0 100 100" width="80">
@@ -29,8 +29,9 @@
                 </div>
                 <div class="brand"> <a class="brand__link" href="/"> 
                         <picture> 
-                            <source media="(min-width: 992px)" srcset="images/logo/logo-inteligo-sab.png"><img class="image" src="images/logo/logo-inteligo-sab.png" alt="Logo Inteligo SAB" srcset="images/logo/logo-inteligo-sab.png">
+                            <source media="(min-width: 992px)" srcset="images/logo/logo-inteligo-sab.png"><img class="image" src="images/logo/logo-inteligo-sab-mobile.png" alt="Logo Inteligo SAB" srcset="images/logo/logo-inteligo-sab-mobile.png">
                         </picture></a></div>
+                <div class="top__button-right"><a class="button button-primary button-xs" href="#">Operar en bolsa</a></div>
                 <ul class="top__nav"> 
                     <li class="nav__item"> <a class="nav__link" href="#"> <span class="link__icon icon svg--inline-icon">
                                 <svg>
@@ -45,10 +46,19 @@
                                     <use xlink:href="images/icons/icons.svg#icon-chevron-down"></use>
                                 </svg></span></a>
                         <ul class="dropdown-menu dropdown-align--end">
-                            <li class="dropdown-item">RUT 1412669</li>
-                            <li class="dropdown-item"><a class="dropdown-link" href="#">Actualizar registro de cliente</a></li>
-                            <li class="dropdown-item"><a class="dropdown-link" href="#">Configuración</a></li>
-                            <li class="dropdown-item"><a class="dropdown-link" href="#">Cerrar sesión</a></li>
+                            <li class="dropdown-item"><span class="dropdown-text">RUT 1412669</span></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#"> <span class="icon svg--inline-icon mrg-e-2">
+                                        <svg>
+                                            <use xlink:href="images/icons/icons.svg#icon-identification"></use>
+                                        </svg></span>Actualizar registro de cliente</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#"> <span class="icon svg--inline-icon mrg-e-2">
+                                        <svg>
+                                            <use xlink:href="images/icons/icons.svg#icon-settings"></use>
+                                        </svg></span>Configuración</a></li>
+                            <li class="dropdown-item"><a class="dropdown-link" href="#"> <span class="icon svg--inline-icon mrg-e-2">
+                                        <svg>
+                                            <use xlink:href="images/icons/icons.svg#icon-logout"></use>
+                                        </svg></span>Cerrar sesión</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -87,6 +97,30 @@
                 </ul>
             </nav>
         </header>
+        <div class="mobile-menu">
+            <ul class="navbar__nav"> 
+                <li class="nav__item"><a class="nav__link active" href="#"><span class="link__icon icon svg--inline-icon">
+                            <svg>
+                                <use xlink:href="images/icons/icons.svg#icon-home"></use>
+                            </svg></span>Inicio</a></li>
+                <li class="nav__item"><a class="nav__link" href="#"><span class="link__icon icon svg--inline-icon">
+                            <svg>
+                                <use xlink:href="images/icons/icons.svg#icon-chart-stacked-vertical"></use>
+                            </svg></span>Operar en bolsa</a></li>
+                <li class="nav__item"><a class="nav__link" href="#"><span class="link__icon icon svg--inline-icon">
+                            <svg>
+                                <use xlink:href="images/icons/icons.svg#icon-document-multiple-01"></use>
+                            </svg></span>Reportes</a></li>
+                <li class="nav__item"><a class="nav__link" href="#"><span class="link__icon icon svg--inline-icon">
+                            <svg>
+                                <use xlink:href="images/icons/icons.svg#icon-arrows-vertical"></use>
+                            </svg></span>Movimientos</a></li>
+                <li class="nav__item"><a class="nav__link" href="#"><span class="link__icon icon svg--inline-icon">
+                            <svg>
+                                <use xlink:href="images/icons/icons.svg#icon-overflow-menu-horizontal"></use>
+                            </svg></span>Más </a></li>
+            </ul>
+        </div>
         <main role="main">
             <div class="layout-sticky-container"> 
                 <aside class="layout-sidebar sidebar">

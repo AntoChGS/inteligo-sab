@@ -1,0 +1,191 @@
+.dpy-block.bgd-color-white.shadow-box-sm.mrg-b-2
+    .box-main-s-3.box-main-end
+        .box__info.mrg-b-4
+            p.typography-body-16.mrg-b-1 Efectivo disponible
+            .box-main-s-1.box-main-center
+                p.info__subheading.typography-heading-18.mrg-b-0 #[span.typography-body-16 USD] #[span.text-color-blue-60 10,950.00] #[span.typography-body-16 + PEN] #[span.text-color-blue-60 0.00]
+        .dpy-block
+            a.button.button-secondary(href="#") Depósitar
+
+.dpy-block.bgd-color-white.shadow-box-sm
+    .navigation-tabs.navigation-tabs-underline#tabs2
+        .pdg-4.pdg-b-0
+            ul.tab-buttons
+                li.navigation-tab-item
+                    button.tab-button.navigation-link.active(data-tab="tab1") Renta Variable
+                li.navigation-tab-item
+                    button.tab-button.navigation-link(data-tab="tab2") Renta Fija
+        .tab-content
+            .tab-pane.active#tab1
+                .dpy-block.mrg-b-2.pdg-4.pdg-t-0.pdg-b-0
+                    h2.typography-subheading-24.mrg-b-0.text-color-blue-60 Renta Variable
+                .accordion
+                    .accordion-item
+                        .accordion-header.box-main-s-1.box-main-center
+                            h3.box__info.mrg-b-0 
+                                button.accordion-toggle(data-toggle="collapse" data-target="#collapseOne") Acciones y ETFs en el mercado extranjero
+                        .accordion-body.collapse.show#collapseOne
+                            .dpy-block.mrg-b-4.pdg-4.pdg-t-0.pdg-b-0
+                                .box-main-s-1.box-main-center.mrg-b-0
+                                    p.typography-heading-28.mrg-b-0 #[span.typography-body-16 USD] #[span.text-color-blue-60 10,598.00]
+                                p.typography-footnote-14.mrg-b-0 Monto valorizado dólares americanos
+                            table.table
+                                thead
+                                    tr 
+                                        th.table-border-right Símbolo
+                                        th.text-align-right Cantidad #[br] Disponible
+                                        th.text-align-right Valor de #[br] Mercado
+                                        th.text-align-right Ganancia/ #[br] Pérdida
+                                tbody
+                                    tr 
+                                        td.table-border-right 
+                                            a.text-link 
+                                                span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'chevron-right')
+                                                | AAL
+                                        td.text-align-right 5,337.75
+                                        td.text-align-right 177.92
+                                        td.text-align-right
+                                            span.text-color-green-70 177.92
+                                    tr 
+                                        td.table-border-right 
+                                            a.text-link 
+                                                span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'chevron-right')
+                                                | APPL
+                                        td.text-align-right 2,024.90
+                                        td.text-align-right 202.49
+                                        td.text-align-right
+                                            span.text-color-green-70 202.49
+                                    tr 
+                                        td.table-border-right 
+                                            a.text-link 
+                                                span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'chevron-right')
+                                                | APPL
+                                        td.text-align-right 2,024.90
+                                        td.text-align-right 202.49
+                                        td.text-align-right
+                                            span.text-color-green-70 202.49
+                                    tr 
+                                        td.table-border-right 
+                                            a.text-link 
+                                                span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'chevron-right')
+                                                | APPL
+                                        td.text-align-right 2,024.90
+                                        td.text-align-right 202.49
+                                        td.text-align-right
+                                            span.text-color-green-70 202.49
+                                    tr 
+                                        td.table-border-right 
+                                            a.text-link 
+                                                span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'chevron-right')
+                                                | APPL
+                                        td.text-align-right 2,024.90
+                                        td.text-align-right 202.49
+                                        td.text-align-right
+                                            span.text-color-green-70 202.49
+                                tfoot 
+                                    tr
+                                        td(colspan="2") 
+                                            span.typography-label-14 Se muestran 5 de 10 símbolos
+                                        td.text-align-right(colspan="2")
+                                            a.button.button-invisible.button-md(href="#") Ver todos 
+                                                span.icon.svg--inline-icon.mrg-s-2: svg: use(xlink:href=iconPath+'arrow-right')
+                    .accordion-item
+                        .accordion-header.box-main-s-1.box-main-center.close
+                            h3.box__info.mrg-b-0  
+                                button.accordion-toggle.collapsed(data-toggle="collapse" data-target="#collapseTwo") Acciones y ETFs en la Bolsa de Lima
+                        .accordion-body.collapse#collapseTwo
+                            .dpy-block.mrg-b-4.pdg-4.pdg-t-0.pdg-b-0
+                                .box-main-s-1.box-main-center.mrg-b-0
+                                    p.typography-heading-28.mrg-b-0 #[span.typography-body-16 USD] #[span.text-color-blue-60 1,673.00]
+                                p.typography-footnote-14.mrg-b-0 Monto valorizado dólares americanos
+                            table.table
+                                thead
+                                    tr 
+                                        th.table-border-right Símbolo
+                                        th.text-align-right Cantidad #[br] Disponible
+                                        th.text-align-right Valor de #[br] Mercado
+                                        th.text-align-right Ganancia/ #[br] Pérdida
+                                tbody
+                                    tr 
+                                        td.table-border-right 
+                                            a.text-link 
+                                                span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'chevron-right')
+                                                | AAL
+                                        td.text-align-right 5,337.75
+                                        td.text-align-right 177.92
+                                        td.text-align-right
+                                            span.text-color-green-70 177.92
+                                    tr 
+                                        td.table-border-right 
+                                            a.text-link 
+                                                span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'chevron-right')
+                                                | APPL
+                                        td.text-align-right 2,024.90
+                                        td.text-align-right 202.49
+                                        td.text-align-right
+                                            span.text-color-green-70 202.49
+                                    tr 
+                                        td.table-border-right 
+                                            a.text-link 
+                                                span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'chevron-right')
+                                                | APPL
+                                        td.text-align-right 2,024.90
+                                        td.text-align-right 202.49
+                                        td.text-align-right
+                                            span.text-color-green-70 202.49
+                                    tr 
+                                        td.table-border-right 
+                                            a.text-link 
+                                                span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'chevron-right')
+                                                | APPL
+                                        td.text-align-right 2,024.90
+                                        td.text-align-right 202.49
+                                        td.text-align-right
+                                            span.text-color-green-70 202.49
+                                    tr 
+                                        td.table-border-right 
+                                            a.text-link 
+                                                span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'chevron-right')
+                                                | APPL
+                                        td.text-align-right 2,024.90
+                                        td.text-align-right 202.49
+                                        td.text-align-right
+                                            span.text-color-green-70 202.49
+                                tfoot 
+                                    tr
+                                        td(colspan="2") 
+                                            span.typography-label-14 Se muestran 5 de 10 símbolos
+                                        td.text-align-right(colspan="2")
+                                            a.button.button-invisible.button-md(href="#") Ver todos 
+                                                span.icon.svg--inline-icon.mrg-s-2: svg: use(xlink:href=iconPath+'arrow-right')
+            .tab-pane#tab2
+                .dpy-block.mrg-b-2.pdg-4.pdg-t-0.pdg-b-0
+                    h2.typography-subheading-24.mrg-b-0.text-color-blue-60 Renta Fija
+                .accordion
+                    .accordion-item
+                        .accordion-header.box-main-s-1.box-main-center
+                            h3.box__info.mrg-b-0 
+                                button.accordion-toggle(data-toggle="collapse" data-target="#collapseTwoOne") Bonos
+                        .accordion-body.collapse.show#collapseTwoOne
+                            .dpy-block.mrg-b-4.pdg-4.pdg-t-0.pdg-b-0
+                                .box-main-s-1.box-main-center.mrg-b-0
+                                    p.typography-heading-28.mrg-b-0 #[span.typography-body-16 USD] #[span.text-color-blue-60 10,598.00]
+                                p.typography-footnote-14.mrg-b-0 Monto valorizado dólares americanos
+                            table.table
+                                thead
+                                    tr 
+                                        th.table-border-right Símbolo
+                                        th.text-align-right Cantidad #[br] Disponible
+                                        th.text-align-right Valor de #[br] Mercado
+                                        th.text-align-right Ganancia/ #[br] Pérdida
+                                tbody
+                                    tr 
+                                        td.table-border-right 
+                                            a.text-link 
+                                                span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'chevron-right')
+                                                | BANBOOG 6 1/4
+                                        td.text-align-right 5,337.75
+                                        td.text-align-right 177.92
+                                        td.text-align-right
+                                            span.text-color-green-70 177.92
+                                    

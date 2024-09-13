@@ -10,7 +10,9 @@ header.header
             a(href="/" class="brand__link") 
                 picture 
                     source(media="(min-width: 992px)", srcset="images/logo/logo-inteligo-sab.png")
-                    img.image(src="images/logo/logo-inteligo-sab.png", alt="Logo Inteligo SAB", srcset="images/logo/logo-inteligo-sab.png")
+                    img.image(src="images/logo/logo-inteligo-sab-mobile.png", alt="Logo Inteligo SAB", srcset="images/logo/logo-inteligo-sab-mobile.png")
+        .top__button-right
+            a(href="#").button.button-primary.button-xs Operar en bolsa
         ul.top__nav 
             li.nav__item 
                 a.nav__link(href="#") 
@@ -27,10 +29,19 @@ header.header
                     | Perfil
                     span.toggle-icon-dropdown.mrg-s-1.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chevron-down')
                 ul.dropdown-menu.dropdown-align--end
-                    li.dropdown-item RUT 1412669
-                    li.dropdown-item: a.dropdown-link(href="#") Actualizar registro de cliente
-                    li.dropdown-item: a.dropdown-link(href="#") Configuración
-                    li.dropdown-item: a.dropdown-link(href="#") Cerrar sesión
+                    li.dropdown-item: span.dropdown-text RUT 1412669
+                    li.dropdown-item
+                        a.dropdown-link(href="#") 
+                            span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'identification')
+                            | Actualizar registro de cliente
+                    li.dropdown-item
+                        a.dropdown-link(href="#") 
+                            span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'settings')
+                            | Configuración
+                    li.dropdown-item
+                        a.dropdown-link(href="#") 
+                            span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'logout')
+                            | Cerrar sesión
     nav.nav__menu 
         ul.navbar__nav 
             li.nav__item 
@@ -61,3 +72,26 @@ header.header
                 span.nav__text Cambio USD: #[b.text-color-blue-60 3.728]
             li.nav__item 
                 span.nav__text Última actualización: #[b 10:20:42 am]
+
+.mobile-menu
+    ul.navbar__nav 
+        li.nav__item
+            a.nav__link.active(href="#")
+                span.link__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'home')
+                | Inicio
+        li.nav__item
+            a.nav__link(href="#")
+                span.link__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chart-stacked-vertical')
+                | Operar en bolsa
+        li.nav__item
+            a.nav__link(href="#")
+                span.link__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'document-multiple-01')
+                | Reportes
+        li.nav__item
+            a.nav__link(href="#")
+                span.link__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'arrows-vertical')
+                | Movimientos
+        li.nav__item
+            a.nav__link(href="#")
+                span.link__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'overflow-menu-horizontal')
+                | Más 
