@@ -1,12 +1,12 @@
 .burger-btn {
-    display: none;
+    display: none !important;
     padding: 0;
     width: 32px;
     height: 32px;
     font-size: 1.75rem;
 
     @media only screen and (min-width: 1056px) and (max-width: 1311.98px) {
-        display: inline-flex;
+        display: inline-flex !important;
     }
 
     &.active {
@@ -46,10 +46,10 @@
     }
 }
 
-.header {
+.sab-header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 20;
 
     .header__top {
         display: flex;
@@ -60,6 +60,21 @@
 
         @media (min-width: 1056px) {
             padding: 1rem 1.5rem;
+        }
+
+        .brand {
+            display: inline-flex;
+
+            .brand__svg {
+                display: block;
+                width: 100%;
+                max-width: 129px;
+                height: auto;
+
+                @media (min-width: 1056px) {
+                    max-width: 147px;
+                }
+            }
         }
 
         .top__nav {
@@ -86,8 +101,8 @@
                     display: inline-flex;
                     align-items: center;
                     justify-content: center;
-                    width: 24px;
-                    height: 24px;
+                    width: 32px;
+                    height: 32px;
                     font-size: 9px;
                     background-color: $color-gray-30;
                     border-radius: 50%;
@@ -95,8 +110,8 @@
 
                     .user-profile__badge {
                         position: absolute;
-                        right: -2px;
-                        bottom: -2px;
+                        right: 0px;
+                        bottom: 0px;
                         width: 9px;
                         height: 9px;
                         background-color: $color-blue-50;
@@ -108,7 +123,7 @@
                 .nav__link {
                     display: inline-flex;
                     align-items: center;
-                    font-size: 0.75rem;
+                    font-size: .875rem;
                     padding: 0.5rem 0.5rem;
                     color: $color-gray-70;
                     text-decoration: none;
@@ -124,7 +139,7 @@
                     }
 
                     .link__icon {
-                        font-size: 12px;
+                        font-size: 14px;
                         margin-right: 4px;
                     }
 
@@ -134,14 +149,15 @@
                 }
 
                 +.nav__item {
-                    padding-left: 0.75rem;
+                    display: inline-flex;
+                    align-items: center;
+                    padding-left: .5rem;
 
                     &::before {
-                        float: left;
-                        padding-right: 0.75rem;
+                        padding-right: .5rem;
                         content: "|";
                         color: $color-gray-30;
-                        margin-top: 4px;
+                        margin-top: 1px;
                     }
                 }
             }
@@ -255,17 +271,17 @@
         padding-left: 0;
         margin-bottom: 0;
         list-style: none;
-
         margin-left: auto !important;
 
         .nav__item {
             +.nav__item {
-                padding-left: 0.125rem;
+                padding-left: .5rem;
 
                 &::before {
                     float: left;
-                    padding-right: 0.125rem;
+                    padding-right: .5rem;
                     content: "|";
+                    color: $color-gray-30;
                 }
             }
 
@@ -280,7 +296,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 20;
 
     display: flex;
     align-items: center;
@@ -354,6 +370,107 @@
             &::after {
                 height: 2px;
                 background-color: $color-blue-60;
+            }
+        }
+    }
+}
+
+.mobile-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: $color-gray-20;
+    display: block;
+    transition: right 0.3s;
+    z-index: 24;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 68px;
+
+    &.open {
+        right: 0;
+    }
+
+    .sidebar {
+        &__top {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            line-height: 1;
+            padding: 16px 16px 16px;
+            background-color: $color-white;
+            border-bottom: 1px solid $color-gray-40;
+        }
+
+        &__info {
+            position: relative;
+            padding: 32px 24px 24px;
+            background-color: $color-white;
+            border-bottom: 1px solid $color-gray-40;
+
+            .info__rut {
+                display: inline-flex;
+                margin: 0;
+                padding: 2px 12px 2px 12px;
+                color: $color-gray-80;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.15;
+                border-radius: 24px;
+                background-color: $color-gray-30;
+            }
+        }
+
+        &__content {
+            padding: 24px 16px;
+        }
+
+        &__menu {
+            padding: 8px 16px;
+            background-color: $color-white;
+            border-radius: 3px;
+
+            .navbar__nav {
+                font-size: $font-size-16;
+                color: $color-gray-70;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .nav {
+                &__item {
+                    +.nav__item {
+                        border-top: 1px solid $color-gray-30;
+                    }
+                }
+
+                &__link {
+                    display: flex;
+                    align-items: center;
+                    padding: 1rem 0rem;
+                    color: $color-gray-70;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    text-decoration: none;
+
+                    &:hover {
+                        border-radius: 2px;
+                        text-decoration: none;
+                        background: $color-gray-20;
+                    }
+
+                    &.active {
+                        background: $color-gray-20;
+                        color: $color-gray-70;
+                    }
+
+                    .link__icon {
+                        font-size: 20px;
+                    }
+                }
             }
         }
     }

@@ -1,10 +1,10 @@
-.dropdown {
+.sab-dropdown {
     position: relative;
     display: inline-block;
 
     &-toggle {
         >.toggle-icon-dropdown {
-            font-size: 12px;
+            font-size: 14px;
 
             >svg {
                 transition: all ease .3s;
@@ -29,8 +29,8 @@
         border-radius: 0.25rem;
         list-style: none;
         padding: 0.5rem;
-        font-size: $font-size-14;
-        z-index: 1000;
+        font-size: $font-size-16;
+        z-index: 10;
         top: 105%;
         left: 0;
         min-width: 198px;
@@ -46,7 +46,7 @@
     }
 
     &-item {
-        +.dropdown-item {
+        +.sab-dropdown-item {
             border-top: 1px solid $color-gray-30;
         }
     }
@@ -56,7 +56,7 @@
         display: block;
         width: 100%;
         color: $color-gray-70;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 1.15;
     }
 
@@ -65,7 +65,7 @@
         display: block;
         width: 100%;
         color: $color-gray-70;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 1.15;
         text-decoration: none;
         white-space: nowrap;

@@ -1,4 +1,4 @@
-header.header 
+header.sab-header 
     .header__top
         .button.button-secondary.burger-btn.mrg-e-4.toggle-btn
             <svg class="icon svg--inline-icon burger-ham" viewBox="0 0 100 100" width="80">
@@ -22,24 +22,24 @@ header.header
                 a.nav__link(href="#") 
                     span.link__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'customer-service')
                     | Contacto
-            li.nav__item.dropdown 
-                a.nav__link.dropdown-toggle(href="#") 
+            li.nav__item.sab-dropdown 
+                a.nav__link.sab-dropdown-toggle(href="#") 
                     span.user-profile EQ
                         span.user-profile__badge
                     | Perfil
                     span.toggle-icon-dropdown.mrg-s-1.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'chevron-down')
-                ul.dropdown-menu.dropdown-align--end
-                    li.dropdown-item: span.dropdown-text RUT 1412669
-                    li.dropdown-item
-                        a.dropdown-link(href="#") 
+                ul.sab-dropdown-menu.sab-dropdown-align--end
+                    li.sab-dropdown-item: span.sab-dropdown-text RUT 1412669
+                    li.sab-dropdown-item
+                        a.sab-dropdown-link(href="#") 
                             span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'identification')
                             | Actualizar registro de cliente
-                    li.dropdown-item
-                        a.dropdown-link(href="#") 
+                    li.sab-dropdown-item
+                        a.sab-dropdown-link(href="#") 
                             span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'settings')
                             | Configuración
-                    li.dropdown-item
-                        a.dropdown-link(href="#") 
+                    li.sab-dropdown-item
+                        a.sab-dropdown-link(href="#") 
                             span.icon.svg--inline-icon.mrg-e-2: svg: use(xlink:href=iconPath+'logout')
                             | Cerrar sesión
     nav.nav__menu 
@@ -50,23 +50,23 @@ header.header
                 a.nav__link(href="#") Operar en Bolsa
             li.nav__item 
                 a.nav__link(href="#") Reportes de Mercado
-            li.nav__item.dropdown 
-                a.nav__link.dropdown-toggle(href="#") Movimientos de Efectivo
+            li.nav__item.sab-dropdown 
+                a.nav__link.sab-dropdown-toggle(href="#") Movimientos de Efectivo
                     span.toggle-icon-dropdown.icon.svg--inline-icon.mrg-s-1: svg: use(xlink:href=iconPath+'chevron-down')
-                ul.dropdown-menu
-                    li.dropdown-item: a.dropdown-link(href="#") Depositar
-                    li.dropdown-item: a.dropdown-link(href="#") Retirar
-                    li.dropdown-item: a.dropdown-link(href="#") Historial de transacciones
+                ul.sab-dropdown-menu
+                    li.sab-dropdown-item: a.sab-dropdown-link(href="#") Depositar
+                    li.sab-dropdown-item: a.sab-dropdown-link(href="#") Retirar
+                    li.sab-dropdown-item: a.sab-dropdown-link(href="#") Historial de transacciones
             li.nav__item 
                 a.nav__link(href="#") Fondos Mutuos
-            li.nav__item.dropdown  
-                a.nav__link.dropdown-toggle(href="#") Otras Consultas
+            li.nav__item.sab-dropdown  
+                a.nav__link.sab-dropdown-toggle(href="#") Otras Consultas
                     span.toggle-icon-dropdown.icon.svg--inline-icon.mrg-s-1: svg: use(xlink:href=iconPath+'chevron-down')
-                ul.dropdown-menu
-                    li.dropdown-item: a.dropdown-link(href="#") Custodia de valores
-                    li.dropdown-item: a.dropdown-link(href="#") Consulta de órdenes
-                    li.dropdown-item: a.dropdown-link(href="#") Consulta de pólizas
-                    li.dropdown-item: a.dropdown-link(href="#") Consulta estado de cuenta
+                ul.sab-dropdown-menu
+                    li.sab-dropdown-item: a.sab-dropdown-link(href="#") Custodia de valores
+                    li.sab-dropdown-item: a.sab-dropdown-link(href="#") Consulta de órdenes
+                    li.sab-dropdown-item: a.sab-dropdown-link(href="#") Consulta de pólizas
+                    li.sab-dropdown-item: a.sab-dropdown-link(href="#") Consulta estado de cuenta
         ul.navbar__nav-right
             li.nav__item 
                 span.nav__text Cambio USD: #[b.text-color-blue-60 3.728]
@@ -92,6 +92,60 @@ header.header
                 span.link__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'arrows-vertical')
                 | Movimientos
         li.nav__item
-            a.nav__link(href="#")
+            a.nav__link.nav__link-more#toggle-button-mobile(href="#")
                 span.link__icon.icon.svg--inline-icon: svg: use(xlink:href=iconPath+'overflow-menu-horizontal')
                 | Más 
+
+
+.mobile-sidebar#sidebar-mobile
+    .sidebar__top
+        button.button.button-invisible.pdg-0#close-button-mobile
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" fill="white" fill-opacity="0.01" style="mix-blend-mode:multiply"/>
+            <path d="M13.0606 12L19.5 5.56058L18.4394 4.5L12 10.9394L5.56072 4.5L4.5 5.56058L10.9394 12L4.5 18.4394L5.56072 19.5L12 13.0606L18.4394 19.5L19.5 18.4394L13.0606 12Z" fill="#0041A3"/>
+            </svg>
+    .sidebar__info
+        p.typography-subheading-24.mrg-b-2 Juan Carlos Peralta
+        p.mrg-b-0 #[span.info__rut RUT 1412669]
+    .sidebar__content
+        p.typography-heading-16.mrg-b-1 Otras consultas
+        .sidebar__menu.shadow-box-sm.mrg-b-4
+            ul.navbar__nav 
+                li.nav__item
+                    a.nav__link(href="#")
+                        span.link__icon.icon.svg--inline-icon.mrg-e-4: svg: use(xlink:href=iconPath+'piggy-bank-slot')
+                        span Fondos Mutuos
+                        span.link__icon.icon.svg--inline-icon.mrg-s-4: svg: use(xlink:href=iconPath+'chevron-right')
+                li.nav__item
+                    a.nav__link(href="#")
+                        span.link__icon.icon.svg--inline-icon.mrg-e-4: svg: use(xlink:href=iconPath+'money')
+                        | Custodia de valores
+                        span.link__icon.icon.svg--inline-icon.mrg-s-4: svg: use(xlink:href=iconPath+'chevron-right')
+                li.nav__item
+                    a.nav__link(href="#")
+                        span.link__icon.icon.svg--inline-icon.mrg-e-4: svg: use(xlink:href=iconPath+'current-account')
+                        | Historial de ordenes
+                        span.link__icon.icon.svg--inline-icon.mrg-s-4: svg: use(xlink:href=iconPath+'chevron-right')
+                li.nav__item
+                    a.nav__link(href="#")
+                        span.link__icon.icon.svg--inline-icon.mrg-e-4: svg: use(xlink:href=iconPath+'document-multiple-01')
+                        | Historial de pólizas
+                        span.link__icon.icon.svg--inline-icon.mrg-s-4: svg: use(xlink:href=iconPath+'chevron-right')
+            
+        p.typography-heading-16.mrg-b-1 Perfil del cliente
+        .sidebar__menu.shadow-box-sm
+            ul.navbar__nav 
+                li.nav__item
+                    a.nav__link(href="#")
+                        span.link__icon.icon.svg--inline-icon.mrg-e-4: svg: use(xlink:href=iconPath+'piggy-bank-slot')
+                        | Actualización de registro
+                        span.link__icon.icon.svg--inline-icon.mrg-s-4: svg: use(xlink:href=iconPath+'chevron-right')
+                li.nav__item
+                    a.nav__link(href="#")
+                        span.link__icon.icon.svg--inline-icon.mrg-e-4: svg: use(xlink:href=iconPath+'money')
+                        | Configuración
+                        span.link__icon.icon.svg--inline-icon.mrg-s-4: svg: use(xlink:href=iconPath+'chevron-right')
+                li.nav__item
+                    a.nav__link(href="#")
+                        span.link__icon.icon.svg--inline-icon.mrg-e-4: svg: use(xlink:href=iconPath+'current-account')
+                        | Cerrar sesión

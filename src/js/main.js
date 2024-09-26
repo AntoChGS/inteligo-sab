@@ -12,6 +12,22 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // SIDEBAR MOBILE
+    const toggleButton = document.getElementById('toggle-button-mobile');
+    const closeButton = document.getElementById('close-button-mobile');
+    const sidebar = document.getElementById('sidebar-mobile');
+
+    toggleButton.addEventListener('click', () => {
+        sidebar.classList.toggle('open');
+        document.body.style.overflow = 'hidden'; // Oculta el overflow del body
+    });
+
+    closeButton.addEventListener('click', () => {
+        sidebar.classList.remove('open');
+        document.body.style.overflow = 'auto'; // Restablece el overflow del body
+    });
+
+
     // ACCORDION
     const buttons = document.querySelectorAll('.accordion-toggle');
 
@@ -59,18 +75,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // SELECT DROPDOWN
-    const dropdowns = document.querySelectorAll('.dropdown');
+    const dropdowns = document.querySelectorAll('.sab-dropdown');
 
     dropdowns.forEach(dropdown => {
-        const toggle = dropdown.querySelector('.dropdown-toggle');
-        const menu = dropdown.querySelector('.dropdown-menu');
+        const toggle = dropdown.querySelector('.sab-dropdown-toggle');
+        const menu = dropdown.querySelector('.sab-dropdown-menu');
 
         toggle.addEventListener('click', function () {
             const isOpen = menu.classList.contains('show');
 
             // Cerrar todos los dropdowns abiertos
-            document.querySelectorAll('.dropdown-menu').forEach(m => m.classList.remove('show'));
-            document.querySelectorAll('.dropdown-toggle').forEach(t => t.classList.remove('show'));
+            document.querySelectorAll('.sab-dropdown-menu').forEach(m => m.classList.remove('show'));
+            document.querySelectorAll('.sab-dropdown-toggle').forEach(t => t.classList.remove('show'));
 
             if (!isOpen) {
                 menu.classList.add('show');
@@ -80,9 +96,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.addEventListener('click', function (event) {
-        if (!event.target.closest('.dropdown')) {
-            document.querySelectorAll('.dropdown-menu').forEach(menu => menu.classList.remove('show'));
-            document.querySelectorAll('.dropdown-toggle').forEach(toggle => toggle.classList.remove('show'));
+        if (!event.target.closest('.sab-dropdown')) {
+            document.querySelectorAll('.sab-dropdown-menu').forEach(menu => menu.classList.remove('show'));
+            document.querySelectorAll('.sab-dropdown-toggle').forEach(toggle => toggle.classList.remove('show'));
         }
     });
 

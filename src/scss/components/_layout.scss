@@ -45,9 +45,9 @@
 
                 @media (min-width: 1312px) {
                     position: sticky;
-                    top: 116px;
-                    height: calc(100vh - 116px);
-                    z-index: 1000;
+                    top: 122px;
+                    height: calc(100vh - 122px);
+                    z-index: 901;
                     width: 356px;
                 }
 
@@ -56,7 +56,7 @@
                     top: 65px;
                     height: calc(100vh - 65px);
                     transform: translateX(-100%);
-                    z-index: 1001;
+                    z-index: 901;
                     visibility: hidden;
                 }
 
