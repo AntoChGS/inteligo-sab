@@ -2,16 +2,16 @@
 //=require jquery/dist/jquery.min.js
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('.toggle-btn').forEach(button => {
+    document.querySelectorAll('.itg-toggle-btn-sidebar').forEach(button => {
         button.addEventListener('click', () => {
             // Encuentra el primer elemento con la clase 'sidebar'
-            const burgerBtn = document.querySelector('.burger-btn');
-            const sidebar = document.querySelector('.sidebar');
+            const burgerBtn = document.querySelector('.itg-burger-btn');
+            const sidebar = document.querySelector('.itg-layout-sticky-container .layout-sidebar');
             burgerBtn.classList.toggle('active');
             sidebar.classList.toggle('open');
         });
     });
-
+    
     // SIDEBAR MOBILE
     const toggleButton = document.getElementById('toggle-button-mobile');
     const closeButton = document.getElementById('close-button-mobile');
@@ -27,9 +27,37 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = 'auto'; // Restablece el overflow del body
     });
 
+    // SELECT DROPDOWN
+    const dropdowns = document.querySelectorAll('.itg-dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.itg-dropdown-toggle');
+        const menu = dropdown.querySelector('.itg-dropdown-menu');
+
+        toggle.addEventListener('click', function (event) {
+            event.preventDefault(); // Evitar el comportamiento predeterminado del clic
+            const isOpen = menu.classList.contains('show');
+
+            // Cerrar todos los dropdowns abiertos
+            document.querySelectorAll('.itg-dropdown-menu').forEach(m => m.classList.remove('show'));
+            document.querySelectorAll('.itg-dropdown-toggle').forEach(t => t.classList.remove('show'));
+
+            if (!isOpen) {
+                menu.classList.add('show');
+                toggle.classList.add('show');
+            }
+        });
+    });
+
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.itg-dropdown')) {
+            document.querySelectorAll('.itg-dropdown-menu').forEach(menu => menu.classList.remove('show'));
+            document.querySelectorAll('.itg-dropdown-toggle').forEach(toggle => toggle.classList.remove('show'));
+        }
+    });
 
     // ACCORDION
-    const buttons = document.querySelectorAll('.accordion-toggle');
+    const buttons = document.querySelectorAll('.itg-accordion .accordion-toggle');
 
     buttons.forEach(button => {
         button.addEventListener('click', function () {
@@ -73,92 +101,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
-    // SELECT DROPDOWN
-    const dropdowns = document.querySelectorAll('.sab-dropdown');
-
-    dropdowns.forEach(dropdown => {
-        const toggle = dropdown.querySelector('.sab-dropdown-toggle');
-        const menu = dropdown.querySelector('.sab-dropdown-menu');
-
-        toggle.addEventListener('click', function () {
-            const isOpen = menu.classList.contains('show');
-
-            // Cerrar todos los dropdowns abiertos
-            document.querySelectorAll('.sab-dropdown-menu').forEach(m => m.classList.remove('show'));
-            document.querySelectorAll('.sab-dropdown-toggle').forEach(t => t.classList.remove('show'));
-
-            if (!isOpen) {
-                menu.classList.add('show');
-                toggle.classList.add('show');
-            }
-        });
-    });
-
-    document.addEventListener('click', function (event) {
-        if (!event.target.closest('.sab-dropdown')) {
-            document.querySelectorAll('.sab-dropdown-menu').forEach(menu => menu.classList.remove('show'));
-            document.querySelectorAll('.sab-dropdown-toggle').forEach(toggle => toggle.classList.remove('show'));
-        }
-    });
-
-    // TABS
-    // Función para activar una pestaña y sincronizar botones externos
-    function activateTab(container, button) {
-        const tabButtons = container.querySelectorAll('.tab-button');
-        const tabPanes = container.querySelectorAll('.tab-pane');
-        const targetTabId = button.getAttribute('data-tab');
-        const targetPane = container.querySelector(`#${targetTabId}`);
-
-        // Elimina la clase activa de todos los botones y panes
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        tabPanes.forEach(pane => pane.classList.remove('active'));
-
-        // Añade la clase activa al botón y al pane correspondiente
-        button.classList.add('active');
-        if (targetPane) {
-            targetPane.classList.add('active');
-        }
-
-        // Actualiza la clase activa en los botones externos relacionados
-        const containerId = container.getAttribute('id');
-        document.querySelectorAll(`.external-tab-button[data-tabs-id="${containerId}"]`).forEach(externalButton => {
-            externalButton.classList.remove('active');
-            if (externalButton.getAttribute('data-target') === targetTabId) {
-                externalButton.classList.add('active');
-            }
-        });
-    }
-
-    // Manejo de clics en botones de tabs internos
-    document.querySelectorAll('.navigation-tabs').forEach(container => {
-        const tabButtons = container.querySelectorAll('.tab-button');
-
-        tabButtons.forEach(button => {
-            button.addEventListener('click', (event) => {
-                event.preventDefault(); // Evita el comportamiento predeterminado
-                activateTab(container, button);
-            });
-        });
-    });
-
-    // Manejo de clics en botones externos
-    document.querySelectorAll('.external-tab-button').forEach(button => {
-        button.addEventListener('click', (event) => {
-            event.preventDefault(); // Evita el comportamiento predeterminado
-            const targetTabId = button.getAttribute('data-target');
-            const tabsId = button.getAttribute('data-tabs-id');
-            const container = document.getElementById(tabsId);
-            const targetTabButton = container ? container.querySelector(`[data-tab="${targetTabId}"]`) : null;
-
-            if (targetTabButton) {
-                activateTab(container, targetTabButton);
-            }
-        });
-    });
-
     // TOOLTIP
-    const tooltipTriggers = document.querySelectorAll('.tooltip-trigger');
+    const tooltipTriggers = document.querySelectorAll('.itg-tooltips .tooltip-trigger');
 
     tooltipTriggers.forEach(trigger => {
         const tooltipContainer = trigger.parentElement;
@@ -223,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Event listener for open modal buttons and links
-    document.querySelectorAll('.open-modal-btn').forEach(element => {
+    document.querySelectorAll('.itg-open-modal-btn').forEach(element => {
         element.addEventListener('click', function (event) {
             event.preventDefault(); // Prevent default action for links
             const modalId = this.getAttribute('data-modal');
@@ -232,21 +176,75 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Event listener for close buttons
-    document.querySelectorAll('.close, .close-modal-btn').forEach(button => {
+    document.querySelectorAll('.itg-close-modal, .itg-close-modal-btn').forEach(button => {
         button.addEventListener('click', function () {
-            const modal = this.closest('.modal');
+            const modal = this.closest('.itg-modal');
             closeModal(modal);
         });
     });
 
     // Close modal when clicking outside of the modal content
     window.addEventListener('click', function (event) {
-        if (event.target.classList.contains('modal')) {
+        if (event.target.classList.contains('itg-modal')) {
             closeModal(event.target);
         }
     });
-});
 
+    // TABS
+    // Función para activar una pestaña y sincronizar botones externos
+    function activateTab(container, button) {
+        const tabButtons = container.querySelectorAll('.itg-tabs .tab-button');
+        const tabPanes = container.querySelectorAll('.itg-tabs .tab-pane');
+        const targetTabId = button.getAttribute('data-tab');
+        const targetPane = container.querySelector(`#${targetTabId}`);
+
+        // Elimina la clase activa de todos los botones y panes
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabPanes.forEach(pane => pane.classList.remove('active'));
+
+        // Añade la clase activa al botón y al pane correspondiente
+        button.classList.add('active');
+        if (targetPane) {
+            targetPane.classList.add('active');
+        }
+
+        // Actualiza la clase activa en los botones externos relacionados
+        const containerId = container.getAttribute('id');
+        document.querySelectorAll(`.itg-tab-btn-external[data-tabs-id="${containerId}"]`).forEach(externalButton => {
+            externalButton.classList.remove('active');
+            if (externalButton.getAttribute('data-target') === targetTabId) {
+                externalButton.classList.add('active');
+            }
+        });
+    }
+
+    // Manejo de clics en botones de tabs internos
+    document.querySelectorAll('.itg-tabs').forEach(container => {
+        const tabButtons = container.querySelectorAll('.itg-tabs .tab-button');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); // Evita el comportamiento predeterminado
+                activateTab(container, button);
+            });
+        });
+    });
+
+    // Manejo de clics en botones externos
+    document.querySelectorAll('.itg-tab-btn-external').forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // Evita el comportamiento predeterminado
+            const targetTabId = button.getAttribute('data-target');
+            const tabsId = button.getAttribute('data-tabs-id');
+            const container = document.getElementById(tabsId);
+            const targetTabButton = container ? container.querySelector(`[data-tab="${targetTabId}"]`) : null;
+
+            if (targetTabButton) {
+                activateTab(container, targetTabButton);
+            }
+        });
+    });
+});
 
 
 // Datos de ejemplo
@@ -294,7 +292,7 @@ if (totalPercentage < 100) {
 function animateBars(data) {
     data.forEach((dataItem, index) => {
         const barElement = document.getElementById(dataItem.id);
-        const fillElement = barElement.querySelector('.fill');
+        const fillElement = barElement.querySelector('.itg-fill');
         const percentageElement = document.getElementById(dataItem.percentageId);
 
         if (fillElement && percentageElement) {

@@ -235,10 +235,20 @@ legend {
     vertical-align: -0.125em;
 }
 
-.portlet-barebone .portlet-content {
-    border: 0;
-}
+.has-control-menu {
+    .itg-header {
+        top: 56px;
+    }
 
-.portlet-journal-content.portlet-barebone .portlet .portlet-header {
-    z-index: 4;
+    .itg-layout-sticky-container .layout-sidebar {
+        @media (min-width: 1312px) {
+            top: 190px;
+            height: calc(100vh - 190px);
+        }
+
+        @media only screen and (min-width: 1056px) and (max-width: 1311.98px) {
+            top: 137px;
+            height: calc(100vh - 137px);
+        }
+    }
 }

@@ -1,10 +1,10 @@
-.sab-dropdown {
+.itg-dropdown {
     position: relative;
     display: inline-block;
 
     &-toggle {
         >.toggle-icon-dropdown {
-            font-size: 14px;
+            font-size: $font-size-14;
 
             >svg {
                 transition: all ease .3s;
@@ -46,7 +46,7 @@
     }
 
     &-item {
-        +.sab-dropdown-item {
+        +.itg-dropdown-item {
             border-top: 1px solid $color-gray-30;
         }
     }

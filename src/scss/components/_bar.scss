@@ -1,4 +1,4 @@
-.bar {
+.itg-bar {
     display: block;
     height: 24px;
     background-color: $color-gray-30;
@@ -12,7 +12,7 @@
     }
 }
 
-.fill {
+.itg-fill {
     height: 100%;
     background-color: $color-blue-60;
     text-align: center;
@@ -22,7 +22,7 @@
     transition: width 2s ease-out;
 }
 
-.percentage {
+.itg-percentage {
     display: inline-block;
     text-align: right;
 }

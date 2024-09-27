@@ -1,4 +1,4 @@
-.tooltip-container {
+.itg-tooltips {
     position: relative;
     display: inline-block;
     white-space: normal;
@@ -47,37 +47,37 @@
     }
 
     // Posiciones del tooltip
-    &.tooltip-top .tooltip-content {
+    &.itg-tooltips--top .tooltip-content {
         bottom: calc(100% + 10px);
         left: 50%;
         transform: translateX(-50%);
     }
 
-    &.tooltip-bottom .tooltip-content {
+    &.itg-tooltips--bottom .tooltip-content {
         top: calc(100% + 10px);
         left: 50%;
         transform: translateX(-50%);
     }
 
-    &.tooltip-left .tooltip-content {
+    &.itg-tooltips--left .tooltip-content {
         top: 50%;
         right: calc(100% + 10px);
         transform: translateY(-50%);
     }
 
-    &.tooltip-right .tooltip-content {
+    &.itg-tooltips--right .tooltip-content {
         top: 50%;
         left: calc(100% + 10px);
         transform: translateY(-50%);
     }
 
-    &.tooltip-bottom-left .tooltip-content {
+    &.itg-tooltips--bottom-left .tooltip-content {
         top: calc(100% + 2px);
         left: 0;
         transform: translateX(0);
     }
 
-    &.tooltip-bottom-right .tooltip-content {
+    &.itg-tooltips--bottom-right .tooltip-content {
         top: calc(100% + 2px);
         right: 0;
         transform: translateX(0);

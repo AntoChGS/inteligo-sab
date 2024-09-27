@@ -1,4 +1,4 @@
-.burger-btn {
+.itg-burger-btn {
     display: none !important;
     padding: 0;
     width: 32px;
@@ -46,7 +46,7 @@
     }
 }
 
-.sab-header {
+.itg-header {
     position: sticky;
     top: 0;
     z-index: 20;
@@ -292,11 +292,11 @@
     }
 }
 
-.mobile-menu {
+.itg-mobile-menu {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 20;
+    z-index: 25;
 
     display: flex;
     align-items: center;
@@ -375,7 +375,7 @@
     }
 }
 
-.mobile-sidebar {
+.itg-mobile-sidebar {
     position: fixed;
     top: 0;
     right: -100%;

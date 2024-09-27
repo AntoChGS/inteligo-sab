@@ -1,4 +1,4 @@
-.layout {
+.itg-layout {
     &-portlet {
         &-desktop {
             display: none;
@@ -33,6 +33,7 @@
             }
 
             .layout-sidebar {
+                width: 356px;
                 background-color: $color-white;
 
                 @media (min-width: 1056px) {
@@ -45,18 +46,18 @@
 
                 @media (min-width: 1312px) {
                     position: sticky;
-                    top: 122px;
-                    height: calc(100vh - 122px);
-                    z-index: 901;
+                    top: 130px;
+                    height: calc(100vh - 130px);
+                    z-index: 24;
                     width: 356px;
                 }
 
                 @media only screen and (min-width: 1056px) and (max-width: 1311.98px) {
                     position: fixed;
-                    top: 65px;
-                    height: calc(100vh - 65px);
+                    top: 81px;
+                    height: calc(100vh - 81px);
                     transform: translateX(-100%);
-                    z-index: 901;
+                    z-index: 24;
                     visibility: hidden;
                 }
 
