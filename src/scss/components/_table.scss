@@ -35,6 +35,16 @@
         }
     }
 
+    &-border-first {
+        thead, tbody {
+            th,td {
+                &:first-child {
+                    border-right: 1px solid $color-gray-40;
+                }
+            }
+        }
+    }
+
     &-border-left {
         border-left: 1px solid $color-gray-40;
     }
